@@ -1,6 +1,6 @@
 # LDD64 — LEGO Digital Designer 64bit version, buildable source
 
-The restored C++ source of LEGO Digital Designer 4.3.11 with current third-party libraries,
+The [restored C++ source of LEGO Digital Designer 4.3.11](https://codeberg.org/LDD/LegoDigitalDesigner) with current third-party libraries,
 building a 64-bit program for **Windows**, **macOS** and **Linux** (Wayland and X11).
 
 LDD64 is version **4.64.0** on every platform. The About box shows "4.64", and saved models carry
