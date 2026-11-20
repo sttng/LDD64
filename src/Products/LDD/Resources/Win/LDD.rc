@@ -65,7 +65,6 @@ BEGIN
             VALUE "FileDescription", L"LEGO Digital Designer"
             VALUE "FileVersion", L"4.64.0"
             VALUE "InternalName", L"LEGO Digital Designer"
-            VALUE "LegalCopyright", L"LEGO A/S Copyright \x00EF\x00BF\x00BD 2016"
             VALUE "OriginalFilename", L"LDD64.exe"
             VALUE "ProductName", L"LEGO Digital Designer"
             VALUE "ProductVersion", L"4.64.0"

@@ -1,4 +1,4 @@
-# LDD64: LEGO Digital Designer 64bit version
+# LDD64 — LEGO Digital Designer 64bit version, buildable source
 
 The restored C++ source of LEGO Digital Designer 4.3.11 with current third-party libraries,
 building a 64-bit program for **Windows**, **macOS** and **Linux** (Wayland and X11).
