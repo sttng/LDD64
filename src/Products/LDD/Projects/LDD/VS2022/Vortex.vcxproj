@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{EE6214C2-913C-5EBD-B3E8-B955042C4FC9}</ProjectGuid>
+    <RootNamespace>Vortex</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\x64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\x64\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\x64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\x64\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include;..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src;..\..\..\..\..\..\thirdparty\boost-1.92.0\include;..\..\..\..\..\..\thirdparty\qhull-2020.2-vortex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244;4267;4305;4800;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)Vortex.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include;..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src;..\..\..\..\..\..\thirdparty\boost-1.92.0\include;..\..\..\..\..\..\thirdparty\qhull-2020.2-vortex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244;4267;4305;4800;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)Vortex.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Cx\CxSmallSort.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\KeaBlas.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\KeaFrames.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\KeaItrSolver.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\KeaLcp.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\KeaSmvLcp.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\KeaSteppers.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\MdtKeaAddConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\MdtKeaConstraints.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\MemoryPool.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\Vinds.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\bvbCholRRT.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\smv_matrix.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Kea\vbChol.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtAngular1Position3.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtBSJoint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtBcl.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtBclRowsUtil.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtBclWinch.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtBody.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtConeLimit.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtConstraintSizes.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtContact.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtConvert.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtCylindrical.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtGrouping.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtHinge.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtLimit.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtLinear2.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtMotor.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtPartition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtRPROJoint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtSpring.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtType10.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtType14.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtType16.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtWinch.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Mdt\MdtWorld.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeChunk.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeCrtMath.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeIntMap.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeMath.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeMemory.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeMessage.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeProfile.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeVersion.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\VinPool.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincAggregate.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincAggregateGeometry.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBox.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxBox.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxCapsule.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxCylinder.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxPlane.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxSphere.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxSweep.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxTriangle.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxTriangleList.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincBoxTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsule.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsuleCapsule.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsuleLineSegment.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsulePlane.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsuleSphere.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsuleTriangleList.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCapsuleTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCone.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConeGJKPairs.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConeLineSegment.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConePlane.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConeSphere.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincContactSimplify.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConvexHull.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConvexMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConvexMeshInteractions.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincConvexTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinder.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderCapsule.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderCylinder.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderLineSegment.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderPlane.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderSphere.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderTriangle.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderTriangleList.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincError.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincFramework.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincGJK.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincHeightField.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincHeightFieldTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincInteractions.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincIntersect.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincJacobi.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincLineSegment.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincMassProperties.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincMinimize.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincModel.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincModelPair.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincOBBTree.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincOBBTreeBuild.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincPlane.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincPlaneTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincPolygonCircle.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincPrimitiveTypes.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincPrimitives.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincSpace.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincSphere.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincSpherePlane.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincSphereSphere.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincSphereTriangleList.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincSphereTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriTriSeparation.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleClip.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleContacts.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleList.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleListLineSegment.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleListTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshBuild.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshInteractions.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshLineSegment.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshTriangle.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleTriangleContacts.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\ConstraintAccessor.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\GatherAllConstraintsAndSensors.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\UniverseConnector.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxAngular1Position3.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxAssemblyBase.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxAttachment.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxBallAndSocket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxBase.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxBaseUserData.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxBox.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxBridge.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCable.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCapsule.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCollisionGeometry.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCollisionSensor.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCompositeCollisionGeometry.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCompositeController.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxConeConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxConnection.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxConstraintFriction.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxContactMaterial.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxControllerBase.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxControllerGraph.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxControllerState.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCylinder.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCylindrical.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxDifferential.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxDisabledPairs.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxDistanceJoint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxDynamicsContact.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxDynamicsContactInput.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxEntity.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxEulerAngles.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxFluidInteractionUniverseUpdate.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxFrame.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxFrameRegisterInteractions.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxGearRatio.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxGeometry.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxGeometryUtils.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxHeightField.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxHinge.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxID.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxInternalIDIntersectSubscriber.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxIntersect.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxIntersectResult.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxIntersectResultContact.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxLineSegIntersect.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxLinear2.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMassProperties.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMaterial.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMaterialBase.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMaterialTable.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMechanism.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMessage.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxModuleFlag.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxMotorConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxNamePathAssemblyInterface.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxNamePathStrings.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxNode.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxNodeInterface.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxOrientedVolume.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxPart.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxPartMergeInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxQuaternion.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxRPRO.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxResponseTypes.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxSceneGraphInterface.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxSphere.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxSpring.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxState.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxStateBase.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxStateConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxStateEntity.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxSteppingController.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxSubscriberListResponseHandler.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxThreadPoolPthread.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxThreadPoolWin.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxTimer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxTransform.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxTriangleMeshData.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxUniqueNameList.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxUniverse.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxWinch.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\VxData\FieldBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Cx\CxSmallSort.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Cx\CxSpace.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Cx\detail\CxRttiSkeletons.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\KeaFrames.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\KeaMath.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\LCPMatrix.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\MdtKea.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\MdtKeaConstraints.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\MdtKeaRows.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\MemoryPool.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Kea\detail\KeaRttiSkeletons.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Mdt\MdtBcl.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Mdt\MdtBclRows.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Mdt\MdtBody.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Mdt\MdtConstraint.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Mdt\MdtTypes.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Mdt\MdtWorld.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeCall.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeChunk.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeCrtMath.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeIntMap.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeMath.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeMemory.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeMessage.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeProfile.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\MeVersion.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Me\VinPool.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincBoxSweep.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincContactSimplify.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincConvexInteractions.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincConvexMesh.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincGJK.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincGeometry.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincHeightField.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincIntersect.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincMath.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincModel.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincPairSupport.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincPairTests.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincPairTestsB.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincPolygonCircle.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincPrimitives.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincSpace.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincTriangleContacts.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincTriangleMesh.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincTriangleMeshContacts.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vinc\VincTypes.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\ConstraintAccessor.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxAllocator.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxAngular1Position3.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxArray.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxAssemblyBase.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxAttachment.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxBallAndSocket.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxBase.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxBox.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxBridge.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCable.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCapsule.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCollisionGeometry.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCollisionPairRequest.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCollisionSensor.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxColor.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCompositeCollisionGeometry.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCompositeController.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxConeConstraint.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxConnection.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxConstraint.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxConstraintFriction.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxContactMaterial.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxControllerBase.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxControllerGraph.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxControllerState.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxConvexMesh.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCylinder.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxCylindrical.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxDifferential.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxDistanceJoint.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxDynamicsContact.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxDynamicsContactInput.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxEntity.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxFluidInteractionUniverseUpdate.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxFluidState.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxFrame.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxGearRatio.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxGeometry.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxGeometryUtils.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxHeightField.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxHinge.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxID.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxInputOutput.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxInternalIDIntersectSubscriber.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxIntersect.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxIntersectResult.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxLinear2.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxMassProperties.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxMaterial.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxMechanism.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxMessage.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxMotorConstraint.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxNamePathAssemblyInterface.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxNamePathBaseInterface.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxNamePathControllerInterface.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxNamePathStrings.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxPart.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxPlatform.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxQuaternion.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxRPRO.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxResponse.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxSceneGraphInterface.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxSmartPtr.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxSphere.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxSpring.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxState.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxStateBase.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxStateConstraint.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxStateEntity.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxStepperBase.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxSteppingController.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxSubscriberListResponseHandler.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxThreadPool.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxTimer.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxTransform.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxTriangleMesh.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxUniqueNameList.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxUniverse.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxVector3.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxVisitor.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\VxWinch.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\Vx\detail\VxRttiSkeletons.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\VxData\Container.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\VxData\Delegate.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\VxData\Field.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\VxData\FieldBase.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\VxData\FieldVisitor.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\include\VxData\detail\VxDataRttiSkeletons.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Me\MeCrtMathSse2.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderCylinder.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincCylinderCylinderCore.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincInternal.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleClip.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshFinish.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vinc\VincTriangleMeshPairs.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\GatherAllConstraints.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\UniverseConnector.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\vortex-5.0.0-ldd41\src\Vx\VxCollisionInternal.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

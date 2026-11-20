@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- LEGO Digital Designer (Mac) - Info.plist of the original 4.3.11 bundle, without the keys Xcode
+     adds when it builds (BuildMachineOSBuild, DT*, CFBundleSupportedPlatforms); executable name
+     and bundle identifier (com.LEGO.LDD) through the build settings. The restored code reads
+     CFBundleVersion (Application::GetVersion, Mac 0x2760). Version: LDD64's 4.64.0 (the original
+     4.3.11), the same as the Win build's VERSIONINFO (LDD.rc). LSMinimumSystemVersion: the deployment
+     target (the original bundle: 10.10.0). -->
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string>ldd64_document.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>LEGO Exchange Format</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.lego.lxf</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>InMemory</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string>ldd64_document.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>LEGO Exchange Format Markup Language</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.lego.lxfml</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>InMemory</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIconFile</key>
+	<string>ldd64</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.64.0</string>
+	<key>CFBundleSignature</key>
+	<string>LEGO</string>
+	<key>CFBundleVersion</key>
+	<string>4.64.0</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu.nib</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.pkware.zip-archive</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>LEGO Exchange Format</string>
+			<key>UTTypeIconName</key>
+			<string>LDD2_document_OsX</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.lego.lxf</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>lxf</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-legoexchangeformat</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.xml</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>LEGO Exchange Format Markup Language</string>
+			<key>UTTypeIconName</key>
+			<string>LDD2_document_OsX</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.lego.lxfml</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>lxfml</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-legoexchangeformat</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

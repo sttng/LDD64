@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=LEGO Digital Designer
+GenericName=Virtual brick builder
+Comment=Build models with virtual LEGO bricks (LDD64)
+Exec=@LDD_INSTALL_DIR@/ldd64 %f
+Path=@LDD_INSTALL_DIR@
+Icon=@LDD_INSTALL_DIR@/ldd64.ico
+Terminal=false
+Categories=Graphics;3DGraphics;Education;
+MimeType=application/x-lego-lxf;application/x-lego-lxfml;
+StartupWMClass=ldd64

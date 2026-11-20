@@ -1,0 +1,2863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{965F486F-B171-5DA3-98C0-6CB794F59065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL">
+      <UniqueIdentifier>{8A292D5A-FD06-598E-B771-AABEBA61FEEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Include">
+      <UniqueIdentifier>{3F385FB9-08F3-5E8A-9C81-0B92B2B6AACD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Include\LEGO">
+      <UniqueIdentifier>{8E61D0E9-6BC4-501A-AC3E-B7255E5EEF65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source">
+      <UniqueIdentifier>{E3214152-B4CD-51F7-9840-245F56B18102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Base">
+      <UniqueIdentifier>{8B4D3AA7-B89A-5ED2-AA06-4099B36C3724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Connectivity">
+      <UniqueIdentifier>{41E5CFF8-6EF0-5D34-8FD8-4F59991DFEA9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Connectivity\ModelIO">
+      <UniqueIdentifier>{3D3ED214-1E98-5105-95CE-D5303E094B2E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Lua">
+      <UniqueIdentifier>{5C0F9A78-B553-5DEB-9979-12BD7C51EA6D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Network">
+      <UniqueIdentifier>{F3B50D50-03ED-5EEF-90AB-E784CF3DCD36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Physics">
+      <UniqueIdentifier>{C94DDDE7-7E97-5947-AF2A-61289B543BDC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Physics\Vortex">
+      <UniqueIdentifier>{5A5EE38B-2332-5E63-8A9E-3BAA976FBE28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Render">
+      <UniqueIdentifier>{19C8314F-3782-51D7-93BC-F4AC9EB1E9EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Render\Image">
+      <UniqueIdentifier>{19EB91CF-81DB-5447-8986-18E5B7FC1596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Render\OpenGLRender">
+      <UniqueIdentifier>{FD04F091-E897-5E0A-BFC8-CC17655376CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Sound">
+      <UniqueIdentifier>{18430E84-1FF8-55F8-A2AB-89E6CD058122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\Storage">
+      <UniqueIdentifier>{87663C42-E404-5DFB-B692-4F440A715A46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DCL\Source\UI">
+      <UniqueIdentifier>{2FBAE06F-737A-5E05-9B5A-D97AE7BAB96F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Products">
+      <UniqueIdentifier>{02055133-27F4-5122-B8E9-32F993CBD338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Products\LDD">
+      <UniqueIdentifier>{75E4F455-E7AC-5A28-ADE7-BF28BFF61A59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Products\LDD\Source">
+      <UniqueIdentifier>{DFEEABAB-4785-5308-97DA-27E834725A32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Products\LDD\Source\LDDLib">
+      <UniqueIdentifier>{63DCB43B-C64B-524B-A93C-DC2E19AF535D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Products\LDD\Source\LDDLib\Commands">
+      <UniqueIdentifier>{C9818AC8-0467-56DB-93EC-813E56B882DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EBDD25BC-8C6C-54FD-8639-099994543C43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL">
+      <UniqueIdentifier>{229C18F1-09D1-5C06-924F-654FDC003FB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source">
+      <UniqueIdentifier>{140F973C-F3A9-5B5A-8449-C0DC4D7ED9A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Base">
+      <UniqueIdentifier>{8DBD427A-DE60-5F09-934F-86AAA4D76055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Connectivity">
+      <UniqueIdentifier>{9A7B9DDD-E3E2-5541-9434-39C25ED971D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Connectivity\ModelIO">
+      <UniqueIdentifier>{954DBC8E-583B-591D-8C84-044F7B33C301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Lua">
+      <UniqueIdentifier>{11A6DC13-90B3-5126-90F7-1824D1034C0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Network">
+      <UniqueIdentifier>{7DC117B6-5EB4-5097-8AD1-293774439642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Physics">
+      <UniqueIdentifier>{E5C3566A-B227-5919-9AE2-AEE2588A186F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Physics\Vortex">
+      <UniqueIdentifier>{FAD18A40-4DDA-55D4-B324-55A683CBB415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Render">
+      <UniqueIdentifier>{C8BB92A4-9F79-5C05-BC6A-8540EE6BE14F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Render\Image">
+      <UniqueIdentifier>{4CA56BD0-4EC9-5FFA-A550-520DBC0C80F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Render\OpenGLRender">
+      <UniqueIdentifier>{70212650-F4EF-5C5C-924B-E5DE71748291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Sound">
+      <UniqueIdentifier>{5C729D58-C519-5E7C-AABF-5589FC430CBA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\Storage">
+      <UniqueIdentifier>{A03CAF07-2036-53FC-A87E-6041CAF35C9C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DCL\Source\UI">
+      <UniqueIdentifier>{79FBB762-AC52-5BAD-B789-BF9DA4315F3D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Products">
+      <UniqueIdentifier>{055F823F-1471-5FE4-9AA4-3EEF354D3C12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Products\LDD">
+      <UniqueIdentifier>{F537FF66-FDF5-55C7-B1AE-0104DE67401A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Products\LDD\Source">
+      <UniqueIdentifier>{922F953E-CDDA-57B3-9796-2F0D38ED31CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Products\LDD\Source\LDDLib">
+      <UniqueIdentifier>{2C543ABB-1133-5391-8289-20A914092BDA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Products\LDD\Source\LDDLib\Commands">
+      <UniqueIdentifier>{8007FAEF-5684-5CF7-AD72-40397011FE30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Assert.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Base64.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Base64Codec.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\BitmapMask.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\BitmapSelectionMask.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Color.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Config.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Geometry.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Object.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\ObjectFactoryInstantiator.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\ObjectRegistry.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\OperationManager.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Platform.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Preferences.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\ProfileTimer.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\StdLib.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\String.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\StringConversion.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\SystemTime.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\SystemUpdater.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\TextLocale.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\ThreadHook.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\TraceErrorHandler.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\TraceHook.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\UUID.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\UndoManager.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Version.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\Win32Unicode.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Base\XMLDOMNode.cpp">
+      <Filter>Source Files\DCL\Source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\AxleAligner.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\Behavior.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\BehaviorElement.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\Brick.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\BrickConnect.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\BrickDatabase.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\BrickGeometry.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\BrickGroup.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ClickPullSolverCallback.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ClickStickCastUtility.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionField.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldAxle.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldBall.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldFixed.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldHinge.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldPlanar.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldRail.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldSlider.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionManipulator.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectivityWorldLookupTables.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\DisconnectElement.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\HingedElement.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\MaterialManual.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\LdrawMapXMLLoader.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLDraw.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML2.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML3.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML4.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML5.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOStorageScene.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelLoader.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelLoaderAbstract.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\StorageScene2.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\Part.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\PlanarAligner.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveConnection.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveElement.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveLoaderXML.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveRigidConnection.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveRigidElement.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\RigidConnection.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\RigidElement.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\Scene.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\SceneStorage.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\SimplePhysicsSceneDebugInfo.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Connectivity\StringPullSolverCallback.cpp">
+      <Filter>Source Files\DCL\Source\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LayoutResources.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaArrayLayoutControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaBindings.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaButtonControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaButtonSoundAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaCommand.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaConsole.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaContainerControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaControlAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaControlManager.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaControlManagerObserver.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaDragAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaFrameAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaLayout.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaMatrixLayoutControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaPopupAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaPreferences.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaPreferencesObserver.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaRadioGroup.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaSaveRectAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaScriptManager.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaSliderControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaSlidingHideAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaTextInputControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaToggleControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaTooltipAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaWindow.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Lua\LuaWindowControl.cpp">
+      <Filter>Source Files\DCL\Source\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Network\HTTPCommunicator.cpp">
+      <Filter>Source Files\DCL\Source\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Network\SocketManager.cpp">
+      <Filter>Source Files\DCL\Source\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysics.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionBall.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionFree.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionHelper.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionHinge.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionSlideHinge.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsPrimitiveElement.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsRigidElement.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsScene.cpp">
+      <Filter>Source Files\DCL\Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\LDDVortexCollisionFilter.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexAnchorSolver.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexBrickPhysics.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexBrickPhysicsSimulationHingeSolver.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexConnectionAttributeDatas.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexMoveTogetherSolver.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsBallConnection.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsFreeConnection.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsGeometryConfigable.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsHingeConnection.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsPlacedGeometry.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsPrimitiveElement.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsRigidElement.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsScene.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsSceneryElement.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsSlideHingeConnection.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexShapeCollisionFilter.cpp">
+      <Filter>Source Files\DCL\Source\Physics\Vortex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Camera.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\GraphicsCardInfo.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Image\BMPBitmapCodec.cpp">
+      <Filter>Source Files\DCL\Source\Render\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Image\BitmapCodecFactoryHelper.cpp">
+      <Filter>Source Files\DCL\Source\Render\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Image\BitmapCodecPixelConverter.cpp">
+      <Filter>Source Files\DCL\Source\Render\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Image\JPGBitmapCodec.cpp">
+      <Filter>Source Files\DCL\Source\Render\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Image\PCXBitmapCodec.cpp">
+      <Filter>Source Files\DCL\Source\Render\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Image\PNGBitmapCodec.cpp">
+      <Filter>Source Files\DCL\Source\Render\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Materials.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLCrashReport.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLExtensions.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLGraphicsCardInfo.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLRender.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShader.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShader20.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShaderARB.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShaderFactory.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLTexture.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLTextureFactory.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLVertexBuffer.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLVertexBufferVBO.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLVertexBufferVBORoundEdge.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLWindow.cpp">
+      <Filter>Source Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffect.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffectNone.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffectSSAO.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffectSSDO.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\PostProcessor.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\RenderQueue.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\RenderVisualDebugger.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\RoundEdgeDataLayout.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\RoundEdgeDataTextureCreator.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Render\Skybox.cpp">
+      <Filter>Source Files\DCL\Source\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Sound\SimpleSound.cpp">
+      <Filter>Source Files\DCL\Source\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Sound\SimpleSoundChangedNotifier.cpp">
+      <Filter>Source Files\DCL\Source\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\Directory.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\LiffChunk.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\LiffStorageDirectory.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\LiffStorageFactory.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\MemoryDirectory.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\ReadFile.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\Win32Directory.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\Storage\ZipStorageDirectory.cpp">
+      <Filter>Source Files\DCL\Source\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\Application.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ArrayLayoutControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ButtonControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ButtonSoundAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ContainerControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\Control.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ControlDragHelper.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ControlManager.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\DialControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\DropDownControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\FontPlatformFactory.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\FrameAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ImageLoader.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\KeyNames.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\MatrixLayoutControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\MenuItem.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ModalControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\PlatformTextLayout.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\PrintJob.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ProgressBarControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\RenderControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\RenderCursor.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\SaveTraceStringCommand.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\SetPreferenceCommand.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\SliderAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\SliderControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\SlidingHideAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\SpyOnThisAndParentAugmentation.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\StretchableButtonControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\StretchableControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\StretchableImage.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\StretchableToggleControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\TextInputControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\TextLayout.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\TextOutputControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\ToggleControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\TooltipManager.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\WinMain.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\Window.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DCL\Source\UI\WindowControl.cpp">
+      <Filter>Source Files\DCL\Source\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ArchiveFileSaver.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGAnalyzerMinifig.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGAnalyzerSkeleton.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGAutomaticApplication.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGAutomaticMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGAutomaticScene.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BGSubstepFilterMinifig.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BI.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIAnalyzer.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIAnalyzerArticulation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIAnalyzerDirection.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIAnalyzerGroups.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIAnalyzerRigid.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIAnalyzerSeparation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIBrick.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIBrickPrimitive.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIBrickRepository.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIBrickSubstep.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BICameraChangeFinder.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIEvent.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIFilter.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIGenerator.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIGeneratorConstructive.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIGeneratorDestructive.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIGraph.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIGraphList.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIProducer.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIProgramGeneric.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStorage.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategy.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategyArticulation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategyBalance.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategyConnectivity.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategyGroundUp.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategyIntegration.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategyNearby.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategySubsteps.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BIStrategySweeping.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BISubstepFilter.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BISubstepFilterBaseplate.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BISubstepFilterProgram.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BoxFilterControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Brand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickConnectSceneControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickConnectSceneControlTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickConnectSceneManager.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickDraw.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickMatcher.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickModeGlobalObject.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickPalette.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickPaletteBagLoaderModel.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickPaletteBagLoaderPAXML.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickPaletteControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickReorientationControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickUpdateLoaderXML.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickVersionDownloaderCaller.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BrickVersionLoaderXML.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BricksControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BricksControlItemPressedNotifier.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\BuildingGuideGenerator.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ClickPullTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ClickStickPickupTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ClickStickTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\CloneTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\AnimateShowHideControlCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\BGModeCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\BGScreenShotCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\CollapseMaingroupsCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\CreateTestModelCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\CutCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\DeconstructionCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\DelayedCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\DeleteCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ExpandMaingroupsCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ExportBOMCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ExportCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\GroupToBrickGroupCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\GroupToLibraryCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\HTMLBICommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ImportCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\InvertSelectionCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ModeNavigationCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\NewCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\NextPartBICommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\NextStepBICommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\OpenCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\OpenPathAsURLCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\OpenURLCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\PasteCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\PrevPartBICommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\PrevStepBICommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\PrintCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ReplayPartBICommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\SaveAsCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\SaveCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\SavePalettesCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ScreenShotCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\SelectAllCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\ShowStartHelpCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\StartupDelayedCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\UndoRedoCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\UploadModelCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Commands\UploadToFactoryCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ConceptBrick.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Countries.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\DecorationControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\DecorationTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\DecorationToolControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\DeleteTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\DescriptionBrickFilter.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\EditMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\FallingBricks.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\FileDownloader.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\FilterControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\FlexVertexBuffer.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\GenerateBuildingGuideCommand.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\GeometryAccum.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\GetRedirectURLCaller.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\GroupTreeViewControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\HTMLBIGenerator.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\HideTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\HingeAlignTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\HingeTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\IncludeModelOnlyFilter.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\InfoBoxControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\InitializeDesignerCaller.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDAlertBox.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDApplication.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDButtonControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDCursor.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDMain.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDPaneContainerControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDPaneToggleControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDPart.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDPopUpControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDPostProcessor.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDSkybox.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDSliderControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDUtilities.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDUtilitiesDropDown.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDUtilitiesMeshes.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDUtilitiesModels.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDUtilitiesUI.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDWebCommunicator.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDWindow.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LDDWindowControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaBrickConnectSceneManagerObserver.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaBrickDatabase.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaBrickMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaBrickPaletteControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaExtendedTextTooltipAugmentation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaHingeTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaLDDApplication.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaLDDApplicationObserver.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaLDDWebCommunicator.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaSceneControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaStandardTextTooltipAugmentation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\LuaToolButtonControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MainGroupDividerControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MaterialControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MaterialGridControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MaterialItemControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MaterialPickerAugmentation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MaterialTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MaterialToolControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\Mode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ModelControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ModelLoaderHandler.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ModelLoaderProgressBarThread.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\MoveTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\NewContentCaller.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\NewContentChecker.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PaletteMaterialControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PaletteNames.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PickTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PreferenceControlBool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PreferenceControlDropDown.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PreferenceControlSlider.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PreferencesControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PrimitiveElementBrick.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\PrimitiveTransformMap.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ProgressBarDialog.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\RecentModelsControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\RenderGrid.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\SavingFileSaver.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ScrollContainerControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\SelectionTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\SingleSelectionTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\StandardTextTooltipAugmentation.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\StartMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\StorageSceneControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\StringPullTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\SurfaceColorPickerTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\SurfacePaintBucketTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\SurfacePickTool.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\TemplateSelectorControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ToolboxMaterialItemControl.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\UploadModelCaller.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\UploadModelDialog.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\LDDLib\ViewMode.cpp">
+      <Filter>Source Files\Products\LDD\Source\LDDLib</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\DCL\Include\LEGO\Assert.h">
+      <Filter>Header Files\DCL\Include\LEGO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Include\LEGO\StdLib.h">
+      <Filter>Header Files\DCL\Include\LEGO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Include\LEGO\String.h">
+      <Filter>Header Files\DCL\Include\LEGO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Include\LEGO\Types.h">
+      <Filter>Header Files\DCL\Include\LEGO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\AutoPointer.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Base64.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BasicArray.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BasicDeque.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BasicList.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BasicMap.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BasicQueue.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BasicString.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BitmapMask.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\BitmapSelectionMask.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Color.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Config.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Error.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Event.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Geometry.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\MathUtil.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Notifier.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Object.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ObjectFactory.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ObjectRefPointer.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ObjectRegistry.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ObserverN.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\OperationManager.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Platform.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Preferences.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ProfileTimer.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ProxyFactory.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\RangeException.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\StringConversion.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\StringStream.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\SystemTime.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\SystemUpdater.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\TextLocale.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Thread.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\ThreadHook.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Trace.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\UUID.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\UndoManager.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Updater.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Version.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\Win32Unicode.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\XMLDOMAttribute.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Base\XMLDOMNode.h">
+      <Filter>Header Files\DCL\Source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Aligner.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\AxleAligner.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Behavior.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\BehaviorElement.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Brick.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\BrickConnect.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\BrickDatabase.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\BrickGeometry.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\BrickGroup.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ClickPullSolverCallback.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ClickStickCastUtility.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionField.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldAxle.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldBall.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldFixed.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldHinge.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldLineFunctions.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldPlanar.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldRail.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionFieldSlider.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectionManipulator.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ConnectivityWorldLookupTables.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\DisconnectElement.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Element.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\HingedElement.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\MaterialManual.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\LdrawMapXMLLoader.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLDraw.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML2.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML3.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML4.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOLXFML5.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelIOStorageScene.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelLoader.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\ModelLoaderAbstract.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\StorageScene.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\StorageScene2.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\ModelIO\TransformAttributes.h">
+      <Filter>Header Files\DCL\Source\Connectivity\ModelIO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Part.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\PlanarAligner.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Primitive.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveConnection.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveElement.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveRigidConnection.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\PrimitiveRigidElement.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\RigidConnection.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\RigidElement.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\Scene.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\SceneGraphUtil.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\SimplePhysicsSceneDebugInfo.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Connectivity\StringPullSolverCallback.h">
+      <Filter>Header Files\DCL\Source\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\AdapterBindableLuaObject.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\BindableLuaObject.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LayoutResources.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaArrayLayoutControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaBindings.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaButtonControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaButtonSoundAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaCommand.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaCommandAdapter.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaConsole.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaContainerControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaControlAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaControlManager.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaControlManagerObserver.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaDragAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaFrameAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaLayout.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaMatrixLayoutControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaPopupAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaPreferences.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaPreferencesObserver.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaRadioGroup.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaSaveRectAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaScriptManager.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaSliderControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaSlidingHideAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaTextInputControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaToggleControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaTooltipAugmentation.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaWindow.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Lua\LuaWindowControl.h">
+      <Filter>Header Files\DCL\Source\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Network\HTTPCommunicator.h">
+      <Filter>Header Files\DCL\Source\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Network\Socket.h">
+      <Filter>Header Files\DCL\Source\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysics.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsAtomic.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionBall.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionFree.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionHelper.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionHinge.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsConnectionSlideHinge.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsPrimitiveElement.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsRigidElement.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BaseBrickPhysicsScene.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\BrickPhysics.h">
+      <Filter>Header Files\DCL\Source\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\LDDVortexCollisionFilter.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexAnchorSolver.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexBrickPhysics.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexBrickPhysicsSimulationHingeSolver.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexConnectionAttributeDatas.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexConversions.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexMoveTogetherHingeData.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexMoveTogetherSolver.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsBallConnection.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsConnectionCommon.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsFreeConnection.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsGeometry.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsGeometryConfigable.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsHingeConnection.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsPlacedGeometry.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsPrimitiveElement.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsRigidElement.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsScene.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsSceneryElement.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexPhysicsSlideHingeConnection.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Physics\Vortex\VortexShapeUserData.h">
+      <Filter>Header Files\DCL\Source\Physics\Vortex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Camera.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\GraphicsCardInfo.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\BMPBitmapCodec.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\Bitmap.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\BitmapCodec.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\BitmapCodecFactoryHelper.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\BitmapCodecPixelConverter.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\DataStream.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\JPGBitmapCodec.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\MacImageIO.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\PCXBitmapCodec.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Image\PNGBitmapCodec.h">
+      <Filter>Header Files\DCL\Source\Render\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Material.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Materials.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Mesh.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLCrashReport.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLExtensions.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLFactories.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLGraphicsCardInfo.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLRender.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShader.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShader20.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShaderARB.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLShaderFactory.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLTexture.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLTextureFactory.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLVertexBuffer.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLVertexBufferVBO.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLVertexBufferVBORoundEdge.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\OpenGLRender\OpenGLWindow.h">
+      <Filter>Header Files\DCL\Source\Render\OpenGLRender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffect.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffectNone.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffectSSAO.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\PostProcessingEffectSSDO.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\PostProcessingScreenPass.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\PostProcessor.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Render.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\RenderQueue.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\RenderVisualDebugger.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\RoundEdgeDataTextureCreator.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Shader.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Skybox.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\Texture.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Render\VertexBuffer.h">
+      <Filter>Header Files\DCL\Source\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Sound\SimpleSound.h">
+      <Filter>Header Files\DCL\Source\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Sound\SimpleSoundChangedNotifier.h">
+      <Filter>Header Files\DCL\Source\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\Directory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\DirectoryElement.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\File.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\LiffChunk.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\LiffStorageDirectory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\LiffStorageFactory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\LiffStorageVolume.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\MacOSXDirectory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\MemoryDirectory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\MonolithTree.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\Path.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\ReadFile.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\SafeFileWrite.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\Stream.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\Win32Directory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\Storage\ZipStorageDirectory.h">
+      <Filter>Header Files\DCL\Source\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Application.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ArrayLayoutControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\BufferedAbleRenderControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ButtonControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ButtonSoundAugmentation.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Command.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ContainerControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Control.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ControlAugmentation.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ControlAugmentationControlObserver.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ControlDragHelper.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ControlManager.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Cursor.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\DialControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\DropDownControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Font.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\FontPlatformFactory.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\FrameAugmentation.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ImageLoader.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Key.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\KeyNames.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\MacWindow.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Main.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\MatrixLayoutControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Menu.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ModalControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\PlatformTextLayout.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\PrintJob.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ProgressBarControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\RenderControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\RenderControlManager.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\RenderCursor.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\SaveTraceStringCommand.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\SetPreferenceCommand.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\SliderAugmentation.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\SliderControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\SlidingHideAugmentation.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\SpyOnThisAndParentAugmentation.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\StretchableButtonControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\StretchableControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\StretchableImage.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\StretchableToggleControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\TextInputControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\TextLayout.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\TextOutputControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\ToggleControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\TooltipManager.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Trigger.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\Window.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DCL\Source\UI\WindowControl.h">
+      <Filter>Header Files\DCL\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGAnalyzerMinifig.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGAnalyzerSkeleton.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGApplication.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGAutomaticApplication.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGAutomaticApplicationObserver.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGAutomaticMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGAutomaticScene.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGScene.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BGSubstepFilterMinifig.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BI.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIAnalyzer.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIAnalyzerArticulation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIAnalyzerDirection.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIAnalyzerGroups.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIAnalyzerRigid.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIAnalyzerSeparation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIBrick.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIBrickPrimitive.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIBrickRepository.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIBrickSubstep.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BICameraChangeFinder.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIEvent.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIFacade.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIFilter.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIGenerator.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIGeneratorConstructive.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIGeneratorDestructive.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIGraph.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIGraphWalk.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIProducer.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIProgram.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIProgramGeneric.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStorage.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategy.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategyArticulation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategyBalance.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategyConnectivity.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategyGroundUp.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategyIntegration.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategyNearby.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategySubsteps.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BIStrategySweeping.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BISubstepFilter.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BISubstepFilterBaseplate.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BISubstepFilterProgram.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BoxFilterControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Brand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickConnectSceneControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickConnectSceneControlObserver.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickConnectSceneControlTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickConnectSceneManager.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickCountAugmentation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickDraw.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickFilter.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickMatcher.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickModeGlobalObject.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickPalette.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickPaletteBagLoaderPAXML.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickPaletteControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickReorientationControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickUpdateLoaderXML.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BrickVersionDownloaderCaller.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BricksClipBoard.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BricksControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BricksControlItemPressedNotifier.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\BuildingGuideGenerator.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ClickPullTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ClickStickPickupTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ClickStickTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\CloneTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\CommandButtonControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\AnimateShowHideControlCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\BGModeCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\BGScreenShotCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\CollapseMaingroupsCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\CreateTestModelCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\CutCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\DeconstructionCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\DelayedCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\DeleteCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ExpandMaingroupsCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ExportBOMCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ExportCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\GroupToBrickGroupCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\GroupToLibraryCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\HTMLBICommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ImportCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\InvertSelectionCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ModeNavigationCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\NewCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\NextPartBICommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\NextStepBICommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\OpenCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\OpenPathAsURLCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\OpenURLCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\PasteCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\PrevPartBICommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\PrevStepBICommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\PrintCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ReplayPartBICommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\SaveAsCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\SaveCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\SavePalettesCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ScreenShotCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\SelectAllCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\ShowStartHelpCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\StartupDelayedCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\UndoRedoCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\UploadModelCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Commands\UploadToFactoryCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ConceptBrick.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Countries.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\DecorationControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\DecorationTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\DecorationToolControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\DeleteTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\DescriptionBrickFilter.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\EditMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ExtendedTextTooltipAugmentation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FallingBricks.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FileDownloader.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FileSaver.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FilterControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FilterControlManager.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FlexVertexBuffer.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\FramedTextControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\GenerateBuildingGuideCommand.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\GeometryAccum.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\GetRedirectURLCaller.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\GroupTreeViewControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\HTMLBIGenerator.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\HideTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\HingeAlignTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\HingeTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\IncludeModelOnlyFilter.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\InfoBoxControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\InitializeDesignerCaller.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDAlertBox.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDApplication.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDBrickConnect.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDButtonControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDCursor.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDMain.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDPaneContainerControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDPaneToggleControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDPart.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDPopUpControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDPostProcessor.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDSkybox.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDSliderControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDUtilities.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDView.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDWebCommunicator.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDWebObserver.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDWindow.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LDDWindowControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaBrickConnectSceneManagerObserver.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaBrickDatabase.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaBrickMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaBrickPaletteControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaExtendedTextTooltipAugmentation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaHingeTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaLDDApplication.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaLDDApplicationObserver.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaLDDWebCommunicator.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaSceneControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaStandardTextTooltipAugmentation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\LuaToolButtonControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MainGroupDividerControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MaterialControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MaterialGridControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MaterialItemControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MaterialPickerAugmentation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MaterialTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MaterialToolControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\Mode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ModelControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ModelLoaderHandler.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ModelLoaderProgressBarThread.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\MoveTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\NewContentChecker.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PaletteMaterialControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PaletteNames.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PickTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PreferenceControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PreferenceControlBool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PreferenceControlDropDown.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PreferenceControlSlider.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PreferencesControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\PrimitiveElementBrick.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ProgressBarDialog.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ProgressBarThread.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\RecentModelsControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\RenderGrid.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ScrollContainerControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\SelectableMesh.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\SelectionTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\SingleSelectionTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\StandardTextTooltipAugmentation.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\StartMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\StorageSceneControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\StringPullTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\SurfaceColorPickerTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\SurfacePaintBucketTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\SurfacePickTool.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\TemplateSelectorControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ToolboxMaterialItemControl.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\UploadModelCaller.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\UploadModelDialog.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\LDDLib\ViewMode.h">
+      <Filter>Header Files\Products\LDD\Source\LDDLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

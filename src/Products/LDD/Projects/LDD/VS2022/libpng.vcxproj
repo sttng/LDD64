@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{668BD90D-9ECD-52BE-AEB4-5C09DE73DD30}</ProjectGuid>
+    <RootNamespace>libpng</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\x64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\x64\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\x64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\x64\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>..\Config;..\..\..\..\..\..\thirdparty\zlib-1.4;..\..\..\..\..\..\thirdparty\libpng-1.6.59;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244;4267;4305;4800;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libpng.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>..\Config;..\..\..\..\..\..\thirdparty\zlib-1.4;..\..\..\..\..\..\thirdparty\libpng-1.6.59;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244;4267;4305;4800;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libpng.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\png.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngerror.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngget.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngmem.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngpread.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngread.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngrio.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngrtran.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngrutil.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngset.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngtrans.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngwio.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngwrite.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngwtran.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngwutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\png.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngconf.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngdebug.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pnginfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngpriv.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\libpng-1.6.59\pngstruct.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

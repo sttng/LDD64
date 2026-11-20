@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- LDD64 Linux: the model file types (shared-mime-info) -->
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-lego-lxf">
+    <comment>LEGO Digital Designer model</comment>
+    <sub-class-of type="application/zip"/>
+    <glob pattern="*.lxf"/>
+  </mime-type>
+  <mime-type type="application/x-lego-lxfml">
+    <comment>LEGO Digital Designer model (XML)</comment>
+    <sub-class-of type="application/xml"/>
+    <glob pattern="*.lxfml"/>
+  </mime-type>
+</mime-info>

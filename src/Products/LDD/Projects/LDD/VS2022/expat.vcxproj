@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{98AA6BD3-8F32-58D0-AE1F-6D299E9A6F4A}</ProjectGuid>
+    <RootNamespace>expat</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\x64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\x64\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\x64\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\x64\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>..\..\..\..\..\..\thirdparty\expat-2.10.0\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244;4267;4305;4800;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)expat.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalIncludeDirectories>..\..\..\..\..\..\thirdparty\expat-2.10.0\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244;4267;4305;4800;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)expat.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xmlparse.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xmlrole.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xmltok.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xcs.c" />
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\random_rand_s.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\ascii.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\asciitab.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\entities.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\expat.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\expat_config.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\expat_external.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\fallthrough.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\hash_table.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\iasciitab.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\internal.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\latin1tab.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\memory_sanitizer.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\nametab.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\random_arc4random_buf.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\random_rand_s.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\siphash.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\utf8tab.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\winconfig.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xcs.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xmlrole.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xmltok.h" />
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\expat-2.10.0\lib\xmltok_impl.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

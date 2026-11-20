@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- LEGO Digital Designer (Mac) - MainMenu (German), RECONSTRUCTED from the original bundle's
+     compiled German.lproj/MainMenu.nib (LDD 4.3.11: the same objects, titles, key equivalents and
+     actions; the nib itself is not part of the source). Application::InitializeCocoa (Mac 0x2300)
+     loads it with NSApp as owner; Window::SetMenu (WindowMac.mm) keeps the first (application)
+     menu and adds the LDD menus after it. About / Preferences use the actions of
+     NSApplication+LEGO.mm. -->
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="NO">
+    <dependencies>
+        <deployment version="101300" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="mainMenu" destination="29" id="200"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="MainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="LEGO Digital Designer" id="56">
+                    <menu key="submenu" title="LEGO Digital Designer" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="Über LEGO Digital Designer" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showLEGOAboutBox:" target="-2" id="201"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236"/>
+                            <menuItem title="Einstellungen…" keyEquivalent="," id="129">
+                                <connections>
+                                    <action selector="showLEGOPreferences:" target="-2" id="202"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="143"/>
+                            <menuItem title="Dienste" id="131">
+                                <menu key="submenu" title="Dienste" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144"/>
+                            <menuItem title="LEGO Digital Designer ausblenden" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-2" id="203"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Andere ausblenden" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-2" id="204"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Alle einblenden" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-2" id="205"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149"/>
+                            <menuItem title="LEGO Digital Designer beenden" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-2" id="206"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>

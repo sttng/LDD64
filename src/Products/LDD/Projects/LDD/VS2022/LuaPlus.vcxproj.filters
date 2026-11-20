@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{26BFA4CA-1C67-553E-A513-7F7176CE32B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{5BA2EF0F-24A9-58FD-902B-A48F3ED6D03E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{667B6227-CFD0-52CD-B73D-56A4268667D9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{6D1CF68E-40F5-5476-8DCF-31A4787B37FE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lapi.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lauxlib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lbaselib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lcode.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ldblib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ldebug.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ldo.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ldump.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lfunc.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lgc.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\linit.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\liolib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\llex.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lmathlib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lmem.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\loadlib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lobject.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lopcodes.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\loslib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lparser.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lstate.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lstring.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lstrlib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ltable.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ltablib.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ltm.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lundump.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lvm.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lzio.c">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\lwstrlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlusAddons.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaCall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlus_Libs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlusFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStackObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStackTableIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStateOutFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaState_DumpObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaTableIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaAutoBlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaCall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaHelper_Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaHelper_StackObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaLink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaObject.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlusCD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaPlusInternal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStackObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStackObject.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStackTableIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaState.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaStateOutFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\LuaTableIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lapi.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lauxlib.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lcode.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ldebug.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ldo.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lfunc.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lgc.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\llex.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\llimits.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lmem.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lobject.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lopcodes.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lparser.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lstate.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lstring.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ltable.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\ltm.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lua.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\luaconf.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lualib.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lundump.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lvm.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\thirdparty\luaplus51-build1100\Src\LuaPlus\src\lzio.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

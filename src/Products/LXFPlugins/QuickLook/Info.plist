@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- LXFQuickLook.qlgenerator - Info.plist of the original LDD 4.3.11 bundle, without the keys Xcode adds when it
+     builds (BuildMachineOSBuild, DT*, CFBundleSupportedPlatforms); executable name and bundle
+     identifier (com.lego.lxfquicklookgenerator) through the build settings. -->
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>QLGenerator</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.lego.lxf</string>
+				<string>com.lego.lxfml</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>LXFQuickLook</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.64.0</string>
+	<key>CFBundleVersion</key>
+	<string>4.64.0</string>
+	<key>CFPlugInDynamicRegisterFunction</key>
+	<string></string>
+	<key>CFPlugInDynamicRegistration</key>
+	<string>NO</string>
+	<key>CFPlugInFactories</key>
+	<dict>
+		<key>D995E624-C593-4C3E-BD01-4EFF0A8779B5</key>
+		<string>QuickLookGeneratorPluginFactory</string>
+	</dict>
+	<key>CFPlugInTypes</key>
+	<dict>
+		<key>5E2D9680-5022-40FA-B806-43349622E5B9</key>
+		<array>
+			<string>D995E624-C593-4C3E-BD01-4EFF0A8779B5</string>
+		</array>
+	</dict>
+	<key>CFPlugInUnloadFunction</key>
+	<string></string>
+	<key>QLNeedsToBeRunInMainThread</key>
+	<false/>
+	<key>QLPreviewHeight</key>
+	<real>600</real>
+	<key>QLPreviewWidth</key>
+	<real>800</real>
+	<key>QLSupportsConcurrentRequests</key>
+	<false/>
+	<key>QLThumbnailMinimumSize</key>
+	<real>17</real>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.pkware.zip-archive</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>LEGO Exchange Format</string>
+			<key>UTTypeIconName</key>
+			<string>LDD2_document_OsX</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.lego.lxf</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>lxf</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-legoexchangeformat</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.xml</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>LEGO Exchange Format Markup Language</string>
+			<key>UTTypeIconName</key>
+			<string>LDD2_document_OsX</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.lego.lxfml</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>lxfml</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-legoexchangeformat</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
