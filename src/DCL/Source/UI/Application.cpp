@@ -318,11 +318,11 @@ void Application::RunModal(Window* window, ModalUpdateReciever* reciever)
     // window = 0. A run started inside another one (e.g. an LDDAlertBox opened while a Lua dialog
     // runs ModalRun) thereby also ends the enclosing run: its do/while sees s_modalRunning
     // false and returns as soon as the inner dialog closes; IsModal() is false from then on.
-    // fixed: the enclosing run's state is saved on entry and handed back on exit (as M20 on Mac).
+    // fixed: the enclosing run's state is saved on entry and handed back on exit (as Application.mm does).
     // s_modalRunning gets its saved value back: true while the outer run goes on, false only when
     // StopModal was already called for the outer run before the inner one started (StopModal has
     // no target, it stops the innermost run). Outside a modal run the saved values are the
-    // original's false / 0 (F1).
+    // original's false / 0.
     const bool outerRunning = s_modalRunning;
     const bool outerInModal = s_inModal;
     ModalUpdateReciever* const outerReciever = s_modalReciever;
@@ -362,7 +362,7 @@ void Application::RunModal(Window* window, ModalUpdateReciever* reciever)
     else
         ::PeekMessageA(&msg, 0, kStopModalMessage, kStopModalMessage, PM_REMOVE);
     --s_updateDepth;
-    s_modalRunning = outerRunning;   // (F1) the enclosing run's state (false / 0 outside one)
+    s_modalRunning = outerRunning;   // the enclosing run's state (false / 0 outside one)
     s_inModal = outerInModal;
     s_modalReciever = outerReciever;
     s_modalWindow = outerWindow;

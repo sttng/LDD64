@@ -22,7 +22,7 @@ void EraseFirst(UndoManager::ActionStack& stack, const UndoAction* action)
 
 // The stacks of the group action AddAction redirects to (see UndoManager::m_group and
 // UndoGroupAction): index 0 = undo (Mac +0x0c, Win +0x10), 1 = redo (Mac +0x1c, Win +0x20).
-// PORT64: through the declared type, not byte offsets (tests/test_services.cpp checks that the
+// PORT64: through the declared type, not byte offsets (the restoration's tests check that the
 // 32-bit layout is unchanged).
 UndoManager::ActionStack* GroupStack(UndoAction* group, UInt32 index)
 {
@@ -122,7 +122,7 @@ void UndoManager::AddAction(UndoAction* action)
 // NOTE: the original holds `action` only during each erase: when the undo stack held the last
 // reference, the first erase frees it and the redo-stack erase takes and drops a reference to
 // the freed action (use after free, double free; the callers in the located code keep their
-// own reference); fixed: one reference over both erases (M23).
+// own reference); fixed: one reference over both erases.
 void UndoManager::RemoveAction(UndoAction* action)
 {
     {

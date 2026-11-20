@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxIntersectResult::Contact accessors (restored;
 // Mac TU 468 0x437bd4-0x437cd4; the rest of TU 468, the CRC table, is in
-// VxID.cpp (V1.2)). Win inlines them. mContact is a VincContact (Vinc/VincIntersect.h).
+// VxID.cpp). Win inlines them. mContact is a VincContact (Vinc/VincIntersect.h).
 #include "Vx/VxIntersect.h"
 #include "Vinc/VincIntersect.h"
 #include "Vinc/VincModel.h"

@@ -1052,7 +1052,7 @@ void OpenGLBitmapObject::Update()
     LDD_GL_CATCH
 }
 
-// (M25, see OpenGLTexture.h; at the end of the file so that no LDD_GL_CATCH line moves)
+// see OpenGLTexture.h
 OpenGLUnpackAlignment1::OpenGLUnpackAlignment1()
     : m_saved(4)
 {

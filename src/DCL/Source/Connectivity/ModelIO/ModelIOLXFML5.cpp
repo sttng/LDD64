@@ -441,7 +441,7 @@ void ModelLoaderLXFML5::SplitBrick(SS& scene, SS::Brick* brick, UInt32 refID) //
     }
     // NOTE: the moved parts keep m_brick pointing at the removed brick (not reference
     // counted: it dangles once the brick is released); fixed: they point at their new brick,
-    // and the parts that are not moved at nothing (H12).
+    // and the parts that are not moved at nothing.
     for (UInt32 i = 0; i < brick->m_parts.GetSize(); ++i) {
         UInt32 designID = brick->m_parts[i]->m_designID;
         brick->m_parts[i]->m_brick = 0;
@@ -550,7 +550,7 @@ void ModelLoaderLXFML5::FixPart(SS::Part* part)                             // M
         part->m_designID = 2454;   // NOTE: already done by UpdateDesignID
 
     // NOTE: the corrections below use the first bone without checking that there is one;
-    // fixed: a part without bones is not corrected (H15).
+    // fixed: a part without bones is not corrected.
     if (part->m_bones.IsEmpty())
         return;
     if (m_brickSetVersion <= Version(68) && (part->m_designID == 32059 || part->m_designID == 30249)) {

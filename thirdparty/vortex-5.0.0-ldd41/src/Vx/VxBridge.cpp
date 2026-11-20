@@ -55,7 +55,7 @@ inline MdtBody* modelBody(VincModelID m)
 } // namespace
 
 // The intersect filter of a collision geometry (model ma4): the typed form of
-// VxCollisionGeometry::unk_437f26 (Mac 0x437f26, Win 0x7104b0; V4.4's TU) (names inferred)
+// VxCollisionGeometry::unk_437f26 (Mac 0x437f26, Win 0x7104b0; TU) (names inferred)
 void VxCollisionGeometry::setIntersectFilter(VxIntersectFilter* f)
 {
     mModel->ma4 = (ptrdiff_t)f;

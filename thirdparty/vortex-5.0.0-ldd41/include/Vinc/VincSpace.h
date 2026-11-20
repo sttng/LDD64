@@ -56,7 +56,7 @@ int MEAPI VincSpaceInsertModel(VincSpaceID space, VincModelID m);      /* Mac 0x
 int MEAPI VincSpaceRemoveModel(VincModelID m);                         /* Mac 0x541a34, Win 0x72d2f0 */
 void MEAPI VincSpaceUpdateModel(VincModelID m);                        /* Mac 0x541923, Win 0x72ccb0 */
 void MEAPI VincSpaceUpdateModelWithTime(VincModelID m, MeReal dt, int force); /* Mac 0x54195d, Win 0x72cce0 */
-/* state 2 (VincModelSetState): out of the axis lists (1) / back in (0) (name from V3.2) */
+/* state 2 (VincModelSetState): out of the axis lists (1) / back in (0) (name inferred) */
 void MEAPI VincSpaceModelSetState2(VincModelID m, int isState2);       /* Mac 0x541998, Win 0x72cd10 */
 /* LDD64: `count` models of one space out of its axis lists (1), or nothing done (0: the caller
  * updates them as usual), for a jump; then back in at their new bounds (CxSmallSort::takeOut) */

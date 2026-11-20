@@ -33,7 +33,7 @@ bool OpenGLShader20::Link(OpenGLSharedShader* vertexShader, OpenGLSharedShader* 
     // glLinkProgram), so a program that does not link is used: nothing drawn, GL errors at every
     // glUseProgram / glUniform*; fixed: GL_LINK_STATUS is checked as OpenGLShaderARB::Link does,
     // and a failure is traced and returned, so the factory drops the shader (the path of a
-    // failed compile) and the caller draws without it (M25).
+    // failed compile) and the caller draws without it.
     LDD_GL_TRY
     GLint linked = 0;
     glGetProgramiv(m_program, GL_LINK_STATUS, &linked);

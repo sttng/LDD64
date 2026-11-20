@@ -236,7 +236,7 @@ public:
     }
 
 private:
-    // (not in the original; H13) The bytes of n elements; std::bad_alloc when n elements do not
+    // (not in the original) The bytes of n elements; std::bad_alloc when n elements do not
     // fit in 32 bits or their size in a size_t. The original multiplies in 32 bits, so a huge
     // count allocates a wrapped (small) block and the elements are written past it.
     static size_t ByteSize(UInt64 n)

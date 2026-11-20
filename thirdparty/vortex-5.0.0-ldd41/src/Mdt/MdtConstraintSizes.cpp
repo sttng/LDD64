@@ -1,4 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - size of the largest constraint type (restored, V2.1).
+// Vortex 5.0.0 build 800 "vortexldd41" - size of the largest constraint type (restored).
 // Mac 0x4929de-0x492a79 (static initialiser 0x492a37 / 0x492a62), Win 0x752780.
 #include "Mdt/MdtConstraint.h"
 

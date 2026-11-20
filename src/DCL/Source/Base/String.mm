@@ -25,7 +25,7 @@ inline CFStringRef Empty() { return CFSTR(""); }
 // which returns NULL for a byte above 0x7F; that NULL is then used as the string (or appended /
 // released: CFStringGetLength, CFStringAppend, CFRelease of NULL crash). fixed: if the ASCII
 // conversion fails, a lossy one that widens each byte to one UTF-16 unit (Latin-1, as the Win
-// String does); a NULL `s` gives the empty string (M18).
+// String does); a NULL `s` gives the empty string.
 CFStringRef CreateWithASCII(const char* s)
 {
     CFStringRef r = s ? CFStringCreateWithCString(0, s, kASCII) : 0;
@@ -154,7 +154,7 @@ String::String(const UniChar16* z)                                // 0x288e70
 String::String(const AString& a)                                  // 0x288ee0
     : m_mutable(0), m_charCache(0), m_peakLength(0)
 {
-    m_string = CreateWithASCII(a.c_str());                         // (M18)
+    m_string = CreateWithASCII(a.c_str());
 }
 
 String::String(const char* s, UInt32 length)                      // 0x288f30
@@ -166,13 +166,13 @@ String::String(const char* s, UInt32 length)                      // 0x288f30
         char* tmp = new char[length + 1];
         tmp[length] = 0;
         memcpy(tmp, s, length);
-        m_string = CreateWithASCII(tmp);                           // (M18)
+        m_string = CreateWithASCII(tmp);
         delete[] tmp;
     }
 }
 
 String::String(const char* s)                                     // 0x289000 (no null check)
-    : m_string(CreateWithASCII(s)), m_mutable(0), m_charCache(0), m_peakLength(0) {}   // (M18)
+    : m_string(CreateWithASCII(s)), m_mutable(0), m_charCache(0), m_peakLength(0) {}
 
 String::String(UInt32 count, UniChar16 fill)                      // 0x289040
     : m_mutable(0), m_charCache(0), m_peakLength(0)
@@ -242,7 +242,7 @@ String& String::Assign(const char* s, UInt32 length)              // 0x28cea0
         char* tmp = new char[length + 1];
         tmp[length] = 0;
         memcpy(tmp, s, length);
-        m_string = CreateWithASCII(tmp);                           // (M18)
+        m_string = CreateWithASCII(tmp);
         delete[] tmp;
     }
     return *this;
@@ -416,7 +416,7 @@ String& String::Append(const String& s)                           // 0x289cc0
 
 String& String::Append(const char* s)                             // 0x28d110
 {
-    CFStringRef t = CreateWithASCII(s);                            // (M18)
+    CFStringRef t = CreateWithASCII(s);
     MakeMutable();
     CFStringAppend(m_mutable, t);
     CFRelease(t);
@@ -425,7 +425,7 @@ String& String::Append(const char* s)                             // 0x28d110
 
 String& String::Append(const AString& a)                          // 0x28d020
 {
-    CFStringRef t = CreateWithASCII(a.c_str());                    // (M18)
+    CFStringRef t = CreateWithASCII(a.c_str());
     MakeMutable();
     CFStringAppend(m_mutable, t);
     CFRelease(t);
@@ -564,9 +564,8 @@ String& String::operator<<(bool b)                                // 0x289f30
     return *this;
 }
 
-// LDD64: the decimal digits appended directly. The original formats each number with
-// CFStringCreateWithFormat ("%hu" / "%u" / "%qu", the same text), which made building the brick
-// palette keys of a large model a third of its scene loading on the Mac.
+// LDD64: the decimal digits appended directly, the same text as the original's
+// CFStringCreateWithFormat ("%hu" / "%u" / "%qu") at a fraction of its cost.
 void String::AppendDecimal(UInt64 v)
 {
     UniChar16 digits[20];

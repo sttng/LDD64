@@ -81,7 +81,7 @@ int MEAPI MdtBodyGetAutoDisableAliveWindow(const MdtBody* b);                   
 // --- misc -------------------------------------------------------------------------------------
 void* MEAPI MdtBodyGetUserData(const MdtBody* b);                     // Mac 0x48ae23, Win 0x730090
 void MEAPI MdtBodySetUserData(MdtBody* b, void* data);                // Mac 0x48aefe, Win 0x730600
-void MEAPI MdtBodySetM548(MdtBody* b, MdtBodyContactFn fn, void* data); // Mac 0x48b35a, Win 0x731a60 (name unknown; V4.2: pointer types)
+void MEAPI MdtBodySetM548(MdtBody* b, MdtBodyContactFn fn, void* data); // Mac 0x48b35a, Win 0x731a60 (name unknown; pointer types)
 void MEAPI MdtBodySetGrouping(MdtBody* b, int grouping);              // Mac 0x48b374, Win 0x731aa0
 int MEAPI MdtBodyGetGrouping(const MdtBody* b);                       // Mac 0x48b385
 

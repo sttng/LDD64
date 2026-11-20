@@ -73,6 +73,10 @@
 			isa = PBXBuildFile;
 			fileRef = FBB1CDE135E7156D9F1E74BF /* ldd64_document.icns */;
 		};
+		3FCE9FB458D6F8E8E426906A /* ldraw.xml in Resources */ = {
+			isa = PBXBuildFile;
+			fileRef = B236C5BB7F225B0A7CB49011 /* ldraw.xml */;
+		};
 		EB62F908B48188B9F3A28886 /* ldd64.icns in Resources */ = {
 			isa = PBXBuildFile;
 			fileRef = 7D0734884C899F82C27296DF /* ldd64.icns */;
@@ -13675,6 +13679,12 @@
 			path = ldd64.icns;
 			sourceTree = "<group>";
 		};
+		B236C5BB7F225B0A7CB49011 /* ldraw.xml */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = ldraw.xml;
+			sourceTree = "<group>";
+		};
 		FBB1CDE135E7156D9F1E74BF /* ldd64_document.icns */ = {
 			isa = PBXFileReference;
 			lastKnownFileType = image.icns;
@@ -14829,6 +14839,7 @@
 			isa = PBXGroup;
 			children = (
 				D5AAF6DFA30CECF34835D525 /* Mac */,
+				B236C5BB7F225B0A7CB49011 /* ldraw.xml */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -15981,6 +15992,7 @@
 				046A3FFB9936C9873A800A1F /* MainMenu.xib in Resources */,
 				EB62F908B48188B9F3A28886 /* ldd64.icns in Resources */,
 				1BBDFEB9F50ABC1224851A16 /* ldd64_document.icns in Resources */,
+				3FCE9FB458D6F8E8E426906A /* ldraw.xml in Resources */,
 				B0B76DEF7AB00A2674278B2D /* SavePanelAccessoryView.xib in Resources */,
 				2FCE81469C39235813451C14 /* InfoPlist.strings in Resources */,
 			);

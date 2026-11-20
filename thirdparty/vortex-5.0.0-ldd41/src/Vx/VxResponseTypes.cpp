@@ -2,7 +2,7 @@
 // handlers (restored). Mac TU 515 0x477fa8-0x478500 (file guess: the TU of
 // VxResponseStart_Sensor_Sensor; it also carries the MdtGetMaxConstraintSize header static,
 // initialiser 0x4785c2, and coalesced copies of inline Mdt grouping getters 0x478500-0x4785b6
-// that VxUniverse's print uses - V4.1). Win: one shared scalar deleting dtor 0x70c810 (ICF).
+// that VxUniverse's print uses). Win: one shared scalar deleting dtor 0x70c810 (ICF).
 #include "Vx/VxResponse.h"
 
 namespace Vx {

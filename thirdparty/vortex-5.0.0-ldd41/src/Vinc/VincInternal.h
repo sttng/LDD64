@@ -14,11 +14,11 @@ extern "C" {
 #endif
 
 
-/* ---- triangle passed to the triangle contact generators: V3.6's VincTriangle ---- */
+/* ---- triangle passed to the triangle contact generators: VincTriangle ---- */
 #include "Vinc/VincTriangleContacts.h"
 typedef VincTriangle VincTriangleRef;
 
-/* ---- convex hulls and the Convex geometry: V3.1's Vinc/VincConvexMesh.h (CnvHull, CnvVertex,
+/* ---- convex hulls and the Convex geometry: Vinc/VincConvexMesh.h (CnvHull, CnvVertex,
  * CnvFace, CnvEdge, VincConvexGeometry, VincConvexDesc, CnvPairCache, cnv*, VincConvexMesh*) ---- */
 #ifdef __cplusplus
 }
@@ -39,7 +39,7 @@ int MEAPI VincConvexTriangleContacts(VincGeometryID convex, const MeReal* relTM,
 void MEAPI VincRequestInitDefault(void);                 /* Mac 0x4c24eb (name inferred) */
 extern VincRequest* VincDefaultRequestPtr;         /* Mac 0x77ce74, Win 0xaf2060 */
 
-/* ---- 558e (V3.8): aggregate ("Composite") geometry, src/Vinc/VincAggregateGeometry.cpp ---- */
+/* ---- 558e: aggregate ("Composite") geometry, src/Vinc/VincAggregateGeometry.cpp ---- */
 MeI16 MEAPI VincAggregateGetTypeId(void);                                  /* Mac 0x54b028, Win 0x759cb0 */
 int MEAPI VincAggregateAddElementGeometry(VincGeometryID agg, VincModelID element, MeReal* relTM); /* Mac 0x54b03a, Win 0x759f00 */
 int MEAPI VincAggregateRemoveElementGeometry(VincGeometryID agg, int i);   /* Mac 0x54b0a4, Win 0x759f50 */
@@ -86,8 +86,8 @@ void MEAPI VincGeometryPairRegisterDistanceBoundedFn(int typeA, int typeB, VincD
 void MEAPI VincTetraMassProperties(MeReal* out13, const MeVector3 a, const MeVector3 b, const MeVector3 c); /* Mac 0x549786, Win 0x7ae770 */
 void MEAPI VincSumMassProperties(const MeReal* tetra13, int count, MeReal* out13);  /* Mac 0x54939f, Win 0x7ae040 */
 
-/* ---- 558d (V3.8): the space (VincModelSetState -> VincSpaceModelSetState2, VincSpaceModelIsFrozen
- * (V3.2's VincSpaceModelTestFlag)): Vinc/VincSpace.h ---- */
+/* ---- 558d: the space (VincModelSetState -> VincSpaceModelSetState2, VincSpaceModelIsFrozen
+ * (VincSpaceModelTestFlag)): Vinc/VincSpace.h ---- */
 #ifdef __cplusplus
 }
 #endif
@@ -96,7 +96,7 @@ void MEAPI VincSumMassProperties(const MeReal* tetra13, int count, MeReal* out13
 extern "C" {
 #endif
 
-/* ---- 559a (V3.7): contact simplification: Vinc/VincContactSimplify.h ---- */
+/* ---- 559a: contact simplification: Vinc/VincContactSimplify.h ---- */
 #ifdef __cplusplus
 }
 #endif
@@ -105,7 +105,7 @@ extern "C" {
 extern "C" {
 #endif
 
-/* ---- 558c (V3.7): height field (VincHeightFieldGetTypeId / GetCellRange / GetVertex ...):
+/* ---- 558c: height field (VincHeightFieldGetTypeId / GetCellRange / GetVertex ...):
  * Vinc/VincHeightField.h ---- */
 #ifdef __cplusplus
 }
@@ -115,7 +115,7 @@ extern "C" {
 extern "C" {
 #endif
 
-/* ---- 558a (V3.6): triangle contact generators: Vinc/VincTriangleContacts.h ---- */
+/* ---- 558a: triangle contact generators: Vinc/VincTriangleContacts.h ---- */
 
 /* pair-data pool of the convex pair tests (0x10c-byte objects, VincConvexMeshInteractions.cpp) */
 int MEAPI VincConvexPairDataRelease(VincModelID m1, VincModelID m2, void* data);   /* Mac 0x4bd6c2 */

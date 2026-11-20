@@ -37,7 +37,7 @@
 @end
 #endif
 
-// The LEGOMacWindow content view (WindowMac.mm, R8) answers getDrawingView.
+// The LEGOMacWindow content view (WindowMac.mm) answers getDrawingView.
 @interface NSView (LEGODrawingView)
 - (NSView*)getDrawingView;
 @end

@@ -1,5 +1,5 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - Mdt (dynamics) data structures
-// (restored header offsets, V2.1 full structs).
+// (restored header offsets; full structs).
 //
 // Mdt is C-style code compiled as C++ (Mac TUs 530 tail-552, one static initialiser per file;
 // Win __FILE__ "c:\work\martinc\vortexldd41\vortex\mdt\src\mdtworld.cpp", Mac
@@ -7,7 +7,7 @@
 // reproduce the two layouts: Mac i386 (doubles 4-aligned) and Win MSVC (doubles 8-aligned).
 // Offsets in comments: "+0xMAC / Win +0xWIN" (Win only given where it differs).
 // Checked by static asserts at the end (Mac with an i386 compiler, Win with the zig/MSVC build)
-// and by tests/test_mdt.cpp. Field names are inferred (Karma/MathEngine conventions) unless a
+// and by the restoration's tests. Field names are inferred (Karma/MathEngine conventions) unless a
 // string names them.
 #ifndef MDT_MDTTYPES_H
 #define MDT_MDTTYPES_H
@@ -70,7 +70,7 @@ struct MdtBodyPartitionInfo {
     int lastPartition;  // +0xc level partition that last added this body (MdtPartitionWorld)
 };
 
-// contact callback of a body (VxPart's handler, V4.2): the body and the contact (name inferred)
+// contact callback of a body (VxPart's handler): the body and the contact (name inferred)
 typedef void (*MdtBodyContactFn)(MdtBody* body, MdtConstraint* contact);
 
 struct MdtConstraintNode; // body's list of constraints (world cNodePool, 0xc bytes)

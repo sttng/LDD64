@@ -1,6 +1,6 @@
 /* Vortex 5.0.0 build 800 "vortexldd41" - one triangle against a primitive, appending world-space
  * contacts to an intersect result (restored). Mac 0x4fbfc6-0x4fe7e4 (558a),
- * Win 0x7cea50-0x7cf9c0. Callers: the triangle mesh / height field pair tests (V3.2). All names
+ * Win 0x7cea50-0x7cf9c0. Callers: the triangle mesh / height field pair tests. All names
  * (name inferred). Each copies the triangle into a local VincTriangle in the primitive's frame,
  * calls the contact generator and appends its points in world space while contactCount <
  * contactMaxCount, adding the world normal to result->normal. The originals return a bool (Win sets

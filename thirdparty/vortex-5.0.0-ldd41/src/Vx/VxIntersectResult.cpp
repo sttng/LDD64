@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxIntersectResult (restored).
 // Mac TU 498 0x45c140-0x45c44e (file guess Vx/VxIntersectResult.cpp), Win 0x723190-0x723560.
-// The Contact accessors are V4.4's (src/Vx/VxIntersectResultContact.cpp, Mac TU 468).
+// The Contact accessors are (src/Vx/VxIntersectResultContact.cpp, Mac TU 468).
 #include "Vx/VxIntersect.h"
 #include "Vx/VxCollisionGeometry.h"
 #include "Vx/VxAllocator.h"

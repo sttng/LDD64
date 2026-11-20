@@ -15,7 +15,7 @@ void MEAPI VincCapsuleRegisterLineSegment(void)
 
 /* Mac 0x4e3b4e, Win 0x7db730: the segment against the top end sphere, then the bottom one (a hit
  * counts only on the sphere's outer half: at least hh from the capsule centre), then the shaft
- * cylinder (V3.6's VincLineSegmentSphere / VincLineSegmentCylinder). A capsule with hh < 1e-14 is
+ * cylinder (VincLineSegmentSphere / VincLineSegmentCylinder). A capsule with hh < 1e-14 is
  * never hit (NOTE: both builds, even though it is a sphere). */
 int MEAPI VincCapsuleLineSegment(VincModelID m, const MeVector3 p0, const MeVector3 p1, VincLineSegResult* r)
 {

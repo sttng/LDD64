@@ -25,7 +25,7 @@ public:
     BasicString(const C* s, UInt32 n) : m_data(0) { Assign(s, n); }
     // NOTE: the original counts the shares with plain ++ / -- (here, operator=, Reserve and
     // ReleaseBuffer), so a buffer shared by strings of two threads can be freed twice or leak;
-    // fixed: atomic increment / decrement (AddShare / DropShare) (M21).
+    // fixed: atomic increment / decrement (AddShare / DropShare).
     BasicString(const BasicString& o) : m_data(o.m_data) { if (m_data) AddShare(Head()); }
     ~BasicString() { ReleaseBuffer(); }
 
@@ -33,7 +33,7 @@ public:
     {
         if (o.m_data != m_data) {
             if (o.m_data)
-                AddShare(o.Head());                          // (M21)
+                AddShare(o.Head());
             ReleaseBuffer();
             m_data = o.m_data;
         }
@@ -65,7 +65,7 @@ public:
             if (!discard) {
                 keep = Head()->length;
             } else {
-                ReleaseBuffer();    // (M21) frees the block if the other sharer let go meanwhile
+                ReleaseBuffer();    // frees the block if the other sharer let go meanwhile
                 keep = 0;
             }
             UInt32 c = (n + 1) | 0x20;
@@ -266,7 +266,7 @@ private:
 
     Header* Head() const { return (Header*)m_data - 1; }
 
-    // (M21) shares + 1 owners; DropShare returns the new count, -1 = the last owner let go.
+    // shares + 1 owners; DropShare returns the new count, -1 = the last owner let go.
     static void AddShare(Header* h)
     {
 #if defined(_WIN32)
@@ -302,7 +302,7 @@ private:
     void ReleaseBuffer()
     {
         if (m_data) {
-            if (DropShare(Head()) < 0)                       // (M21) was 0: the only owner
+            if (DropShare(Head()) < 0)                       // was 0: the only owner
                 delete[] (char*)Head();
             m_data = 0;
         }

@@ -14,14 +14,14 @@ class VxConstraint;
 // --------------------------------------------------------------------------------------
 // VxStepperBase (Mac vtable 0x75dd88, 15 slots; Win 14; class id 0x105 Mac 0x453914)
 // Mac 0x34 bytes, Win 0x4c (MSVC sizeof 0x50: rounded to the double alignment). The ctor is
-// inline (expanded in VxUniverse's, Mac 0x4848fa). VxFrame (src/Vx/VxFrame.cpp, V4.1) keeps five
+// inline (expanded in VxUniverse's, Mac 0x4848fa). VxFrame (src/Vx/VxFrame.cpp) keeps five
 // copies of its stepper list, each sorted by one of the five priorities below, and calls slot 8
 // on the first, 9 / 10 / 11 on the next three and 12 (+ the timings 13 / 14) on the last.
 class VxStepperBase : public VxBase {
 public:
-    VX_DECLARE_ALLOCATOR();                             // delete Mac 0x453cbe, Win 0x70dbd0 (V4.1)
+    VX_DECLARE_ALLOCATOR();                             // delete Mac 0x453cbe, Win 0x70dbd0
     static int getStaticClassType();                    // Mac 0x453914: 0x105
-    static const VxArray<int>& getStaticClassTypes();   // Mac 0x454afa (name inferred; V1.3 addition)
+    static const VxArray<int>& getStaticClassTypes();   // Mac 0x454afa (name inferred)
     VxStepperBase() : mTimeStep(0.02f), mStepperParam0(5), mStepperParam1(5), mStepperParam2(5),
                       mStepperParam3(5), mStepperParam4(5) {}
     virtual bool isOfType(int type) const;              // slot 0 Mac 0x454e82, Win 0x70ef00
@@ -44,7 +44,7 @@ public:
 
     VxReal getTimeStep() const { return mTimeStep; }
     // the five step priorities as the sort keys VxFrame binds (Mac 0x456332 / 0x45634a /
-    // 0x456362 / 0x45637a / 0x456392: (VxReal)param) (V4.1) (names inferred)
+    // 0x456362 / 0x45637a / 0x456392: (VxReal)param) (names inferred)
     VxReal getStepPriority0() const;
     VxReal getStepPriority1() const;
     VxReal getStepPriority2() const;
@@ -80,7 +80,7 @@ public:
         kCollisionGeometryRemoved = 6,    // slot 4
         kAssemblyAdded = 7,               // slot 5
         kAssemblyRemoved = 8,             // slot 5
-        kEventNone = 0                    // (V0.2 name)
+        kEventNone = 0                    // (earlier name)
     };
 };
 
@@ -105,7 +105,7 @@ public:
     Collection mCollectionSubscribers;
 
     // the original's notification sequence (inlined at every sender): the subscribers of the
-    // event, then the all-event subscribers, each list copied first (V4.1)
+    // event, then the all-event subscribers, each list copied first
     template <class O>
     static void notifyList(typename Collection::List* l, void (Subscriber::*fn)(T*, Event, O*), T* owner, Event e, O* object)
     {

@@ -33,7 +33,7 @@ public:
     void push();                                    // Mac 0x4ab1ee, Win 0x7b9870
     void pop();                                     // Mac 0x4ab1d2, Win 0x7b9850
     void* overflowAlloc(int size, int align);       // Mac 0x4ab24a, Win 0x7b98b0
-    void* overflowAlloc16(int size);                // Mac 0x4ab2fa, Win 0x7b9bd0 (not Win 0x752c60, a V0.1 mispairing)
+    void* overflowAlloc16(int size);                // Mac 0x4ab2fa, Win 0x7b9bd0 (not Win 0x752c60)
 
     char** mMarks;      // +0x04 (10 entries at first, MeMemoryAPI)
     char* mCurrent;     // +0x08

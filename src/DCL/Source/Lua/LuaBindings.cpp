@@ -172,7 +172,7 @@ void AttachLuaObject(LuaObject& table, BindableLuaObject* object)          // Ma
     object->BindLuaObject(table);
 }
 
-// (not in the original; H23) True for a box made by AttachLuaObject: a full userdata whose
+// (not in the original) True for a box made by AttachLuaObject: a full userdata whose
 // metatable is the registry's _GarbageCollector (Lua scripts cannot set a userdata's metatable).
 static bool IsAttachedBox(LuaObject& box)
 {
@@ -193,7 +193,7 @@ static bool IsAttachedBox(LuaObject& box)
 // NOTE: DestroyLuaObject and GetBoundObject take any userdata in "__object" (or the object
 // itself) for a BindableLuaObject (both builds): a script that stores another userdata there
 // (or passes one) has foreign memory used as a C++ object; fixed: only boxes made by
-// AttachLuaObject are taken (H23).
+// AttachLuaObject are taken.
 void DestroyLuaObject(LuaObject& object)                                   // Mac 0x2cfc80, Win 0x445bf0
 {
     if (object.IsTable()) {

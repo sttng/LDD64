@@ -17,10 +17,10 @@
 //   Win vtable 0xa2a4e4 {base 0-6, 0x52bc50, base 0x5c79c0, 0x52bb30, 0x52baa0, 0x52bb50,
 //       0x52bc20, 0x52bcf0, 0x52bda0, 0x52be30, 0x52bec0, sdd 0x52ba00}; secondary 0xa2a530
 //       {0x52c0a0}.
-//   NOTE: the Win slots 9-12 are one off against the work files' pairing (Win 0x52bb30 is
+//   NOTE: the Win slots 9-12 are one off against the obvious pairing (Win 0x52bb30 is
 //   GetEngineTransform, 0x52baa0 SetEngineTransform, 0x52bb50 IsMoving, 0x52bc20 Stop).
-// The joints and geometries read the VxPart at +0xd4 (Mac 0x3a2520 "*(body + 0xd4)";
-// tools/diff/OrigVortex.h kRigidPart). Every name is inferred unless noted.
+// The joints and geometries read the VxPart at +0xd4 (Mac 0x3a2520 "*(body + 0xd4)"). Every name is
+// inferred unless noted.
 #pragma once
 #include "LEGO/Types.h"
 #include "Geometry.h"

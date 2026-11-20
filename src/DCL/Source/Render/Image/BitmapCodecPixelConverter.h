@@ -4,7 +4,7 @@
 // BitmapPixelConverter (routine per (source bpp, destination bpp)). All names inferred.
 // TU 300: Mac 0x2aac30-0x2af5df, Win 0x699160-0x6991df (out-of-line ctors) + 0x69f9b0-0x6a2cff.
 // Routines are cdecl fn(width, height, source, destination); the structure layouts match the
-// original (tests/diff/diff_bitmapcodec.cpp calls the Win routines with them).
+// original (the restoration's diff tests call the Win routines with them).
 #pragma once
 #include "LEGO/Types.h"
 #include "Color.h"

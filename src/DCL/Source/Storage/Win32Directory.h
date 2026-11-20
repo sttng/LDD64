@@ -55,7 +55,7 @@ public:
     virtual bool       DoDirectoryExists(const BasicArray<String>& path);     // Win 0x43d9e0
     virtual bool       DoFileExists(const String& name);                      // Win 0x43dad0
     virtual void       DoEnumerate(const String& pattern, DescriptorSet& entries); // Win 0x43db60
-    // (not in the original; M2) FlushFileBuffers, then MoveFileEx over `to` (Directory.h).
+    // (not in the original) FlushFileBuffers, then MoveFileEx over `to` (Directory.h).
     virtual bool       DoSupportsReplaceFile() const { return true; }
     virtual bool       DoReplaceFile(const String& from, const String& to);
 

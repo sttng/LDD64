@@ -250,7 +250,7 @@ void ParseBone(Parser& parser, const char** attributes)
     Primitive& primitive = *parser.m_primitive;
     // NOTE: boneId grows the arrays to boneId + 1 unchecked (both builds; 0xFFFFFFFF wraps the
     // size to 0 and the bone is written past it); fixed: a boneId from kMaxBones on fails the
-    // primitive (H13).
+    // primitive.
     const UInt32 kMaxBones = 1024;
     if (boneId >= kMaxBones) {
         Fail(parser);

@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxAngular1Position3 (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxAngular1Position3 (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x184 (Mac 0x42405c).
 #ifndef VX_VXANGULAR1POSITION3_H
 #define VX_VXANGULAR1POSITION3_H

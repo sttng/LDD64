@@ -177,7 +177,7 @@ bool VxLineSegIntersect(VxUniverse* universe, const VxVector3& from, const VxVec
 class VxDynamicsContact {
 public:
     VxReal getPenetration() const;                      // Mac 0x44609c -> MdtContact +0xb50 (name inferred)
-    bool setEnabled(bool enable);                       // Mac 0x44604c, Win 0x7251e0 (V1.2) (name inferred)
+    bool setEnabled(bool enable);                       // Mac 0x44604c, Win 0x7251e0 (name inferred)
     MdtContactID getMdtContact() const { return (MdtContactID)this; }
 };
 

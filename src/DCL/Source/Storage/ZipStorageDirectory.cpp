@@ -47,7 +47,7 @@ const UInt32 kDataDescriptorSize     = 0x0c;
 // vtable Mac 0x7641a0 {D1 0x10d350, D0 0x110ee0}, Win 0xa204dc {sdd 0x443790}.
 typedef BasicMap<UInt32, ZipFileHeader*, Less<UInt32> > HeaderMap;
 
-// (not in the original; H5) A path component of an entry name that stays inside its folder
+// (not in the original) A path component of an entry name that stays inside its folder
 // when the archive is copied out: not "." or "..", and no '\' or ':' (a Windows path separator
 // or drive).
 bool IsSafeEntryName(const String& component)
@@ -272,7 +272,7 @@ bool ZipTreeNode::DeleteChildren(bool force, ZipStorageVolume* volume)
     return true;
 }
 
-// (not in the original; M5) True when `node` or an entry below it has open file objects.
+// (not in the original) True when `node` or an entry below it has open file objects.
 static bool HasOpenFiles(const ZipTreeNode* node)
 {
     if (node->m_header && node->m_header->m_openCount != 0)
@@ -290,7 +290,7 @@ static bool HasOpenFiles(const ZipTreeNode* node)
 // objects, and their later Flush writes at stale offsets (corrupt archive). Through the path API
 // (Directory::Delete) the open file's live parent directories already block it; the storage
 // slot itself (DoDelete, DoMove) does not. Fixed: refused while any file below the child is
-// open (M5).
+// open.
 bool ZipTreeNode::DeleteChild(const String& name, bool force, ZipStorageVolume* volume)
 {
     ChildMap::Iterator it = m_children.Find(name);
@@ -417,7 +417,7 @@ bool ZipStorageVolume::Mount(bool /*create*/, const String& name, Directory* par
         // archive (both builds): a reader trusts them (a size of 0xFFFFFFFE makes ReadFile's
         // buffer wrap); fixed: the entry's local header and data must lie before the central
         // directory, a stored entry's two sizes must agree, a deflated entry cannot expand more
-        // than deflate can (1032:1), and no two entries may share a local header (H2).
+        // than deflate can (1032:1), and no two entries may share a local header.
         if ((UInt64)header->m_localOffset + kLocalHeaderSize + header->m_compressedSize > m_centralOffset ||
             (header->m_method == 0 && header->m_compressedSize != header->m_uncompressedSize) ||
             (header->m_method == 8 &&
@@ -437,7 +437,7 @@ bool ZipStorageVolume::Mount(bool /*create*/, const String& name, Directory* par
         // NOTE: an entry that falls between two others is linked behind the next larger one
         // (and one in front of the last entry dereferences its null successor); archives whose
         // central directory follows the local order only ever append (both builds); fixed: it
-        // is linked in front of the next larger one (H1).
+        // is linked in front of the next larger one.
         HeaderMap::Iterator it = byLocalOffset.LowerBound(header->m_localOffset);
         if (it == byLocalOffset.Begin()) {
             header->m_localNext = m_localFirst;
@@ -499,7 +499,7 @@ bool ZipStorageVolume::Mount(bool /*create*/, const String& name, Directory* par
         // is freed at the end of this iteration and the next entry linked beside it writes to
         // it (use after free); "." / ".." components and names with '\' or ':' are taken as they
         // are, so copying the archive out (StartMode's database update) writes outside the
-        // target folder (both builds); fixed: such an archive is not mounted (H1, H5).
+        // target folder (both builds); fixed: such an archive is not mounted.
         if (!failed) {
             ZipTreeNode* node = m_rootNode;
             UInt32 start = 0;
@@ -1459,7 +1459,7 @@ bool ZipStorageFile::LoadData()
 // NOTE: the original refuses the write-back when this file object was opened read-only; as
 // OnFinalRelease flushes through whichever object of a modified entry goes last, a reader
 // closed after the writer drops the writer's changes (the destructor then frees the data);
-// fixed: the write-back depends on the archive being writable, not on this object's mode (M5).
+// fixed: the write-back depends on the archive being writable, not on this object's mode.
 bool ZipStorageFile::Flush()
 {
     if (!m_volume->IsWritable())

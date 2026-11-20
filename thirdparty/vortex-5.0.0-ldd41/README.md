@@ -21,7 +21,7 @@ function prefixes).
 | `include/<Module>/` | public headers (`Me`, `Vx`, `VxData`, `Mdt`, `Kea`, `Vinc`, `Cx`), one per class family |
 | `include/Vx/VxPlatform.h` | `VxReal` = double, `VxReal3/4/4x4`, `VX_STATIC_ASSERT` |
 | `include/Mdt/MdtTypes.h`, `include/Vinc/VincTypes.h` | Mdt / Vinc handles and the struct layouts known from both builds |
-| `include/{Vx,Kea,Cx}/detail/*RttiSkeletons.h` | generated skeletons of the RTTI classes without a header of their own (bases, `vfNN` slots with Mac / Windows addresses) |
+| `include/{Vx,VxData,Kea,Cx}/detail/*RttiSkeletons.h` | generated skeletons of the RTTI classes without a header of their own (bases, `vfNN` slots with Mac / Windows addresses) |
 | `src/<Module>/` | the sources, one file per original source where known; private headers next to them |
 
 The modules: **Me** (C, the MathEngine heritage: memory, messages, pools, math, profiler; on

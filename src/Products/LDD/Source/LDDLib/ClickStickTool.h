@@ -174,7 +174,7 @@ protected:
     virtual void OnFinalRelease();
 
 private:
-    friend struct ClickStickToolTestAccess;   // (tests/test_clickstick.cpp)
+    friend struct ClickStickToolTestAccess;   // (the restoration's tests)
 
     // The drag scene from element bricks (palette bricks with their transforms, materials,
     // decorations and behaviors); the grip at the bottom centre unless `keepPivot` and the

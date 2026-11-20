@@ -7,7 +7,7 @@
  * VincIntersectResult, VincInit, VincTerm, VincSafeTime, VincSpace, VincFramework); the rest
  * is inferred from the MathEngine Mcd API (marked).
  *
- * Usage for pair tests (V3.3-V3.7):
+ * Usage for pair tests:
  *   int MyIntersect(VincModelPair* p, VincIntersectResult* r) {
  *       VincModelID m1 = p->model1, m2 = p->model2;          (m1 has the first registered type)
  *       MeReal* tm1 = VincModelGetTransformPtr(m1);
@@ -88,7 +88,7 @@ typedef struct McdIntersectResult {  /*  Mac    Win */
     MeVector3 normal;                /* +0xf0  +0x110 average normal */
     int m108;                        /* +0x108 +0x128 */
     MeReal time;                     /* +0x10c +0x130 time of impact (swept intersection) */
-    VinPool* contactPool;            /* +0x114 +0x138 scratch contacts of VincAggregateIntersect (V3.8) */
+    VinPool* contactPool;            /* +0x114 +0x138 scratch contacts of VincAggregateIntersect */
 } VincIntersectResult;
 
 /* ---- safe time result ---- */
@@ -102,7 +102,7 @@ typedef struct McdDistanceResult {
     struct McdModelPair* pair;       /* +0x00 */
     MeReal distance;                 /* +0x04 / +0x08 DBL_MAX: no distance function */
     MeReal m10;                      /* +0x0c / +0x10 DBL_MAX: no distance function */
-    /* (V3.8, from the composite distance Win 0x75a9a0, which copies them per model) */
+    /* (from the composite distance Win 0x75a9a0, which copies them per model) */
     MeVector3 point1;                /* Win +0x18 on model1 */
     MeVector3 point2;                /* Win +0x30 on model2 */
     int element1;                    /* Win +0x48 (-1) */
@@ -119,8 +119,8 @@ typedef struct McdLineSegResult {
                                         an aggregate hit (an int holding the pointer in both binaries;
                                         PORT64: the pointer itself, the same 4 bytes on 32-bit) */
     int element;                     /* +0x40 / +0x44 hit element (triangle user id), -1 when nothing was hit;
-                                        in: a triangle list re-tests it first (V3.6) */
-    int firstHit;                    /* +0x44 / +0x48 > 0: stop at the first triangle hit (V3.6, Mac 0x4f52ad) */
+                                        in: a triangle list re-tests it first */
+    int firstHit;                    /* +0x44 / +0x48 > 0: stop at the first triangle hit (Mac 0x4f52ad) */
 } VincLineSegResult;
 
 /* ---- model pair (0x30 bytes on both) ---- */

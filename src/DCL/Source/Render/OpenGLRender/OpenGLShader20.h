@@ -7,7 +7,7 @@
 #pragma once
 #include "OpenGLShader.h"
 #include "LEGO/String.h"
-#include "Trace.h"   // the link-status trace of Link (M25; here: no line added to the .cpp)
+#include "Trace.h"   // the link-status trace of Link
 
 namespace LEGO {
 

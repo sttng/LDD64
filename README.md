@@ -4,7 +4,7 @@ The restored C++ source of LEGO Digital Designer 4.3.11 with current third-party
 building a 64-bit program for **Windows**, **macOS** and **Linux** (Wayland and X11).
 
 LDD64 is version **4.64.0** on every platform. The About box shows "4.64", and saved models carry
-`versionMajor="4" versionMinor="64"`, which LDD 4.3.11 ignores when loading. 
+`versionMajor="4" versionMinor="64"`, which LDD 4.3.11 ignores when loading.
 
 | | Windows | macOS | Linux |
 |---|---|---|---|
@@ -71,26 +71,32 @@ cmake --build build/linux
   launcher and the `.lxf` / `.lxfml` file types.
 
 **macOS.** Build the `LEGO Digital Designer` scheme of `XCode/LDD64.xcodeproj`; it builds the
-libraries and plug-ins with the app, as Release. It is signed ad hoc. If the Quick Look extensions don't load,
-set a team (a free Personal Team is enough) for the app and the `LXFPreview` / `LXFThumbnail`
-targets.
+libraries and plug-ins with the app, as Release. It is signed ad hoc. If the Quick Look
+extensions don't load, set a team (a free Personal Team is enough) for the app and the
+`LXFPreview` / `LXFThumbnail` targets.
 
 The application and model-file icons on all platforms are LDD64's red brick (`ldd64.ico`,
 `ldd64_document.ico`, and `Mac/ldd64.icns`, `Mac/ldd64_document.icns` in
-`src/Products/LDD/Resources`).
+`src/Products/LDD/Resources`). The macOS app icon puts it on a yellow tile, drawn to Apple's
+app icon guidelines; its sources, including a layered Icon Composer version, are in `Mac/Icon`.
 
 ## Running
 
 The program needs the data of an original LDD 4.3 installation, which is not in this repository:
-* **Windows:** put `LDD64.exe` in the installation folder, next to `Assets.lif`. The original
-  `LDD.exe` can stay. The brick database comes from the original installer (in `%APPDATA%`).
+* **Windows:** put `LDD64.exe` and the `ldraw.xml` built next to it in the installation folder,
+  next to `Assets.lif`. The original `LDD.exe` can stay. The brick database comes from the
+  original installer (in `%APPDATA%`).
 * **macOS:** copy the original bundle's `Contents/Resources` data into the built bundle:
   `Assets.lif`, `Sound.lif`, `Help/`, `preferences.ini`, `Cursor*.png`. On another
   Mac, open the app once with Open from the context menu, or run
   `xattr -dr com.apple.quarantine "LEGO Digital Designer.app"`.
-* **Linux:** copy `Assets.lif`, `Sound.lif`, `Help/` and `preferences.ini` next to
-  `ldd64`. User data goes to `~/.local/share/LEGO Company/LEGO Digital Designer/`. To open a
-  model, run `ldd64 model.lxf` or drop the file on the window.
+* **Linux:** copy `Assets.lif`, `Sound.lif`, `Help/` and `preferences.ini` next to `ldd64`. User
+  data goes to `~/.local/share/LEGO Company/LEGO Digital Designer/`. To open a model, run
+  `ldd64 model.lxf` or drop the file on the window.
+
+**LDraw mapping.** `src/Products/LDD/Resources/ldraw.xml` is the community LDraw ↔ LEGO mapping
+(2025-08-11, http://slswww.free.fr/ldraw.xml), much newer than the original's. The builds put it
+next to the program (in the app bundle on macOS); it is used for LDraw import and export.
 
 **Start screen and About box (optional).** `src/Products/LDD/Resources/Assets` holds the two
 pictures at their paths in `Assets.lif`: `Graphics/StartScreen/start-screen.png` and
@@ -134,10 +140,10 @@ with software OpenGL.
 | Picking | A spatial index for `Scene::Pick` (every connection test). It visits the same elements in the same order. |
 | XML | Text is split in one pass. Reading a 131,072-brick model took over two minutes before. |
 | Memory | Compact connections, lazy Vortex tables, pooled collision data, shared equal vertex buffers. 70,000 loose bricks peak at 2.16 GB instead of 2.51 GB. |
-| 3D view | Meshes outside the view are skipped after the original's sort; material changes are batched. A frame inside 70,000 bricks takes 50 ms instead of 1 s. The `ViewDistance`, `ScaledWheelZoom`, `FastNavigation` and level-of-detail settings. |
+| 3D view | Meshes outside the view are skipped after the original's sort; material changes are batched. A frame inside 70,000 bricks takes 50 ms instead of 1 s. New settings: `ViewDistance`, `ScaledWheelZoom`, `FastNavigation`, level of detail. |
 | Broad phase (Vortex) | No pair table that grows with the square of the objects; search trees for inserting objects; a part disables its geometries' pairs once. Loading 70,000 bricks takes about 30 s instead of 3 min. |
 | Carrying, pasting | Large groups' boxes jump through the broad phase instead of being walked; faster snap searches. |
-| Loading | Each inserted brick's test box moves through the search trees; a batch's accepted bricks form one pair group. 262,144 bricks load in 40 s instead of 57 s. On the Mac, numbers are read with one reused number formatter instead of a new one each. |
+| Loading | Each inserted brick's test box moves through the search trees; a batch's accepted bricks form one pair group; palette bricks are looked up once per kind of brick. 262,144 bricks load in 40 s instead of 57 s. On the Mac, numbers are read and written without a CoreFoundation formatter per number. |
 | Saving | The LXFML writer looks refIDs up instead of copying maps. Saving 524,288 bricks takes 35 s instead of about 5 min. |
 | Building guide | Occlusion tests draw only bricks that can hide the brick; the main loop wakes for each test; substeps are found by hash; swept collision tests use the search trees. 16,384 bricks take 45 s instead of 326 s; 262,144 take 33 min instead of 4+ h. |
 

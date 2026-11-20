@@ -62,7 +62,7 @@ int MEAPI VincCapsuleSphereSafeTime(VincModelPair* pair, MeReal maxTime, VincSaf
 int VincCapsuleSphereContact(MeReal* sep, MeReal* n, MeReal* point, MeI16* dims, const MeReal* pad,
                              const MeReal* r, const MeReal* hh, const MeReal* sr, const MeReal* c, int* element);
 
-/* ---- V3.8 (558e) helpers called here; implemented by V3.8 (cdecl on Win) ---- */
+/* ---- (558e) helpers called here (cdecl on Win) ---- */
 /* Mac 0x545192, Win 0x7e8ac0: candidate contact points of box 2 (rel = box 2 in box 1's frame,
  * half extents r2) against box 1 (r1), in box 1's frame, appended at *cursor */
 void VincBoxClipBoxPoints(MeReal** cursor, const MeReal* rel, const MeReal* r1, const MeReal* r2, MeReal pad);

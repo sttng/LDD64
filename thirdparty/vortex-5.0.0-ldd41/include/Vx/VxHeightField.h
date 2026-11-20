@@ -2,7 +2,7 @@
 // src/Vx/VxHeightField.cpp = Mac TU 493). Mac vtable 0x75dee8 (13 + 4 slots); class id 0x12f.
 // Mac 0xb8 bytes (new(0xb8), LEGO VortexPhysicsGeometrySampledHeightField Mac 0x3a7080), Win 0xd8.
 // A regular grid of (xCells + 1) x (yCells + 1) heights centred on the origin (Vinc "RGHeightField",
-// type 8, V3.7). The glue fills mHeights directly (row-major, mXCount per row), then calls build().
+// type 8). The glue fills mHeights directly (row-major, mXCount per row), then calls build().
 // Win only (dead-stripped on the Mac, not reached by LDD, not restored): the deformable API
 // (setHeights 0x7124e0, setUseExtendedBoundingBox / setSurfaceThickness 0x711d60 / 0x711dc0,
 // normals 0x712d30 ..), the BMP constructor 0x713aa0 + CreateHeightMatrixFromBmp 0x713570,

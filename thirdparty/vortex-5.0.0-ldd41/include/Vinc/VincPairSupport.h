@@ -1,19 +1,19 @@
-/* Vortex 5.0.0 build 800 "vortexldd41" - functions of other Vinc items that the V3.5 / V3.6 pair
+/* Vortex 5.0.0 build 800 "vortexldd41" - functions of other Vinc items that the pair
  * tests call (implemented by the owning items below). Names inferred except VincContactSimplify
  * (string in both binaries).
  *
  *   function                       Mac        Win        owner
- *   VincContactSimplify            0x54f6a8   0x756dc0   V3.7 (559a)  MEAPI
- *   VincClipSegmentAddPoints       0x544db7   0x7e7100   V3.8 (558e)  cdecl
- *   VincClipSegmentAddInnerPoints  0x544e97   0x7e7030   V3.8 (558e)  cdecl
- *   VincCylinderTriangleContacts   0x545a7e   0x7e76c0   V3.8 (558e)  cdecl (VincTriangleContacts.h)
- *   VincSphereTriangleContact      0x548776   0x7e7230   V3.8 (558e)  cdecl (VincTriangleContacts.h)
- *   VincEllipsoidSafeTime          0x4dc9ee   0x81c740   V3.4 (557e)  MEAPI
- * declared by V3.5 (557f callers):
- *   VincContactSimplifyResult      0x5501e5   0x757180   V3.7 (559a)  MEAPI
- *   VincClipSegmentCylinderAddPoints      0x544fa2  0x7e60f0  V3.8 (558e)  cdecl
- *   VincClipSegmentCylinderAddInnerPoints 0x545088  0x7e6010  V3.8 (558e)  cdecl
- *   VincConjugateGradientMinimize  0x54ac77   0x81e0e0   V3.8 (558e)  cdecl
+ *   VincContactSimplify            0x54f6a8   0x756dc0   559a         MEAPI
+ *   VincClipSegmentAddPoints       0x544db7   0x7e7100   558e         cdecl
+ *   VincClipSegmentAddInnerPoints  0x544e97   0x7e7030   558e         cdecl
+ *   VincCylinderTriangleContacts   0x545a7e   0x7e76c0   558e         cdecl (VincTriangleContacts.h)
+ *   VincSphereTriangleContact      0x548776   0x7e7230   558e         cdecl (VincTriangleContacts.h)
+ *   VincEllipsoidSafeTime          0x4dc9ee   0x81c740   557e         MEAPI
+ * declared for the 557f callers:
+ *   VincContactSimplifyResult      0x5501e5   0x757180   559a         MEAPI
+ *   VincClipSegmentCylinderAddPoints      0x544fa2  0x7e60f0  558e         cdecl
+ *   VincClipSegmentCylinderAddInnerPoints 0x545088  0x7e6010  558e         cdecl
+ *   VincConjugateGradientMinimize  0x54ac77   0x81e0e0   558e         cdecl
  * The Win conventions are from the disassembly (ret N); the cdecl ones are internal helpers
  * shared between Vinc files. */
 #ifndef VINC_VINCPAIRSUPPORT_H
@@ -26,7 +26,7 @@
 extern "C" {
 #endif
 
-/* VincContactSimplify / VincContactSimplifyResult (V3.7): Vinc/VincContactSimplify.h */
+/* VincContactSimplify / VincContactSimplifyResult: Vinc/VincContactSimplify.h */
 
 /* Clip the segment p + t dir, t in [-1, 1], against the half space z <= 0 (invDirZ = 1 / dir z)
  * and append both end points of the remaining part to *cursor (advanced by 2 points). */
@@ -47,7 +47,7 @@ void VincClipSegmentCylinderAddPoints(MeReal** cursor, const MeReal* p, const Me
 void VincClipSegmentCylinderAddInnerPoints(MeReal** cursor, const MeReal* p, const MeReal* dir, const MeReal* r,
                                            MeReal h, const MeReal* tLo, const MeReal* tHi);
 
-/* Mac 0x54ac77, Win 0x81e0e0 (V3.8, src/Vinc/VincMinimize.c): Polak-Ribiere conjugate-gradient
+/* Mac 0x54ac77, Win 0x81e0e0 (src/Vinc/VincMinimize.c): Polak-Ribiere conjugate-gradient
  * minimisation of f over n <= 4 variables starting at x (at most 100 line searches with tolerance
  * lineTol; stops when 2 |f1 - f0| <= ftol (|f1| + |f0| + 1e-10)); returns the minimum, x = its
  * position (Numerical Recipes frprmn, with the quirks listed in VincMinimize.c) (name inferred) */

@@ -178,7 +178,7 @@ bool XMLDOMNode::Save(const Path& path) const
 // Win 0x533110 / 0x5333e0 / 0x533510). (names inferred)
 // ---------------------------------------------------------------------------
 
-// (not in the original; H17) The deepest element nesting the DOM builders accept.
+// (not in the original) The deepest element nesting the DOM builders accept.
 static const UInt32 kMaxXMLDepth = 256;
 
 // Parse state handed to Expat as user data. Mac: root +0x00, stack +0x04 (BasicDeque),
@@ -211,7 +211,7 @@ void XMLCALL XMLDOMNodeParser::OnStartElement(void* userData, const XML_Char* na
     XMLDOMNodeParser* state = static_cast<XMLDOMNodeParser*>(userData);
     // NOTE: the nesting is not limited (both builds): a deeply nested document builds a tree
     // that the recursive destructor and Write overflow the stack on; fixed: the parse fails
-    // beyond kMaxXMLDepth levels (H17), here and in the AString builder.
+    // beyond kMaxXMLDepth levels, here and in the AString builder.
     if (state->m_stack.GetSize() >= kMaxXMLDepth) {
         XML_StopParser(*state->m_parser, XML_FALSE);
         return;
@@ -512,7 +512,7 @@ struct XMLDOMNodeAStringParser {
 void XMLCALL XMLDOMNodeAStringParser::OnStartElement(void* userData, const XML_Char* name, const XML_Char** atts)
 {
     XMLDOMNodeAStringParser* state = static_cast<XMLDOMNodeAStringParser*>(userData);
-    if (state->m_stack.GetSize() >= kMaxXMLDepth) {   // (H17, see XMLDOMNodeParser)
+    if (state->m_stack.GetSize() >= kMaxXMLDepth) {   // (see XMLDOMNodeParser)
         XML_StopParser(*state->m_parser, XML_FALSE);
         return;
     }

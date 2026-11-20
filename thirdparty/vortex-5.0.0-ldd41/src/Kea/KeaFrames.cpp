@@ -602,7 +602,7 @@ MdtKeaParameters* MEAPI MdtKeaFramesGetSlotParameters(MdtKeaFrames* f, int slot)
 
 // Mac 0x4af6de, Win 0x75f270 ("MdtKeaStep")
 // NOTE: the Win build first checks the FLEXlm license of the "Vortex Toolkit" feature (every
-// 0x2b3 steps once licensed); the restored code is the licensed path (V0.3; licensing is V6).
+// 0x2b3 steps once licensed); the restored code is the licensed path (licensing is V6).
 void MEAPI MdtKeaStep(MdtKeaFrames* frames)
 {
     InternalConstraintFrames* f = Frames(frames);

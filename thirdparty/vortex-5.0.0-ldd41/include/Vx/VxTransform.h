@@ -1,5 +1,5 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxTransform (restored header; out-of-line
-// members Mac 0x47f740-0x4800f2, src/Vx/VxTransform.cpp, V1.1).
+// members Mac 0x47f740-0x4800f2, src/Vx/VxTransform.cpp).
 // A 4x4 VxReal matrix, row-major, 128 bytes, no vtable (VxEntity::getTransform Mac 0x4478aa copies
 // 16 doubles). Rows 0..2 are the rotated axes, row 3 the translation (the glue reads +0x60/+0x68/
 // +0x70, Mac TU 435 0x3abc30); column 3 is (0,0,0,1). Points are row vectors (p' = p * M), so
@@ -20,11 +20,11 @@ struct VxEulerAngles {
     int order;       // +0x18
 };
 
-// Mac 0x44810c: Shoemake Eul_ToHMatrix: rotation part of out from ea (src/Vx/VxEulerAngles.cpp,
-// V4.2) (name inferred)
+// Mac 0x44810c: Shoemake Eul_ToHMatrix: rotation part of out from ea (src/Vx/VxEulerAngles.cpp)
+// (name inferred)
 void VxEulerAnglesToTransform(const VxEulerAngles& ea, class VxTransform& out);
 // Mac 0x447df8, Win 0x752570: Shoemake Eul_FromHMatrix: Euler angles of tm's rotation in the given
-// order (src/Vx/VxEulerAngles.cpp, Mac TU 485, V4.2) (name inferred)
+// order (src/Vx/VxEulerAngles.cpp, Mac TU 485) (name inferred)
 VxEulerAngles VxEulerAnglesFromTransform(const class VxTransform& tm, int order);
 
 class VxTransform {

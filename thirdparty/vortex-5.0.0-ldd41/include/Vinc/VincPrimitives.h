@@ -21,7 +21,7 @@
 
 #include "Me/MeMath.h"
 #include "Me/MeCall.h"
-#include "Vinc/VincGeometry.h"   /* VincGeometry (type id head), registry (V3.2) */
+#include "Vinc/VincGeometry.h"   /* VincGeometry (type id head), registry */
 
 #ifdef __cplusplus
 extern "C" {
@@ -140,8 +140,7 @@ int MEAPI VincPrimitivesRegisterInteractions(void);      /* Mac 0x4f85eb */
 void MEAPI VincCapsuleRegisterTypeAndInteractions(void); /* Mac 0x4f6b6f, Win 0x76a8b0 */
 
 /* ---- pair-test registrations (each registers one VincIntersectFn pair with
- * VincGeometryPairRegisterInteractions(A, B, ...); the name is Vinc<A><B>; return 1).
- * V3.6 (557g): */
+ * VincGeometryPairRegisterInteractions(A, B, ...); the name is Vinc<A><B>; return 1). 557g. */
 int MEAPI VincCylinderPlaneRegisterInteraction(void);        /* Mac 0x4f0da2, Win 0x7e0ac0 */
 int MEAPI VincCylinderSphereRegisterInteraction(void);       /* Mac 0x4f1815, Win 0x7e04b0 */
 int MEAPI VincCylinderTriangleListRegisterInteraction(void); /* Mac 0x4f1eb8, Win 0x7dbff0 */
@@ -154,7 +153,7 @@ void MEAPI VincPlaneRegisterLineSegment(void);               /* Mac 0x4f3069, Wi
 void MEAPI VincSphereRegisterLineSegment(void);              /* Mac 0x4f3094, Win 0x7ad2b0 */
 void MEAPI VincBoxRegisterLineSegment(void);                 /* Mac 0x4f30bf, Win 0x7ad470 */
 int MEAPI VincTriangleListRegisterLineSegment(void);         /* Mac 0x4f527d, Win 0x759890 */
-/* implemented by the other pair-test items (V3.3-V3.5, 557d-f); declared here because
+/* implemented by the other pair-test items (557d-f); declared here because
  * VincPrimitivesRegisterInteractions / VincCapsuleRegisterTypeAndInteractions call them: */
 int MEAPI VincBoxBoxRegisterInteraction(void);               /* Mac 0x4dc35b, Win 0x81d330 */
 int MEAPI VincBoxCapsuleRegisterInteraction(void);           /* Mac 0x4dd24a, Win 0x7dac10 */

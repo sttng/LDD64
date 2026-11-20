@@ -29,7 +29,7 @@ inline bool RegisterLXFStorageFactories()
     return ObjectFactory::GetInstance()->RegisterFactory(typeid(ZipStorageDirectory), zipFactory, typeid(Directory));
 }
 
-// (not in the original; H26) The largest file the generator plug-ins read whole.
+// (not in the original) The largest file the generator plug-ins read whole.
 const UInt64 kLXFGeneratorMaxSize = 64 * 1024 * 1024;
 
 // Drops every registered singleton (factories, root directory, ...) after a request.
@@ -41,7 +41,7 @@ inline void ReleaseLXFStorage()
 } // namespace LEGO
 
 #if !defined(__OBJC__)
-// HOST-ONLY (tests/test_lxfplugins.cpp): what the Objective-C parts of the plug-ins do through
+// HOST-ONLY (the restoration's tests): what the Objective-C parts of the plug-ins do through
 // Cocoa, for the Linux-hosted Mac branch: NSData dataWithBytesNoCopy:length: (takes the new[]
 // buffer), the sorted brick list and count of GetMetadataForFile.
 #include <CoreServices/CoreServices.h>

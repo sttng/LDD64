@@ -25,7 +25,7 @@
 
 namespace LEGO {
 
-// (not in the original; H13) The largest surface id / flex control point a model file may use:
+// (not in the original) The largest surface id / flex control point a model file may use:
 // the loaders grow arrays to the index + 1 (an index near 4G wraps the size).
 const UInt32 kMaxModelFileIndex = 0x10000;
 

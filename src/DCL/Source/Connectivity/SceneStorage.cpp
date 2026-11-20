@@ -171,8 +171,8 @@ bool Scene::Load(const StorageScene2& storage, StorageMap& map, BasicArray<RefPo
                     // builds): more bones than the primitive has index past its bone array
                     // (CreatePrimitiveElement), a part without bones gets no element, and an
                     // empty bone slot (a flex of an old file with a missing control point) is
-                    // dereferenced; fixed: such a brick is not loaded (reported missing; H14,
-                    // H15).
+                    // dereferenced; fixed: such a brick is not loaded (reported
+                    // missing).
                     bool badBones = storagePart->m_bones.IsEmpty() ||
                                     storagePart->m_bones.GetSize() > primitive->GetBoneCount();
                     for (UInt32 i = 0; i < storagePart->m_bones.GetSize() && !badBones; ++i)

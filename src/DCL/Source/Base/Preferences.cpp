@@ -178,7 +178,7 @@ void Preferences::InitializeDirectory(const String& key, UInt32 kind)
 // values to; LoadUser replaces it only once it has the user directory, so without one (no app
 // data directory, or "LEGO Company/<app>" cannot be created) the shipped file is overwritten
 // with the user values. fixed: the shipped file is loaded through a local path, m_path only
-// ever names the user file; without one Save fails and nothing is written (M4).
+// ever names the user file; without one Save fails and nothing is written.
 void Preferences::LoadDefaults()
 {
     RefPointer<Directory> directory =

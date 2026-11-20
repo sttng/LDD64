@@ -110,7 +110,7 @@ protected:
     virtual void OnFinalRelease();
 
 private:
-    friend struct MoveToolTestAccess;   // (tests/test_clickstick.cpp)
+    friend struct MoveToolTestAccess;   // (the restoration's tests)
 
     // The parts into the drag scene (moved), the grip at `point` (world). Mac 0x15c120,
     // Win 0x67c6d3

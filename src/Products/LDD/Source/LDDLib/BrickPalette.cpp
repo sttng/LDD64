@@ -74,7 +74,7 @@ static void BuildMaterialRows(MaterialGrid::Rows& rows, const MaterialGrid::Mate
 void MaterialGrid::BuildRows(UInt32 width)
 {
     // NOTE: the original divides by `width` (column = (column + 1) % width, Mac 0x1f8c50), so a
-    // palette's <Grid width="0"> is an integer division by zero; fixed: at least one column (M12).
+    // palette's <Grid width="0"> is an integer division by zero; fixed: at least one column.
     if (width == 0)
         width = 1;
     BuildMaterialRows(m_solidRows, m_solid, width);

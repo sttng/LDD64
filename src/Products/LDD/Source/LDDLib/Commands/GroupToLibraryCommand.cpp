@@ -15,7 +15,7 @@
 #include "Application.h"
 #include "Platform.h"
 #include "TextLocale.h"
-#include "SafeFileWrite.h"   // (M2) Do
+#include "SafeFileWrite.h"   // Do
 
 namespace LEGO {
 
@@ -47,7 +47,7 @@ void GroupToLibraryCommand::Do()
     if (!control || control->GetSelection().IsEmpty())
         return;
     // NOTE: the original copies the parts' materials as they are, the paint bucket's hover
-    // preview included; fixed: the previews are undone first (M8).
+    // preview included; fixed: the previews are undone first.
     control->ClearToolPreviews();
 
     BasicArray<RefPointer<Brick> > bricks;
@@ -83,7 +83,7 @@ void GroupToLibraryCommand::Do()
     // all the same, so a failed write (a full disk, a folder that takes no files) shows a library
     // model whose file is missing or cut; fixed: written all or nothing into the brand's folder
     // ("<uuid>.lxfml.tmp" renamed over the file, SafeWriteTarget / CommitSafeWrite), and a
-    // failure shows UNABLETOSAVEMODELTO and adds nothing (M2).
+    // failure shows UNABLETOSAVEMODELTO and adds nothing.
     bool saved = false;
     Directory* userData = Application::GetInstance()->GetUserDataDirectory();
     RefPointer<Directory> folder;

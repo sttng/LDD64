@@ -51,7 +51,7 @@ public:
     virtual bool       DoDirectoryExists(const BasicArray<String>& path); // Mac 0x32a890
     virtual bool       DoFileExists(const String& name);              // Mac 0x32a990
     virtual void       DoEnumerate(const String& pattern, DescriptorSet& entries); // Mac 0x32aa10
-    // (not in the original; M2) fsync, then rename(2) over `to` (Directory.h).
+    // (not in the original) fsync, then rename(2) over `to` (Directory.h).
     virtual bool       DoSupportsReplaceFile() const { return true; }
     virtual bool       DoReplaceFile(const String& from, const String& to);
 

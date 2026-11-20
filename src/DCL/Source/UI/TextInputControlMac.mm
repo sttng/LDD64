@@ -368,7 +368,7 @@ void TextInputControl::DestroyNative()
 #if defined(__OBJC__)
     // NOTE: the original releases the target (the field's delegate and action target) before
     // the field, which keeps both as unretained pointers: removeFromSuperview (ending an edit)
-    // can message the freed target. fixed: delegate and target cleared first (M19).
+    // can message the freed target. fixed: delegate and target cleared first.
     if (m_field) {
         [LEGO_FIELD setDelegate:nil];
         [LEGO_FIELD setTarget:nil];

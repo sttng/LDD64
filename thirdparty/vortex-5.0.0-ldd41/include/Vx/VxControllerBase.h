@@ -102,7 +102,7 @@ public:
 
     VxBase* getParent() const { return mParent; }
     bool getInputsChanged() const { return mInputsChanged; }           // Mac 0x41fae6 (in VxControllerGraph.cpp)
-    void setInputsChanged(bool changed) { mInputsChanged = changed; }  // (connections, V1.2)
+    void setInputsChanged(bool changed) { mInputsChanged = changed; }  // (connections)
 
     // listeners (Win 0x7f9ea0 add-if-absent, 0x7f9a10 remove; inlined on Mac) (names inferred)
     void addListener(VxControllerListener* l);

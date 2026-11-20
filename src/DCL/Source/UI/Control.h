@@ -293,7 +293,7 @@ public:
     const Vector2&  GetPosition() const { return m_position; }
     // Read inline by BrickConnectSceneControl (Mac 0x45790) and LDDUtilities (Mac 0x149470).
     // NOTE: an inline field read in the original (Mac +0x48 / Win +0x4c); out of line here so the
-    // test seams (tests/diff/diff_render_model.cpp) can provide it.
+    // test seams (the restoration's diff tests) can provide it.
     const Vector2& GetSize() const;
     const Vector2& GetScale() const { return m_scale; }
     const String&  GetName() const { return m_name; }

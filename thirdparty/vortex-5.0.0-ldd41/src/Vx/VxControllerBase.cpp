@@ -2,7 +2,7 @@
 // VxNamePathControllerInterface (restored).
 // Mac TU 446 (0x417d2c-0x41d6bf), Win 0x7f9890-0x7fb3e0 and 0x78bbb0-0x78cf10.
 // The VxData::Field<bool> / Delegate<Field<bool> const&> / DelegateCB<..., mf2<...eStateChange...>>
-// template instances that the Mac build emitted in this TU come from the VxData headers (V1.2).
+// template instances that the Mac build emitted in this TU come from the VxData headers.
 #include "Vx/VxControllerBase.h"
 #include "Vx/VxCompositeController.h"
 #include "Vx/VxControllerGraph.h"

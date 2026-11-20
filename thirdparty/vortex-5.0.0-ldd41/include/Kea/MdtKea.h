@@ -1,5 +1,5 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - the Kea solver interface Mdt uses
-// (restored header; Kea sources: V2.3, src/Kea).
+// (restored header; Kea sources: src/Kea).
 //
 // Mdt hands Kea three things:
 //  * MdtKeaBody: the solver part of an MdtBody (MdtBody + 0x140, Mac 0x3ac / Win 0x3b0 bytes;

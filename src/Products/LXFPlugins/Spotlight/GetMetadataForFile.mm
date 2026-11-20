@@ -10,7 +10,7 @@
 //   com_lego_lxf_numberofbricks  the number of <Brick>s
 //   com_lego_lxf_listofbricks    their distinct design IDs, sorted (as strings)
 // (schema.xml declares the two custom attributes.) File name inferred (Xcode template).
-// Mac only; the Objective-C parts sit behind __OBJC__ (tests/test_lxfplugins.cpp runs the rest
+// Mac only; the Objective-C parts sit behind __OBJC__ (the restoration's tests run the rest
 // on the Linux-hosted Mac branch, with HOST-ONLY stand-ins for the pool and the brick list).
 #if !defined(_WIN32)
 #include "LXFPluginStorage.h"
@@ -170,7 +170,7 @@ Boolean GetMetadataForFile(void* /*thisInterface*/, CFMutableDictionaryRef attri
         [(NSMutableDictionary*)attributes setObject:bricks forKey:@"com_lego_lxf_listofbricks"];
         [bricks release];
 #else
-        // HOST-ONLY: the same list as a CFArray (tests/test_lxfplugins.cpp)
+        // HOST-ONLY: the same list as a CFArray (the restoration's tests)
         CFMutableArrayRef bricks = CFArrayCreateMutable(0, 10, &kCFTypeArrayCallBacks);
         UInt32 count = 0;
         for (RefPointer<StorageScene2::Brick>* b = scene->m_bricks.Begin(); b != scene->m_bricks.End(); ++b) {

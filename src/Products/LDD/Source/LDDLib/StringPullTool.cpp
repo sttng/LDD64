@@ -78,7 +78,7 @@ Vector3 AxisVector(UInt32 axis, Real32 length)
 StringPullTool::Anchor::~Anchor()
 {
     // NOTE: no null check (both builds; CreateAnchor returns NULL without a running solver);
-    // fixed: checked, as CreateAnchor also returns NULL once the solver has ended (M10).
+    // fixed: checked, as CreateAnchor also returns NULL once the solver has ended.
     if (m_handle == 0)
         return;
     m_handle->Remove();
@@ -212,7 +212,7 @@ void StringPullTool::OnMouseMove(Control* control, const Vector2& position)
     // (both builds)
     anchor->m_target.SetTranslation(point - anchor->m_grab);
     // NOTE: the original moves the solver anchor without a check (NULL without a running
-    // solver); fixed: checked (M10).
+    // solver); fixed: checked.
     if (anchor->m_handle != 0)
         anchor->m_handle->SetTargetTransform(anchor->m_target);
     Redraw(GetSceneControl());
@@ -225,7 +225,7 @@ void StringPullTool::Update()
     UInt32 elapsed = (UInt32)now - (UInt32)m_lastTime;
     m_lastTime = now;
     // NOTE: the original steps with 1 / elapsed (ms), which is 1 / 0 = +inf for two updates in
-    // the same millisecond; fixed: at least 1 ms (M15).
+    // the same millisecond; fixed: at least 1 ms.
     if (elapsed == 0)
         elapsed = 1;
     Scene* scene = GetSceneControl()->GetScene();

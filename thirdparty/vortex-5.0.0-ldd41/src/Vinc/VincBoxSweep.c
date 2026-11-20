@@ -1,6 +1,6 @@
 /* Vortex 5.0.0 build 800 "vortexldd41" - earliest time two linearly moving oriented boxes can touch,
  * by the 15 separating axes (restored). Mac 0x4faa70 (558a), Win 0x8517a0.
- * Caller: VincEllipsoidSafeTime (Mac 0x4dc9ee, Win 0x81c740; V3.4). Name inferred. Mac 0x4faa54
+ * Caller: VincEllipsoidSafeTime (Mac 0x4dc9ee, Win 0x81c740). Name inferred. Mac 0x4faa54
  * (empty) / 0x4faa59 (calls it, via the module initialiser table) are this C++ file's compiler
  * static-initialisation stubs: nothing to restore. */
 #include "Vinc/VincBoxSweep.h"

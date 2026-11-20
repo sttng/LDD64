@@ -15,7 +15,6 @@
 //   Win vtable 0xa29024 {0x5c4cb0, 0x5c7750, 0x5c4cf0, 0x459790, 0x459790, 0x51d940, 0x51da50,
 //     0x51dab0, 0x51db30, 0x51dba0, 0x51dc40, 0x51dcf0, 0x51dd90, 0x51de40, 0x51dea0, 0x424e90,
 //     0x51df20, 0x51e0f0, 0x51df30, 0x51dfc0, 0x51dfc0, 0x51dfd0, 0x51e060, sdd 0x51d880}.
-//   NOTE: the work files pair the Mac slots one off (Ghidra vfNN = slot NN + 1 here).
 //
 // Licensing: the Mac build has no license code. The Win original's Vortex is
 // FLEXlm-gated (features mdt / mcd / vxadvcon / vxcable); without a license the dynamics degrade

@@ -1,6 +1,6 @@
 /* Vortex 5.0.0 build 800 "vortexldd41" - line segment queries against the sphere, box and plane
  * (restored). Mac 0x4f2e82-0x4f36f9 (557g), Win 0x7acd40-0x7ad470.
- * Registered per type with VincGeometryRegisterLineSegmentFn; VincLineSegIntersect (V3.2)
+ * Registered per type with VincGeometryRegisterLineSegmentFn; VincLineSegIntersect
  * dispatches on the model's geometry type. Result: the first hit point from p0 towards p1, the
  * surface normal there and the distance from p0. Names (name inferred). */
 #include "Vinc/VincPrimitives.h"

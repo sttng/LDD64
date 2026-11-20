@@ -41,7 +41,7 @@ private:
 };
 
 // Mac 0x1c bytes, vtable 0x75ae68 (D1 0x40be04 / D0 0x40bd94), Win 0x9fe2cc (0x7868f0).
-// Vx::InternalConnection (Mac vtable 0x75d1c0) derives from it (V1.3).
+// Vx::InternalConnection (Mac vtable 0x75d1c0) derives from it.
 class VxConnection {
 public:
     // one end of a connection: the field and its kind (1 input, 2 output, 3 parameter; the

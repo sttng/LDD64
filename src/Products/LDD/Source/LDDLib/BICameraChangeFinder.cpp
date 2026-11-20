@@ -521,7 +521,7 @@ BICameraChangeFinder::BICameraChangeFinder(Render* render, UInt32 width, UInt32 
                                            const BasicArray<BICameraPosition>& positions)
     : m_initialized(false), m_render(render), m_threshold(threshold), m_unknown1c(unknown), m_positions(positions),
       m_maxStepBricks(maxStepBricks),
-      m_width((Real32)width), m_height((Real32)height)   // the target's size until a view is set (M13)
+      m_width((Real32)width), m_height((Real32)height)   // the target's size until a view is set
 {
     m_cull = new BIOcclusionCull;
     bool ok = Initialize(width, height);
@@ -544,7 +544,7 @@ void BICameraChangeFinder::SetViewportSize(Real32 width, Real32 height)
     // view (BuildingGuideGenerateThread::Run passes the scene control's size) divides by zero in
     // GetFieldOfViewY: NaN cameras, which BIGenerator stores in the steps and BGMode::SetCamera
     // then puts into the scene camera; fixed: an empty size is skipped (the previous one, at
-    // first the occlusion target's 128 x 128, is kept) (M13).
+    // first the occlusion target's 128 x 128, is kept).
     if (!(width > 0.0f && height > 0.0f))
         return;
     m_width = width;

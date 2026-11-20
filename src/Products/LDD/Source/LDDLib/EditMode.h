@@ -26,7 +26,7 @@
 //   +0x298..+0x308 below, Object +0x308.
 // Win (constructor 0x62ba52, destructor 0x629158; sizeof 0x338 + Object): observers +0x2a0 /
 //   +0x2ac / +0x2b8 (subjects +0x2a8 / +0x2b4 / +0x2c0), members = Mac + 0x2c,
-//   vtordisp +0x334, Object +0x338 (sizeof 0x340; tests/diff/diff_editmode.cpp).
+//   vtordisp +0x334, Object +0x338 (sizeof 0x340; the restoration's diff tests).
 // Virtual slots: Mac vtable 0x71543c (57 entries) = BrickMode's 50 with Enter 45 = 0x18e2d0,
 //   Exit 46 = 0x18e3d0, CanExit 48 = 0x18e4d0, OnFinalRelease 2 = 0x18f3e0, then the primary
 //   entries of the secondary-base overriders 50-56 (0x18f640, 0x18f780, 0x18f8c0, 0x18fab0,

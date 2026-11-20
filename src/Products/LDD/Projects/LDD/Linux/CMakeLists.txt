@@ -113,12 +113,14 @@ if(LDD_CURSOR_FILES)
         VERBATIM)
 endif()
 set(LDD_ICON ${LDD_ROOT}/src/Products/LDD/Resources/ldd64.ico)
+set(LDD_LDRAW_MAP ${LDD_ROOT}/src/Products/LDD/Resources/ldraw.xml)
 add_custom_command(TARGET ldd64 POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${LDD_ICON} $<TARGET_FILE_DIR:ldd64>/ldd64.ico
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${LDD_LDRAW_MAP} $<TARGET_FILE_DIR:ldd64>/ldraw.xml
     VERBATIM)
 
-# cmake --install: lib/ldd64 (ldd64, Cursors/, ldd64.ico; LDD's data files go there too), a
-# launcher and the model file types. The launcher names the configured prefix.
+# cmake --install: lib/ldd64 (ldd64, Cursors/, ldd64.ico, ldraw.xml; LDD's data files go there
+# too), a launcher and the model file types. The launcher names the configured prefix.
 include(GNUInstallDirs)
 set(LDD_PROGRAM_DIR ${CMAKE_INSTALL_LIBDIR}/ldd64)
 set(LDD_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/${LDD_PROGRAM_DIR})
@@ -126,7 +128,7 @@ install(TARGETS ldd64 DESTINATION ${LDD_PROGRAM_DIR})
 if(LDD_CURSOR_FILES)
     install(FILES ${LDD_CURSOR_FILES} DESTINATION ${LDD_PROGRAM_DIR}/Cursors)
 endif()
-install(FILES ${LDD_ICON} DESTINATION ${LDD_PROGRAM_DIR})
+install(FILES ${LDD_ICON} ${LDD_LDRAW_MAP} DESTINATION ${LDD_PROGRAM_DIR})
 configure_file(${LDD_ROOT}/src/Products/LDD/Resources/Linux/ldd64.desktop.in ${CMAKE_BINARY_DIR}/ldd64.desktop @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/ldd64.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 install(FILES ${LDD_ROOT}/src/Products/LDD/Resources/Linux/ldd64-mime.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/mime/packages)

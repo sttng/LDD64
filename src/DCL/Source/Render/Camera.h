@@ -4,7 +4,7 @@
 // TU 411: Mac 0x38ff60-0x39187f (26 functions), Win
 // 0x5b7290-0x5b8db0 (+ helpers 0x5b8db0, 0x5b9010, 0x5b9030). Vtable Mac 0x7574a0 {D1 0x391650,
 // D0 0x391660, ..}, Win 0xa2cdbc {sdd 0x5b7380, ..}; sizeof 0xc0. EvalReal floating point
-// (Geometry.cpp convention), checked by tests/diff/diff_camera.cpp.
+// (Geometry.cpp convention), checked by the restoration's diff tests.
 #pragma once
 #include "LEGO/Types.h"
 #include "Object.h"

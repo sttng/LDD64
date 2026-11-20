@@ -3,7 +3,7 @@
 // (anonymous namespace)::TrivialSceneGraphInterface; static initialiser 0x4593e1 iostream only),
 // Win 0x752d30-0x7533f0 (the empty / constant slots are ICF-shared Win stubs).
 // LDD registers neither interface: only the defaults below run (the node interface through
-// VxNode::addRef / release, V4.3).
+// VxNode::addRef / release).
 #include "Vx/VxSceneGraphInterface.h"
 
 namespace Vx {

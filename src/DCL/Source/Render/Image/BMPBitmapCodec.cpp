@@ -46,7 +46,7 @@ inline void WriteNibble(UInt8*& destination, UInt8 value, UInt32& x)
     ++x;
 }
 
-// (not in the original; H6) DecodeRLE8 / DecodeRLE4 with every read checked against the
+// (not in the original) DecodeRLE8 / DecodeRLE4 with every read checked against the
 // `length` bytes of `source` and every write against the expanded image: valid data decodes
 // exactly as there; when the data ends early or a run, delta or line reaches past the image,
 // decoding stops there (a run is cut at the end) and the rest of the image stays 0 (the buffer
@@ -345,7 +345,7 @@ RefPointer<BitmapCodec::Header> BMPBitmapCodec::ReadHeader()
         return 0;
     // NOTE: the info header is read through a Stream of at most 0x8a bytes of the file whatever
     // its declared size (both builds): a file shorter than its info header leaves fields unread;
-    // fixed: such a file is refused (H7).
+    // fixed: such a file is refused.
     if ((UInt64)14 + infoSize > header->m_fileSize)
         return 0;
     surface.m_dataSize = header->m_fileSize - infoSize - 14;
@@ -365,7 +365,7 @@ RefPointer<BitmapCodec::Header> BMPBitmapCodec::ReadHeader()
             UInt32 colors = 1u << header->m_bitCount;
             surface.m_dataSize -= colors * 3;
             UInt32 count = header->m_colorsUsed != 0 ? header->m_colorsUsed : colors;
-            if (0x1a + (UInt64)colors * 3 > header->m_fileSize)   // (H7, see below)
+            if (0x1a + (UInt64)colors * 3 > header->m_fileSize)   // (see below)
                 return 0;
             m_palette.Resize(colors, Color());
             const UInt8* entry = file + 0x1a;
@@ -423,7 +423,7 @@ RefPointer<BitmapCodec::Header> BMPBitmapCodec::ReadHeader()
             m_palette.Resize(colors, Color());
             // NOTE: no check of biClrUsed against 1 << bpp or of the palette against the file
             // size (both builds): a larger biClrUsed writes past the palette array; fixed: at
-            // most 1 << bpp entries are read and they must lie in the file (H7).
+            // most 1 << bpp entries are read and they must lie in the file.
             if (count > colors)
                 count = colors;
             if ((UInt64)14 + infoSize + (UInt64)count * 4 > header->m_fileSize)
@@ -660,9 +660,9 @@ bool BMPBitmapCodec::Decode(Bitmap& bitmap, const Color* colorKey)
 
     // NOTE: bfOffBits is not checked against the file and the rows against the data after it
     // (both builds): an offset past the end, or too little pixel data, reads outside the file;
-    // the RLE decoders trust their runs (heap overflow writes, H6); fixed: the offset must lie
+    // the RLE decoders trust their runs (heap overflow writes); fixed: the offset must lie
     // in the file, uncompressed rows must fit in the data, and the RLE data is decoded with
-    // checked reads and writes (H6, H7).
+    // checked reads and writes.
     if (header->m_dataOffset > header->m_fileSize)
         return false;
     const UInt32 dataSize = header->m_fileSize - header->m_dataOffset;

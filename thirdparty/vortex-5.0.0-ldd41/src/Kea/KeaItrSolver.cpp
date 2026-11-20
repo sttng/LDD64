@@ -1,7 +1,7 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - itr_constraint_solver: block Gauss-Seidel over the
 // constraints of a work slot (restored). Mac sub-TU 556 0x4a5e86-0x4a6c3b,
 // Win 0x7b9d00-0x7bad50. Selected by MdtKeaParameters::constraintSolver = 1, which LDD never
-// sets (V0.3: its solve, Win 0x7ba8d0, never runs).
+// sets (its solve, Win 0x7ba8d0, never runs).
 // Each block has its own smv_matrix (J_b M^-1 J_b^T); a sweep solves the block LCPs in turn with
 // the other blocks' body forces on the right hand side, until the complementarity residual stops
 // improving.

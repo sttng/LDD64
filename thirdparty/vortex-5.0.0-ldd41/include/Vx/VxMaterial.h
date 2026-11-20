@@ -6,7 +6,7 @@
 //   src/Vx/VxMaterial.cpp       Mac 0x45ff0c-0x4605b0, Win 0x7aa150-0x7aa420
 //   src/Vx/VxMaterialBase.cpp   Mac 0x4605b0-0x461246, Win 0x7a3af0-0x7a4820
 //   src/Vx/VxMaterialTable.cpp  Mac 0x461246-0x463c0a, Win 0x73ea10-0x73ec20
-// (Mac 0x463c0a-0x463d8a is src/Vx/VxMessage.cpp, V1.1.)
+// (Mac 0x463c0a-0x463d8a is src/Vx/VxMessage.cpp.)
 //
 // A material holds the contact parameters of one surface; the material table (one per VxFrame,
 // VxFrame::mMaterialTable Mac +0xd8 = new(0x38)) keeps the materials by index (VxCollisionGeometry's
@@ -61,7 +61,7 @@ private:
 // Win builds: the material data starts at +0x30 as in the MSVC 2008 binary (std::string 28 bytes)
 // whatever the std::string of the build, so that a VxContactMaterial inside MdtContact keeps the
 // original layout (MdtContact offsets, raw constraint images of the differential tests). Not
-// original code: an empty base when VxBase already has the original size. (V4.2)
+// original code: an empty base when VxBase already has the original size.
 template <int N> struct VxLayoutPad { char mLayoutPad[N]; };
 template <> struct VxLayoutPad<0> {};
 #if defined(_WIN32)
@@ -130,8 +130,8 @@ public:
     void setCompliance(VxReal c);                       // Mac 0x460cfe (also the options bit) (name inferred)
     void setDamping(VxReal d);                          // Mac 0x460d40 (also the options bit) (name inferred)
 
-    // Out of line in the binaries at Mac 0x4a0e56 / Win 0x73e300 (inside MdtBclRowsUtil's TU; V2.2
-    // restored it as MdtBclContactMaterialGetFrictionModel on the data block) (name inferred)
+    // Out of line in the binaries at Mac 0x4a0e56 / Win 0x73e300 (inside MdtBclRowsUtil's TU;
+    // restored as MdtBclContactMaterialGetFrictionModel on the data block) (name inferred)
     int getFrictionModel(int axis) const { return axis == kFrictionAxisLinear ? mFrictionModel[0] : mFrictionModel[axis]; }
     VxReal getBoxFrictionForce(int axis) const { return mBoxFrictionForce[axis]; }
     VxReal getSlip(int axis) const { return mSlip[axis]; }

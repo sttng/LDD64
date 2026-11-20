@@ -1,7 +1,7 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - TriangleMesh vs Plane pair test (restored;
 // Mac 557d 0x4c97a1-0x4c9ed4, Win 0x7d4e10 / 0x7d4f70). Walks the mesh's OBB tree in the plane
 // frame (a node is visited when its box reaches z <= 0) and collects the triangle-plane contacts of
-// 558a (V3.6) into a 1000-contact buffer, then simplifies them.
+// 558a into a 1000-contact buffer, then simplifies them.
 #include "VincTriangleMeshPairs.h"
 #include "Vinc/VincTriangleMeshContacts.h"
 #include "Vinc/VincTriangleContacts.h"
@@ -54,7 +54,7 @@ int MEAPI VincTriangleMeshPlaneIntersect(VincModelPair* pair, VincIntersectResul
     PlaneContacts(result, mesh, tree->nodes, tmMesh, tmPlane, rel);
     if (result->contactCount == 0) {
         // NOTE: the original returns with result->contacts still pointing at its stack buffer
-        // (and contactMaxCount 1000); restored to the caller's array (as V3.2's mesh pairs do).
+        // (and contactMaxCount 1000); restored to the caller's array (as mesh pairs do).
         saved.Restore(result);
         return 0;
     }

@@ -347,7 +347,7 @@ bool Window::ExecuteMenuShortcut(const Menu* menu, UInt32 key, UInt32 modifiers,
                 if (key - kKeyF1 < 10)
                     return true;
                 if (key - kKeyF11 < 0x10 && ((0xe003u >> (key - kKeyF11)) & 1))
-                    return true;          // F11, F12, F13-F15
+                    return true;          // F11, F13-F15
 #endif
                 item->GetShortcutCommand()->Do();
                 return true;

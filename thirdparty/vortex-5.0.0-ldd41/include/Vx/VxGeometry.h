@@ -141,11 +141,11 @@ public:
     VX_DECLARE_CLASS_TYPES();
     // C1 Mac 0x432882 -> C2 0x432804, Win 0x711620 (VincBoxCreate: full extents)
     explicit VxBox(const VxVector3& dimensions);
-    VxBox(VxReal dx, VxReal dy, VxReal dz);             // Win 0x7115e0 (Win only) (V4.4)
+    VxBox(VxReal dx, VxReal dy, VxReal dz);             // Win 0x7115e0 (Win only)
     virtual ~VxBox();                                   // slot 2/3 Mac 0x43298c/0x432908, Win 0x7118c0
     virtual const char* getClassName() const;           // slot 4 Mac 0x432de0, Win 0x711870
     virtual VxGeometry* clone() const;                  // slot 7 Mac 0x4329b2, Win 0x711710
-    // slots 10/11 Mac 0x46f4fc / 0x474232, Win 0x76eb50 / 0x76eb90 (fluid TU 510, V4.7)
+    // slots 10/11 Mac 0x46f4fc / 0x474232, Win 0x76eb50 / 0x76eb90 (fluid TU 510)
     virtual void computeSmallestEnclosing(const VxArray<VxVector3>& points, VxTransform& transform,
                                           int lockAxis, bool flag);
     virtual void computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform,
@@ -167,7 +167,7 @@ public:
     virtual ~VxSphere();                                // slot 2/3 Mac 0x478800/0x47877c, Win 0x714470
     virtual const char* getClassName() const;           // slot 4 Mac 0x478c58, Win 0x714430
     virtual VxGeometry* clone() const;                  // slot 7 Mac 0x478826, Win 0x7142f0
-    // slots 10/11 Mac 0x46f4ac / 0x46d9b0, Win 0x76f130 / 0x76f9a0 (fluid TU 510, V4.7)
+    // slots 10/11 Mac 0x46f4ac / 0x46d9b0, Win 0x76f130 / 0x76f9a0 (fluid TU 510)
     virtual void computeSmallestEnclosing(const VxArray<VxVector3>& points, VxTransform& transform,
                                           int lockAxis, bool flag);
     virtual void computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform,
@@ -177,7 +177,7 @@ public:
     void setRadius(VxReal r);                           // Mac 0x478666, Win 0x7742c0 (inlined Vinc) (name inferred)
 
 private:
-    // (V4.7, src/Vx/VxOrientedVolume.cpp) the fit behind slot 11: the minimal sphere, or the radius
+    // (src/Vx/VxOrientedVolume.cpp) the fit behind slot 11: the minimal sphere, or the radius
     // about the kept centre (Mac 0x46d406, Win 0x76f790; array overload Win 0x76f9e0) (name inferred)
     void _computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform, bool keepCenter);
     void _computeSmallestEnclosing(const VxArray<VxVector3>& points, VxTransform& transform, bool keepCenter);
@@ -196,7 +196,7 @@ public:
     virtual ~VxCapsule();                               // slot 2/3 Mac 0x437514/0x437490, Win 0x711be0
     virtual const char* getClassName() const;           // slot 4 Mac 0x437982, Win 0x711b80
     virtual VxGeometry* clone() const;                  // slot 7 Mac 0x43753a, Win 0x711a30
-    // slots 10/11 Mac 0x46f54c / 0x4720e0, Win 0x76eb10 / 0x76f910 (fluid TU 510, V4.7)
+    // slots 10/11 Mac 0x46f54c / 0x4720e0, Win 0x76eb10 / 0x76f910 (fluid TU 510)
     virtual void computeSmallestEnclosing(const VxArray<VxVector3>& points, VxTransform& transform,
                                           int lockAxis, bool flag);
     virtual void computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform,
@@ -208,7 +208,7 @@ public:
     void setHeight(VxReal h);                           // Mac 0x437322, Win 0x7119e0 (VincCapsuleSetHeight) (name inferred)
 
 private:
-    // (V4.7, src/Vx/VxOrientedVolume.cpp) the fit behind slot 11 (keepAxes: lock axis 2 / 3)
+    // (src/Vx/VxOrientedVolume.cpp) the fit behind slot 11 (keepAxes: lock axis 2 / 3)
     // (Mac 0x471cf0, Win 0x76f570; array overload Win 0x76f960) (name inferred)
     void _computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform, bool keepAxes,
                                    bool keepCenter);
@@ -229,7 +229,7 @@ public:
     virtual ~VxCylinder();                              // slot 2/3 Mac 0x44273a/0x4426b6, Win 0x711550
     virtual const char* getClassName() const;           // slot 4 Mac 0x442bc6, Win 0x7114f0
     virtual VxGeometry* clone() const;                  // slot 7 Mac 0x442760, Win 0x7113a0
-    // slots 10/11 Mac 0x46f59c / 0x472574, Win 0x76ead0 / 0x76f880 (fluid TU 510, V4.7)
+    // slots 10/11 Mac 0x46f59c / 0x472574, Win 0x76ead0 / 0x76f880 (fluid TU 510)
     virtual void computeSmallestEnclosing(const VxArray<VxVector3>& points, VxTransform& transform,
                                           int lockAxis, bool flag);
     virtual void computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform,
@@ -244,7 +244,7 @@ public:
     void setCosTolerance(VxReal c);
 
 private:
-    // (V4.7, src/Vx/VxOrientedVolume.cpp) the fit behind slot 11 (keepAxes: lock axis 2 / 3)
+    // (src/Vx/VxOrientedVolume.cpp) the fit behind slot 11 (keepAxes: lock axis 2 / 3)
     // (Mac 0x472184, Win 0x76f3a0; array overload Win 0x76f8d0) (name inferred)
     void _computeSmallestEnclosing(const VxVector3* points, int count, VxTransform& transform, bool keepAxes,
                                    bool keepCenter);

@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - point-set helpers of the smallest-enclosing-shape fits
 // (restored: Mac TU 491 0x458334-0x458e66, Win 0x7e31e0-0x7e3b20), used by the
-// fluid TU (Mac 510, V4.7). Names inferred. Win 0x7e3890 (Win only, not reached) is not restored.
+// fluid TU (Mac 510). Names inferred. Win 0x7e3890 (Win only, not reached) is not restored.
 #ifndef VX_VXGEOMETRYUTILS_H
 #define VX_VXGEOMETRYUTILS_H
 

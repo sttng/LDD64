@@ -1025,6 +1025,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\Resources\Win\LDD.rc" />
+    <CopyFileToFolders Include="..\..\..\Resources\ldraw.xml">
+      <DestinationFolders>$(OutDir)</DestinationFolders>
+    </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="zlib.vcxproj">

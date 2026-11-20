@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxConeConstraint (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxConeConstraint (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x119 (Mac 0x43c4f4).
 #ifndef VX_VXCONECONSTRAINT_H
 #define VX_VXCONECONSTRAINT_H

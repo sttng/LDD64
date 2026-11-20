@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxLinear2 (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxLinear2 (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x122 (Mac 0x45d882).
 #ifndef VX_VXLINEAR2_H
 #define VX_VXLINEAR2_H

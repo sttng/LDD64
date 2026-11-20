@@ -134,7 +134,7 @@ public:
     virtual bool             DoIsEnumerationDone();                                       // Mac 0x168e0, Win 0x428bd0
     virtual bool             DoIsEnumerating();                                           // Mac 0x16900, Win 0x4df3c0
     virtual void             DoEndEnumeration();                                          // Mac 0x16910, Win 0x428c00
-    // (not in the original; M2) Only the native disk storage (Win32Directory, MacOSXDirectory)
+    // (not in the original) Only the native disk storage (Win32Directory, MacOSXDirectory)
     // can replace a file in one step: DoReplaceFile flushes the file `from` to the disk and
     // renames it over `to` (MoveFileEx with MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH /
     // rename(2)), so `to` stays the complete old file until it is the complete new one. The
@@ -160,7 +160,7 @@ public:
     bool FileExists(const BasicArray<String>& path);                                      // Mac 0x15580, Win 0x427790
     bool Delete(const String& path, bool recursive);                                      // Mac 0x13d90, Win 0x4262c0
     bool Delete(const BasicArray<String>& path, bool recursive);                          // Mac 0x13e90, Win 0x426350
-    // (not in the original; M2) DoReplaceFile under the storage lock. Refused when `to` exists
+    // (not in the original) DoReplaceFile under the storage lock. Refused when `to` exists
     // and is read-only, as the in-place write it replaces would be (rename(2) itself would
     // replace a read-only file).
     bool ReplaceFile(const String& from, const String& to);

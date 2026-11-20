@@ -261,7 +261,7 @@ int MEAPI VincBoxBoxRegisterInteraction(void)
 
 /* Mac 0x4dc9ee, Win 0x81c740: conservative safe time of two moving boxes (half extents radii1 /
  * radii2 along the models' axes; the callers bound spheres / capsules / cylinders by boxes; the
- * V3.6 name "ellipsoid" is kept). maxTime is cut into n + 1 steps, n = (|w1| + |w2|) maxTime / 0.2
+ * name "ellipsoid" is kept). maxTime is cut into n + 1 steps, n = (|w1| + |w2|) maxTime / 0.2
  * (angular speeds); in each step the boxes sweep linearly (VincBoxSweepTime) from the poses
  * integrated to the start of the step. result->time = the first possible contact time (maxTime
  * when none); returns 1 when one was found. */

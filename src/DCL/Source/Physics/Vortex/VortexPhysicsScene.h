@@ -22,7 +22,7 @@
 //     0x523ab0, 0x523be0, 0x523f70, 0x5242d0, .., 0x524410, 0x524710, .., 0x5248a0, 0x5248f0,
 //     0x524950, 0x524990, 0x5247d0, 0x524830, 0x524840, 0x5294e0, 0x5249d0, 0x524a00, 0x524a00,
 //     0x524a50, 0x524a20, 0x40be80, 0x40be80, 0x524ad0, 0x524cb0, 0x525030, 0x5252b0, 0x525340,
-//     sdd 0x522240, 0x459790, 0x525160}. NOTE: the work files pair several of these one slot off.
+//     sdd 0x522240, 0x459790, 0x525160}.
 //   VortexPhysicsSnapshot : BaseBrickPhysicsSnapshot. sizeof 0x1c. Mac 0x758d40, Win 0xa2a1e8.
 //   VortexHingeSolverHinge : BaseBrickPhysicsConnectionHelper (+0), BaseBrickPhysicsSimulationCallback
 //     (+0x64), Object (+0x6c). sizeof 0x84. Mac 0x758c3c / 0x758c6c / 0x758c88; Win 0xa29fc4 /
@@ -214,7 +214,7 @@ public:
     static void SetShape(Vx::VxCollisionGeometry* geometry, VortexShapeUserData* shape);
 
     // ---- data -------------------------------------------------------------------------------
-    bool                        m_doCollide;          // +0x90 true (tools/diff/OrigVortex.h kSceneDoCollide)
+    bool                        m_doCollide;          // +0x90 true
     Vx::VxUniverse*             m_universe;           // +0x94
     Vx::VxMechanism*            m_mechanism;          // +0x98 the bodies and joints (both builds)
     VortexRigidBodyUserData     m_testBodyData;       // +0x9c kind 2: the temporary test / drag parts

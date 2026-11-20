@@ -140,7 +140,7 @@ void VxAttachment::getTransform(VxTransform& tm) const
     }
 }
 
-// Win 0x7828f0 (V4.1; Win only): the reference transform as in getTransform, then the local
+// Win 0x7828f0 (Win only): the reference transform as in getTransform, then the local
 // frame = world relative to it (Win 0x719940, inlined here: out = A * B^T on the rotation rows,
 // translation (A.t - B.t) * B^T; every sum in the order k = 0, 1, 2)
 void VxAttachment::setTransform(const VxTransform& world)

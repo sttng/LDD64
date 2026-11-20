@@ -227,7 +227,7 @@ public:
     void setContactHandler(ContactHandler* h);           // Mac 0x468168: deletes the old one (name inferred)
     ContactHandler* getContactHandler() const;           // Mac 0x46801e (name inferred)
 
-    // --- constraints (VxConstraint::setPart, V4.3) ---
+    // --- constraints (VxConstraint::setPart) ---
     void addConstraint(VxConstraint* c);                 // Mac 0x46ab92, Win 0x71e8c0 (name inferred)
     // Mac 0x469afa: removes c when it uses this part exactly once (name inferred)
     void removeConstraint(VxConstraint* c);

@@ -288,7 +288,7 @@ void PartChildStart(void* data, const char* name, const char** a)
             return;
         // NOTE: the surface id grows the array to surface + 1 unchecked (both builds; an id
         // near 4G wraps the size and writes past it); fixed: ids from kMaxModelFileIndex on are
-        // ignored, as 0 is (H13).
+        // ignored, as 0 is.
         if (surface >= kMaxModelFileIndex)
             return;
         BasicArray<UInt32>& materials = parser.CurrentPart()->m_materials;
@@ -369,7 +369,7 @@ void PartStart(void* data, const char* name, const char** a)
         detail = ModelLoader::PartError::flex;
     // NOTE: the control point grows the flex's part array to controlPoint + 1 unchecked (both
     // builds; 0xFFFFFFFE wraps it); fixed: a control point from kMaxModelFileIndex on is a
-    // flex error (H13).
+    // flex error.
     else if (controlPoint != 0xffffffff && controlPoint >= kMaxModelFileIndex)
         detail = ModelLoader::PartError::flex;
     else
@@ -799,7 +799,7 @@ struct ModelSaverLXFML4::Writer {
     // ` name="value"`
     // NOTE: the original writes the value as it is (Win 0x4e4810, 0x4e5f00 … call no
     // String::ToXML), so a name or item number with & < > " ' breaks the file; fixed: the value
-    // is escaped (M7).
+    // is escaped.
     void Attribute(const char* name, const String& value)
     {
         m_text << " " << name << "=\"" << value.ToXML() << "\"";
@@ -847,7 +847,7 @@ void ModelSaverLXFML4::Writer::Metas()                                       // 
         Indent(4);
         m_text << "<" << it->m_name;
         // NOTE: the original writes the attribute values and the text as they are (no
-        // String::ToXML, Win 0x4e4490); fixed: both are escaped (M7).
+        // String::ToXML, Win 0x4e4490); fixed: both are escaped.
         for (BasicArray<SS2::Meta::Attribute>::ConstIterator a = it->m_attributes.Begin(); a != it->m_attributes.End(); ++a)
             m_text << " " << a->m_name << "=\"" << a->m_value.ToXML() << "\"";
         if (it->m_text.IsEmpty())

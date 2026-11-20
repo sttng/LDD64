@@ -253,7 +253,7 @@ public:
 
     MdtConstraintID getMdtConstraint() const { return mConstraint; }
 
-    // ---- V0.2 spellings (deprecated; non-colliding ones only) ----
+    // ---- earlier spellings (deprecated; non-colliding ones only) ----
     void unk_43d2f4(int c, VxReal a, VxReal b) { setMotorStiffnessAndDamping(c, a, b); }
     VxReal unk_43d120(int c) const { return getMotorStiffness(c); }
     void unk_43cef4(int value) { setMdtFlag2(value); }
@@ -272,7 +272,7 @@ public:
     VxSubscriberCollection<Event, Subscriber, 2> mSubscribers; // Mac +0x20, Win +0x38
     MdtConstraintID mConstraint;                // Mac +0x2c, Win +0x44
     VxUniverse* mUniverse;                      // Mac +0x30, Win +0x48 (name inferred)
-    void* m34;                                  // Mac +0x34, Win +0x4c: the owning VxAssemblyBase (UniverseConnector; V4.6: read by the name paths / VxStateConstraint)
+    void* m34;                                  // Mac +0x34, Win +0x4c: the owning VxAssemblyBase (UniverseConnector; read by the name paths / VxStateConstraint)
     VxArray<VxPart*> mParts;                    // Mac +0x38, Win +0x50 (sized partCount)
     VxArray<VxAttachment> mPartAttachments;     // Mac +0x48, Win +0x60 (cache, Win only users) (name inferred)
     VxArray<ConstraintPartAttachment*> mPartAttachmentAccessors; // Mac +0x58, Win +0x70 (name inferred)

@@ -1,5 +1,5 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - aggregate (composite) models: a model whose geometry is
-// the aggregate geometry of the space item (V3.8, Mac 0x54b028...) holding element models
+// the aggregate geometry of the space item (Mac 0x54b028...) holding element models
 // (restored; Mac 557c 0x4bfbdd-0x4bfd82, Win 0x7746a0-0x7747e0).
 // Used by Vx::VxCompositeCollisionGeometry (Mac 0x43b67c ... 0x43bec8).
 #include "Vinc/VincIntersect.h"

@@ -29,6 +29,6 @@ typedef VxReal VxReal4x4[4][4];
 //  * "Mac +0xNN" = offset in the i386 Darwin build (GCC 4.x, libstdc++ COW std::string of 4
 //    bytes, double aligned to 4 inside structs).
 //  * "Win +0xNN" = offset in the MSVC 2008 build (std::string 28 bytes, double aligned to 8).
-//  * tests/test_vortex_headers.cpp checks the declared members against those numbers.
+//  * the restoration's tests check the declared members against those numbers.
 
 #endif

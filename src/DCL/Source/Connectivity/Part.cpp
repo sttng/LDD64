@@ -199,7 +199,7 @@ void Part::SetMaterials(const BasicArray<UInt32>& materials)
         return;
     // NOTE: `materials` is read for every material slot of the part without checking its size
     // (both builds; an LXFML part with fewer materials than its primitive has surfaces reads
-    // past the array); fixed: a missing entry counts as 0, no material of its own (H11).
+    // past the array); fixed: a missing entry counts as 0, no material of its own.
     for (UInt32 i = 0; i < m_materials.GetSize(); ++i)
         ApplyMaterial(i, i < materials.GetSize() ? materials[i] : 0, m_primitive, m_materials, changed, &groups);
     if (changed)

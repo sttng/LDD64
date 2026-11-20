@@ -59,7 +59,7 @@ VINC_INLINE void VincTriangleUpdateNormal(VincTriangle* t)
     }
 }
 
-/* ---- V3.6 (558a): one source triangle (vertices in world space, index, edge data) against a
+/* ---- (558a): one source triangle (vertices in world space, index, edge data) against a
  * primitive; the contacts are appended to result->contacts (result->contactCount), the
  * primitive's normals summed into result->normal; return 1 when contacts were added. cdecl. ---- */
 /* Mac 0x4fbfc6, Win 0x7cea50 */
@@ -77,14 +77,14 @@ int VincTriangleBoxContacts(VincIntersectResult* result, const VincTriangle* src
 int VincTriangleCylinderContacts(VincIntersectResult* result, const VincTriangle* src, MeReal radius,
                                  MeReal halfHeight, const MeReal* tm, MeReal tol, MeReal cosTol, int flag);
 
-/* Contact generators of other items, called by the V3.6 triangle-list pair tests (cdecl on Win):
- * Mac 0x548776 / Win 0x7e7230 (V3.8, 558e): sphere (centre = origin of the triangle's frame,
+/* Contact generators of other items, called by the triangle-list pair tests (cdecl on Win):
+ * Mac 0x548776 / Win 0x7e7230 (558e): sphere (centre = origin of the triangle's frame,
  * radius *r) against tri; separation, normal (from the triangle to the sphere), contact point,
  * dims (high byte 2: face contact). Returns 1 on contact within *pad. */
 int VincSphereTriangleContact(MeReal* sep, MeReal* normal, MeReal* point, MeI16* dims, const MeReal* pad,
                               const MeReal* r, const VincTriangle* tri);
 
-/* Mac 0x545a7e / Win 0x7e76c0 (V3.8, 558e): cylinder (radius *r, half height *hh, axis z of the
+/* Mac 0x545a7e / Win 0x7e76c0 (558e): cylinder (radius *r, half height *hh, axis z of the
  * triangle's frame) against tri: appends contact points to *points and separations to *seps,
  * one shared normal (cylinder frame) and dims; tol = padding / 1000; cosTol / flag from the
  * cylinder geometry (+0x1c / +0x24 Mac). out1 / out2: further outputs not read by the caller. */
@@ -92,14 +92,14 @@ int VincCylinderTriangleContacts(MeReal* out1, MeReal* normal, MeReal* out2, MeR
                                  const MeReal* tol, const MeReal* r, const MeReal* hh, const VincTriangle* tri,
                                  MeReal cosTol, int flag, MeReal** seps);
 
-/* Mac 0x5458bd / Win 0x7e53b0 (V3.8): tri (plane frame) against z <= 0: contact points appended
+/* Mac 0x5458bd / Win 0x7e53b0: tri (plane frame) against z <= 0: contact points appended
  * to *points, one separation, normal (plane frame) */
 int VincPlaneTriangleContact(MeReal* sep, MeReal* normal, MeReal** points, MeI16* dims, MeReal pad,
                              const VincTriangle* tri);
-/* Mac 0x547a3e / Win 0x7e9780 (V3.8): box (half extents radii) against tri (box frame) */
+/* Mac 0x547a3e / Win 0x7e9780: box (half extents radii) against tri (box frame) */
 int VincBoxTriangleContact(MeReal* out1, MeReal* normal, MeReal* out2, MeReal** points, MeReal** seps,
                            MeI16* dims, const MeReal* pad, const MeReal* radii, const VincTriangle* tri);
-/* Mac 0x548dc5 / Win 0x81baa0 (V3.8): capsule segment against one triangle edge a-b (capsule
+/* Mac 0x548dc5 / Win 0x81baa0: capsule segment against one triangle edge a-b (capsule
  * frame), contacts written through *cursor while *count < maxCount */
 int VincCapsuleEdgeContacts(const MeReal* a, const MeReal* b, const MeReal* edgeNormal, MeReal halfHeight,
                             MeReal radius, const MeReal* tm, VincContact** cursor, int maxCount, int* count,

@@ -1,4 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - Vortex heap allocation (restored header, V0.2).
+// Vortex 5.0.0 build 800 "vortexldd41" - Vortex heap allocation (restored header).
 // Every Vx class has its own out-of-line operator new / delete (e.g. VxHinge: new Mac 0x45a2a1,
 // delete Mac 0x45a1c7) forwarding to vxAlloc / vxFree (the MeMemoryAPI table); VxArray growth
 // (inlined in LEGO code, e.g. Mac TU 435 0x3abd90) uses them too. Win: operator new is a 16-byte
@@ -23,7 +23,7 @@ void vxFree(void* p);
     static void* operator new(size_t size);  \
     static void operator delete(void* p)
 
-// The matching definitions, for the class's .cpp (V1.1).
+// The matching definitions, for the class's .cpp.
 #define VX_IMPLEMENT_ALLOCATOR(Class)                                    \
     void* Class::operator new(size_t size) { return Vx::vxAlloc(size); } \
     void Class::operator delete(void* p)                                 \

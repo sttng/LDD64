@@ -2,7 +2,7 @@
 // LXFQuickLook.qlgenerator: the preview of an .lxf / .lxfml file. QuickLook 0x12b0-0x1c5f.
 // An .lxf (a zip archive, opened as a VFS directory) shows its IMAGE100.PNG; any other file (an
 // .lxfml) is shown as plain text. File name inferred (Xcode template).
-// Mac only; the Objective-C parts sit behind __OBJC__ (tests/test_lxfplugins.cpp runs the rest
+// Mac only; the Objective-C parts sit behind __OBJC__ (the restoration's tests run the rest
 // on the Linux-hosted Mac branch, with HOST-ONLY stand-ins for NSData / the pool).
 #if !defined(_WIN32)
 #include "LXFPluginStorage.h"
@@ -29,7 +29,7 @@ namespace {
 // handed to NSData without copy, which frees it with free() (both plug-ins); when the read fails
 // it is leaked. The size is the archive's declaration, not checked (both plug-ins, inside
 // Finder's preview process); fixed: an empty file or one over kLXFGeneratorMaxSize is not shown,
-// the buffer comes from malloc and a failed read frees it (H26).
+// the buffer comes from malloc and a failed read frees it.
 void SetPreviewData(QLPreviewRequestRef preview, const Path& path, CFStringRef type)
 {
     RefPointer<File> file = path.OpenFile(OpenMode(true, false, true, false), false);

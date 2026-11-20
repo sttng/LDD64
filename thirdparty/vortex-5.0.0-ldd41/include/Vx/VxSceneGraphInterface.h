@@ -5,7 +5,7 @@
 // 0x446d6e). The node is an opaque handle whose reference count is kept by the registered node
 // interface (Mac 0x458f3d returns it: slot 2 addRef, slot 3 release). The scene-graph interface
 // lives in VxFrame::mSceneGraphInterface (Mac +0xd4) and is created lazily (Mac 0x458ebf, the
-// TrivialSceneGraphInterface factory, V4.5) - the original inlines that "get or create" into its
+// TrivialSceneGraphInterface factory) - the original inlines that "get or create" into its
 // callers (VxEntity Mac 0x446cda / 0x446d6e / 0x447a94).
 //
 // LDD never binds a node (no VX_GRAPHICS_REGISTER_NODE_INTERFACE): every path below is
@@ -26,23 +26,23 @@ class VxEntity;
 class VxNode {
 public:
     VxNode() : mHandle(0) {}
-    void addRef();              // Mac 0x4673f6 (TU 506, src/Vx/VxNode.cpp, V4.3): node interface slot 2
-    void release();             // Mac 0x4673c6, Win 0x760b30 (V4.3): slot 3; clears the handle when it returns 0
+    void addRef();              // Mac 0x4673f6 (TU 506, src/Vx/VxNode.cpp): node interface slot 2
+    void release();             // Mac 0x4673c6, Win 0x760b30: slot 3; clears the handle when it returns 0
     bool operator==(const VxNode& o) const { return mHandle == o.mHandle; }
     bool operator!=(const VxNode& o) const { return mHandle != o.mHandle; }
-    static const VxNode sNull;  // Mac 0x77cdfc, Win 0xaf2ff8 (bss; defined in src/Vx/VxNodeInterface.cpp, V4.6)
+    static const VxNode sNull;  // Mac 0x77cdfc, Win 0xaf2ff8 (bss; defined in src/Vx/VxNodeInterface.cpp)
 
     void* mHandle;              // +0x00
 };
 
-// The node interface (V4.3 / V4.6: src/Vx/VxNodeInterface.cpp = Mac TU 507 0x467482-0x467efd,
+// The node interface (src/Vx/VxNodeInterface.cpp = Mac TU 507 0x467482-0x467efd,
 // Win 0x752d00-0x7534e0 + 0x7ac7a0). The default instance is a static object of this class
 // itself (Mac vtable 0x75e340, in VxSceneGraphInterface.cpp), so every slot is concrete:
 // addRef / release return 1, the others
 // warn "VxNodeInterface: default implementation of %s() is used..." (VX_GRAPHICS_REGISTER_NODE_
 // INTERFACE) and return a neutral value; only slot 17 does real work (through the scene-graph
 // interface). Method names from the warning strings; parameter lists from the Win callee
-// cleanup sizes (unknown 4-byte arguments are kept as ints) (V4.6).
+// cleanup sizes (unknown 4-byte arguments are kept as ints).
 struct VxNodeBoundingBox {     // (name inferred) 0x30 bytes: empty box = (DBL_MAX..., -DBL_MAX...)
     VxVector3 min;
     VxVector3 max;
@@ -93,10 +93,10 @@ public:
     virtual void updateNodeTreeFromParts(const VxNode& node);           // slot 36 Mac 0x4676c8, Win 0x7532a0
     virtual std::string getNodeTypeName(const VxNode& node);            // slot 37 Mac 0x467664, Win 0x753490 ("")
 };
-// Mac 0x458f3d, Win 0x7533a0: the registered node interface (V4.5, VxSceneGraphInterface.cpp)
+// Mac 0x458f3d, Win 0x7533a0: the registered node interface (VxSceneGraphInterface.cpp)
 VxNodeInterface* vxGetNodeInterface();
 
-// Mac slots (D1, D0 first) 2 .. 12 (vtable of the trivial implementation Mac 0x75de68, V4.5:
+// Mac slots (D1, D0 first) 2 .. 12 (vtable of the trivial implementation Mac 0x75de68:
 // src/Vx/VxSceneGraphInterface.cpp = Mac TU 492, Win 0x752d30-0x7533f0). Return types from the
 // trivial implementation (which returns 0 / 1 from slots 2, 4-7, 11, 12). (names inferred)
 class VxSceneGraphInterface {
@@ -128,7 +128,7 @@ public:
 };
 
 // Mac 0x458eef: the registered node interface (a function-local static pointer, initialised
-// with the default interface, Mac 0x458fe4: a static VxNodeInterface) (V4.5) (name inferred)
+// with the default interface, Mac 0x458fe4: a static VxNodeInterface) (name inferred)
 VxNodeInterface*& vxNodeInterfaceRef();
 
 // The "get or create" the original inlines (Mac 0x446cda: frame +0xd4, then 0x458ebf).

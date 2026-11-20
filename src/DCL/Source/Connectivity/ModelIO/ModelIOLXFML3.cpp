@@ -426,12 +426,12 @@ void PartChildStart(void* data, const char* name, const char** a)
             return;
         // NOTE: the surface id grows the array to surface + 1 unchecked (both builds; an id
         // near 4G wraps the size and writes past it); fixed: ids from kMaxModelFileIndex on are
-        // ignored, as 0 is (H13).
+        // ignored, as 0 is.
         if (surface >= kMaxModelFileIndex)
             return;
         // NOTE: CurrentPart() is Back() of the current rigid's parts, which is empty when the
         // conversion kept the first part of a group aside (both builds: reads before the
-        // array); fixed: the element is then ignored (H16), here and for <Decoration>.
+        // array); fixed: the element is then ignored, here and for <Decoration>.
         if (parser.CurrentRigid().m_parts.IsEmpty())
             return;
         BasicArray<UInt32>& materials = parser.CurrentPart()->m_materials;

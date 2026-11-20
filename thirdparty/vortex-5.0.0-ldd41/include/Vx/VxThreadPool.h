@@ -3,7 +3,7 @@
 // VxThreadPool is the abstract interface (Win vtable 0x9fa8a0, 12 slots, all pure but the
 // dtor); VxFrame makes one lazily (VxFrame +0x100 Mac / +0x118 Win, Mac 0x4539b4:
 // VxThreadPool::create(mThreadCount, "VxFrame ThreadPool")) and Kea's threaded step
-// (MdtKeaStep, V2.3) queues one work unit per partition and waits.
+// (MdtKeaStep) queues one work unit per partition and waits.
 //  * Mac: VxThreadPoolPthread (TU 530 0x486da2-0x487bee; detached pthreads, a std::deque queue)
 //  * Win: VxThreadPoolWin (Win-only, 0x7534e0-0x754370, reached by the ball game: a semaphore,
 //    a shutdown event, a critical section and _beginthreadex threads)

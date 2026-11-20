@@ -68,7 +68,7 @@ void DecodePlanarRLE(const UInt8* source, UInt8* destination, UInt32 rowBytes, U
     }
 }
 
-// (not in the original; H8) DecodeRLE / DecodePlanarRLE with the reads checked against the
+// (not in the original) DecodeRLE / DecodePlanarRLE with the reads checked against the
 // `length` bytes of `source` and the writes against the image: valid data decodes exactly as
 // there; a run crossing the end is cut, data that ends early leaves the rest 0.
 void DecodeRLEChecked(const UInt8* source, UInt32 length, UInt8* destination, UInt32 rowBytes, UInt32 height)
@@ -256,7 +256,7 @@ UInt32 PCXBitmapCodec::GetEncodedSize(const Bitmap& bitmap)
 // NOTE: the header is read through a Stream of 0x80 bytes without checking the stream size
 // (its fields take 74 bytes: a shorter file is read past its end), and the 256-colour palette
 // is looked for 0x301 bytes before the end of the stream without a size check either (in a
-// file shorter than that, before its start). Fixed: files shorter than either are refused (H8).
+// file shorter than that, before its start). Fixed: files shorter than either are refused.
 RefPointer<BitmapCodec::Header> PCXBitmapCodec::ReadHeader()
 {
     if (!m_header.IsNull())
@@ -272,7 +272,7 @@ RefPointer<BitmapCodec::Header> PCXBitmapCodec::ReadHeader()
 
     const UInt8* file = m_stream->GetBuffer();
     UInt32 fileSize = m_stream->GetBufferSize();
-    if (fileSize < 0x80)                                       // (H8, see above)
+    if (fileSize < 0x80)                                       // (see above)
         return 0;
     Stream stream(const_cast<UInt8*>(file), 0x80, false);
     stream.Read(header->m_manufacturer);
@@ -303,7 +303,7 @@ RefPointer<BitmapCodec::Header> PCXBitmapCodec::ReadHeader()
     stream.Read(header->m_verticalScreenSize);
 
     if (header->m_xMax < header->m_xMin || header->m_yMax < header->m_yMin)
-        return 0;   // a negative extent wraps to a size near 4G (H8)
+        return 0;   // a negative extent wraps to a size near 4G
     surface.m_width = (UInt32)((Int32)header->m_xMax - (Int32)header->m_xMin + 1);
     surface.m_height = (UInt32)((Int32)header->m_yMax - (Int32)header->m_yMin + 1);
     if (surface.m_width == 0 || surface.m_height == 0)
@@ -365,7 +365,7 @@ bool PCXBitmapCodec::Decode(Bitmap& bitmap, const Color* colorKey)
     const UInt8* data = m_stream->GetBuffer() + 0x80;
     // NOTE: the pixel data is not checked against the file (both builds): raw rows are read and
     // RLE runs decoded past its end, and a run crossing the end of the image writes past the
-    // buffer (H8); fixed: raw rows must fit in the file, RLE is decoded with checked reads and
+    // buffer; fixed: raw rows must fit in the file, RLE is decoded with checked reads and
     // writes, and an image of more than 256 MB is refused.
     const UInt32 dataSize = m_stream->GetBufferSize() - 0x80 -
                             ((Int8)header->m_planes == 1 && (Int8)header->m_bitsPerPixel == 8 ? 0x301 : 0);

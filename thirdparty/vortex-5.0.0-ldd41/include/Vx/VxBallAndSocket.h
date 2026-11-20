@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxBallAndSocket (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxBallAndSocket (restored header).
 // Mac 0x90 bytes, Win 0xa8 (glue operator new sizes). Class id 0x118 (Mac 0x42f0dc).
 #ifndef VX_VXBALLANDSOCKET_H
 #define VX_VXBALLANDSOCKET_H

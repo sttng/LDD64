@@ -115,7 +115,7 @@ bool LiffChunk::FindChunk(UInt32 index, const ChunkId& id, UInt64& offset, Chunk
         // NOTE: the declared chunk size is not checked (both builds): a size below the chunk
         // header makes the chunk's data size wrap, a size past the parent's data reaches
         // outside it, and a size of 0 never advances (endless loop); fixed: such a chunk ends
-        // the search (H3, H4).
+        // the search.
         if (header.m_size < ChunkHeader::kSize || header.m_size > GetDataSize() - offset)
             return false;
         if (any || header.m_id == id)

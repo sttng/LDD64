@@ -1,5 +1,5 @@
 // LEGO Digital Designer — restored source
-// LEGO::BGAutomaticMode — the building-guide mode ("bgAutomaticMode", F7): a BGMode whose guide
+// LEGO::BGAutomaticMode — the building-guide mode ("bgAutomaticMode"): a BGMode whose guide
 //   comes from a BGAutomaticApplication (generated, or stored with the model). Owns the
 //   navigation commands (LDD.commands.bgAutomaticMode, short-cuts), step slider, "n / total"
 //   texts, step preview panel (2 x 2 cells) and substep previews; layout from Lua "bgAutomaticMode".

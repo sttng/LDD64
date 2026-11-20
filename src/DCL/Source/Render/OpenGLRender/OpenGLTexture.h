@@ -23,9 +23,8 @@ class OpenGLTextureFactory;
 // of 4, but the rows of a bitmap (RowBytes pitch: Win RGB24 / BGR24 / grey images) and of the
 // padding copy in UploadImage are tightly packed: an image whose (power-of-two) width is 1 or 2
 // with 1 or 3 bytes per pixel is read with a skew from the second row on (and past the data);
-// fixed: UploadImage and UploadImage3D upload with alignment 1 and restore the previous value
-// (M25).
-class OpenGLUnpackAlignment1 {   // GL_UNPACK_ALIGNMENT 1 for its scope (M25)
+// fixed: UploadImage and UploadImage3D upload with alignment 1 and restore the previous value.
+class OpenGLUnpackAlignment1 {   // GL_UNPACK_ALIGNMENT 1 for its scope
 public:
     OpenGLUnpackAlignment1();
     ~OpenGLUnpackAlignment1();

@@ -2,7 +2,7 @@
 // LEGO::String, Windows implementation on BasicString<UniChar16>. From the Win build: Reserve
 // 0x401350, Append 0x401e90/0x401f80, release 0x4017c0, Int32 0x402300, UInt32 0x402380, UInt64
 // 0x4023f0, Real32 0x402470, literal append 0x403ff0/0x404100. Search/compare/split/parse are
-// mostly inlined there; written to the String.mm contract (tests/test_string.cpp checks both).
+// mostly inlined there; written to the String.mm contract (the restoration's tests check both).
 #if defined(_WIN32)
 
 #include "LEGO/String.h"
@@ -52,8 +52,8 @@ UInt32 FormatUnsigned(UniChar16* buf, U v, bool negative)
 // _fltout2 (0x6edf7b) → 80-bit (__dtold 0x6edebe) → $I10_OUTPUT (0x6f25cf): 17 digits in 96-bit
 // arithmetic, rounded on an 18th; %G crops zeros, 3-digit exponent ("1E+030"); NaN / inf from
 // "1#INF", "1#QNAN", "1#SNAN", "1#IND" with character rounding ("1.#QNB" at precision 5). Followed
-// operation by operation (e.g. 414.010223388671875 -> ...87, 7.47310638427734375 -> ...38);
-// tests/diff/diff_string.cpp checks it against the original.
+// operation by operation (e.g. 414.010223388671875 -> ...87, 7.47310638427734375 -> ...38).
+// The restoration's diff tests check it against the original.
 
 // 12-byte "long double" of the CRT: words (little endian) 0 = 16 extra bits, 1-2 = low 32
 // mantissa bits, 3-4 = high 32 mantissa bits, 5 = sign and exponent.
@@ -463,7 +463,7 @@ inline bool InSet(const String& set, UniChar16 c)
 
 // iswspace of the VS2008 CRT (Win 0x6cb492 = iswctype(c, _SPACE)): the CRT's _wctype table
 // below 0x100 (0x85 is not a space there), GetStringTypeW(CT_CTYPE1) C1_SPACE above. The set is
-// the one the original returns for 0..0xFFFF (tests/diff/diff_string.cpp compares all of them).
+// the one the original returns for 0..0xFFFF (the restoration's diff tests compare all of them).
 inline bool IsSpaceChar(UniChar16 c)
 {
     if (c < 0x100)
@@ -1108,7 +1108,7 @@ void String::Split(const String& sep, BasicArray<String>& out) const
 // not added: after the last separator the rest is appended only when it is not empty
 // (0x403bfa-0x403c03 `if (data && start < length)`), so "a/b/" -> {a, b}, "/" -> {""}, "" -> {}.
 // The VFS relies on it: Directory::Enumerate("memory/dir/") lists "dir" in "memory"
-// (tests/diff/diff_memorydirectory.cpp).
+// (the restoration's diff tests).
 void String::Split(UniChar16 sep, BasicArray<String>& out) const
 {
     out.Clear();

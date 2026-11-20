@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxSpring (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxSpring (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x126 (Mac 0x478cf0).
 #ifndef VX_VXSPRING_H
 #define VX_VXSPRING_H

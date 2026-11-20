@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxMechanism (restored).
 // Mac TU 450 (0x420ef4-0x42247b), Win 0x71eb00-0x71f810. The assembly behaviour itself is
-// VxAssemblyBase's (V4.1); VxMechanism adds the reference part and forwards the part /
+// VxAssemblyBase's; VxMechanism adds the reference part and forwards the part /
 // constraint API.
 #include "Vx/VxAssemblyBase.h"
 #include "Vx/VxCable.h"

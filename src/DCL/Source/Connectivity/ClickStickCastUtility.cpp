@@ -348,7 +348,7 @@ bool ClickStickCastUtility::DoCast(const Vector3& origin, const Vector3& directi
             // NOTE (both builds, Vortex physics): CastDragScene never reports a hit in LDD (its
             // sweep / ray filters want a shape of kind 4 and see only composites without a shape;
             // LDD's scenery uses flags 1 / 2), so the `hit` branch below never runs
-            // (tests/diff/diff_vortex_scene.cpp TestImpacts).
+            // (the restoration's diff tests).
             PhysicsScene* physics = m_scene->GetPhysicsScene();
             Matrix3D cast;
             cast.SetTranslationMatrix(rayOrigin);

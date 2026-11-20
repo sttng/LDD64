@@ -1,7 +1,7 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxID and the CRC-32 it uses (restored).
 // Mac: VxID = TU 495 0x45b3d2-0x45b585 (file name unknown), CRC-32 = part of TU 468
 // (0x437abe-0x437bac); together here because VxData field names are VxIDs. The rest of those TUs
-// (VxInternalIDIntersectSubscriber ctor 0x45b59c.., the geometry helpers 0x437bd4..) is V4.4 / V4.5.
+// (VxInternalIDIntersectSubscriber ctor 0x45b59c.., the geometry helpers 0x437bd4..) is restored elsewhere.
 #include "Vx/VxID.h"
 
 namespace Vx {

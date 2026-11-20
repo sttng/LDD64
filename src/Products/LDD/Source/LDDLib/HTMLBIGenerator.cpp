@@ -41,7 +41,7 @@
 #include "Path.h"
 #include "Bitmap.h"
 #include "DataStream.h"
-#include "SafeFileWrite.h"   // (M2) SaveImage / WritePage
+#include "SafeFileWrite.h"   // SaveImage / WritePage
 #if !defined(_WIN32)
 #include "MacImageIO.h"
 #endif
@@ -87,8 +87,8 @@ void HTMLBIGenerator::ReplaceTag(String& target, const String& tag, const String
     target.ReplaceAll(tag, 0, String::npos, value, 0, String::npos);
 }
 
-// fixed (M7, not in the original): `text` as HTML text / attribute content: & < > " escaped as
-// String::ToXML does, ' as &#39; (&apos; is not HTML 4); fixed (F3): # as &#35;, so the inserted
+// fixed (not in the original): `text` as HTML text / attribute content: & < > " escaped as
+// String::ToXML does, ' as &#39; (&apos; is not HTML 4); fixed: # as &#35;, so the inserted
 // text cannot hold a tag literal that a later ReplaceTag over the whole page would expand.
 static String EscapeHTML(const String& text)
 {
@@ -98,7 +98,7 @@ static String EscapeHTML(const String& text)
     return escaped;
 }
 
-// fixed (F3, not in the original): `path` (a relative folder name) as a URL path inside an HTML
+// fixed (not in the original): `path` (a relative folder name) as a URL path inside an HTML
 // attribute or a quoted CSS url(): the ASCII characters that a URL would read as an escape, a
 // query or a fragment (% ? #), that end or escape the quoted value (" ' \), that are markup
 // (& < >) and the control characters are percent-encoded (%XX); everything else is kept as it is
@@ -161,7 +161,7 @@ String HTMLBIGenerator::BuildPaletteList()
     while (it != palette->GetBagsEnd()) {
         list << m_paletteTemplate;
         ReplaceTag(list, String("#PaletteCount#"), String("1"));
-        // NOTE: the original inserts the palette name as it is (Win 0x68f35d); fixed: escaped (M7).
+        // NOTE: the original inserts the palette name as it is (Win 0x68f35d); fixed: escaped.
         ReplaceTag(list, String("#PaletteName#"), EscapeHTML((*it)->m_name));
         ++it;
     }
@@ -241,7 +241,7 @@ bool HTMLBIGenerator::Generate(Window* window)
     // NOTE: the original ignores the result of the copy of the template pictures (Win 0x68f917),
     // so a folder that takes no files gives a page without its header and logo; fixed: a failed
     // copy (of an Images folder the assets have) ends the generation with the picture folder's
-    // error (M2).
+    // error.
     if (templates && !templates->Copy(String("Images"), *m_imageDirectory, String("Images"), true, false) &&
         templates->DirectoryExists(String("Images"), 0)) {
         LocalizedString message(String("NODIRFORHTMLPICTURESAVE"));
@@ -271,10 +271,10 @@ bool HTMLBIGenerator::Generate(Window* window)
     m_elementTemplate = LoadTemplate(String("ElementListTemplate.html"));
 
     // NOTE: the original inserts the model name as it is (Win 0x68f917), so a name with & or <
-    // breaks the page (or adds markup to it); fixed: escaped (M7), # too (F3: tags are replaced
+    // breaks the page (or adds markup to it); fixed: escaped, # too (tags are replaced
     // one after another over the whole page, so a name holding e.g. "#ElementList#" was expanded).
     // (#ImageDir# is not entity-escaped: it is also used inside the template's <style>, where
-    // entities are not decoded; it is percent-encoded instead, F3 in Update.)
+    // entities are not decoded; it is percent-encoded instead, see Update.)
     ReplaceTag(m_page, String("#ModelName#"), EscapeHTML(LDDApplication::GetInstance()->GetDocumentName()));
     ReplaceTag(m_page, String("#ModelNameOrNoName#"), EscapeHTML(m_modelName));
     ReplaceTag(m_page, String("#PaletteList#"), BuildPaletteList());
@@ -370,7 +370,7 @@ void HTMLBIGenerator::Update()
     ReplaceTag(m_page, String("#BISteps#"), String(""));
     // NOTE: the original inserts the image folder name as it is (Win 0x6908a9), so a model name
     // with # % ? loses the images (read as fragment / query / escape), ' ends the CSS url() and "
-    // ends the src attribute (markup injection); fixed: percent-encoded (F3; the folder keeps its
+    // ends the src attribute (markup injection); fixed: percent-encoded (the folder keeps its
     // name).
     ReplaceTag(m_page, String("#ImageDir#"), EncodeURLPath(m_imageDirectory->GetPath(false)));
     ReplaceTag(m_page, String("#ElementList#"), BuildElementList());
@@ -383,7 +383,7 @@ void HTMLBIGenerator::Update()
     }
     // NOTE: the original ignores WritePage's result (Win 0x6908a9): a page that could not be
     // written ends the generation as a success; fixed: the error dialog of the target folder
-    // (M2; WritePage writes the page all or nothing).
+    // (WritePage writes the page all or nothing).
     if (!WritePage()) {
         Stop();
         LocalizedString message(String("NODIRFORHTMLPICTURESAVE"));
@@ -408,7 +408,7 @@ String HTMLBIGenerator::BuildStep()
     // NOTE: the original ignores a brick picture that could not be saved (Win 0x68f18b: the part
     // list gets an empty image name, GetBrickImage); fixed: the step fails as for its own picture
     // (Update's CANNOTGENERATEHTMLBI). The pictures are made here in BuildPartList's order, so
-    // BuildPartList and BuildElementList find them all made (M2).
+    // BuildPartList and BuildElementList find them all made.
     for (BrickCountMap::Iterator it = m_stepBricks.Begin(); it != m_stepBricks.End(); ++it)
         if (GetBrickImage(it->first.Get()).IsEmpty())
             return String();
@@ -440,14 +440,14 @@ String HTMLBIGenerator::BuildElementList()
     for (BrickCountMap::Iterator it = m_allBricks.Begin(); it != m_allBricks.End(); ++it) {
         String item(m_elementTemplate);
         ReplaceTag(item, String("#BrickCount#"), String() << it->second);
-        // NOTE: the image folder name as it is (Win 0x68f646); fixed: percent-encoded (F3, see Update).
+        // NOTE: the image folder name as it is (Win 0x68f646); fixed: percent-encoded (see Update).
         ReplaceTag(item, String("#ImageDir#"), EncodeURLPath(m_imageDirectory->GetPath(false)));
         ReplaceTag(item, String("#BrickImageSize#"),
                    String("height=\"") << (UInt32)kBrickImageHeight << "\" width=\""
                                         << (UInt32)kBrickImageWidth << "\"");
         ReplaceTag(item, String("#BrickImage#"), GetBrickImage(it->first.Get()));
         // NOTE: the item number and the description are inserted as they are (Win 0x68f646);
-        // fixed: escaped (M7).
+        // fixed: escaped.
         ReplaceTag(item, String("#BrickNumber#"), EscapeHTML(it->first->GetBrick()->GetName()));
         ReplaceTag(item, String("#BrickName#"), EscapeHTML(GetBrickName(it->first.Get())));
         list << item;
@@ -530,7 +530,7 @@ bool HTMLBIGenerator::SaveImage(const String& name, const Vector2& size, ModelCo
 #endif
         // NOTE: the original ignores SetSize and reports success when the picture cannot be
         // encoded (Win 0x68e975, inlined); fixed: WriteWholeFile (all or nothing, read back), and
-        // no picture is a failure (M2).
+        // no picture is a failure.
         result = !png.IsNull() && WriteWholeFile(file, png->GetData(), (UInt32)png->GetSize());
     }
     delete[] (UInt8*)bitmap.m_data;
@@ -543,7 +543,7 @@ bool HTMLBIGenerator::WritePage()
     // NOTE: the original ignores the results of SetSize and Write (Win 0x68dfcd), so a failed
     // write (a full disk) leaves a cut page and is opened as a success; fixed: written all or
     // nothing (WriteWholeFile: "<name>.tmp", read back, renamed over the page), false on any
-    // failure, and only a complete page is opened (M2).
+    // failure, and only a complete page is opened.
     const Path path(m_fileName, m_directory.Get());
     const AString text = EncodeString(kTextEncodingUTF8, m_page, 0, String::npos);
     if (!WriteWholeFile(path, text.GetBuffer(), text.GetLength()))

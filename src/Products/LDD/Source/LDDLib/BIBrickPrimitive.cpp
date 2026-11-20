@@ -9,7 +9,7 @@ namespace LEGO {
 
 namespace {
 
-// The walker of CollectConnected (WalkDepthFirst, BIGraphWalk.h; M11): the neighbours are the
+// The walker of CollectConnected (WalkDepthFirst, BIGraphWalk.h): the neighbours are the
 // connected primitives (the keys of the connection map).
 struct ConnectedWalker {
     typedef BIBrickPrimitive* Node;
@@ -197,7 +197,7 @@ void BIBrickPrimitive::GetConnectedPrimitives(BasicSet<BIBrickPrimitive*>& primi
 
 // Mac 0x335090
 // NOTE: the original recurses once per primitive of the path, so a long chain of connected
-// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst, M11).
+// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst).
 void BIBrickPrimitive::CollectConnected(BasicSet<BIBrickPrimitive*>& result, const BasicSet<BIBrickPrimitive*>& within)
 {
     ConnectedWalker walker(result, within);

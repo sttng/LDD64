@@ -374,7 +374,7 @@ bool Window::CreateNativeWindow()
         content = [[old contentView] retain];
         [content removeFromSuperviewWithoutNeedingDisplay];
         [old orderOut:nil];
-        [old setDelegate:nil];                                    // (M19, see below)
+        [old setDelegate:nil];                                    // (see below)
         [old release];
         m_nativeWindow = 0;
     }
@@ -393,7 +393,7 @@ bool Window::CreateNativeWindow()
     // Command-W) although m_nativeWindow keeps the alloc reference that DestroyNativeWindow
     // releases: closing frees the window and DestroyNativeWindow then messages and releases
     // it a second time. fixed: one owner, the LEGO Window (not released when closed; the
-    // delegate is cleared before the release) (M19).
+    // delegate is cleared before the release).
     [window setReleasedWhenClosed:NO];
     if (!content)
         content = [[LEGOMacContentView alloc] initWithFrame:rect Manager:this];
@@ -460,7 +460,7 @@ void Window::DestroyNativeWindow()
     NSWindow* window = (NSWindow*)m_nativeWindow;
     [(LEGOMacContentView*)[window contentView] setManager:0];
     [window orderOut:nil];
-    [window setDelegate:nil];                                     // (M19)
+    [window setDelegate:nil];
     [window release];
 #elif defined(LDD_LINUX)
     LinuxShell::DestroyWindow(m_nativeWindow);

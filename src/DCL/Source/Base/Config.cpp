@@ -17,7 +17,7 @@
 #include "Config.h"
 #include "Directory.h"
 #include "StringConversion.h"
-#include "SafeFileWrite.h"   // (M2) Save
+#include "SafeFileWrite.h"   // Save
 #include <string.h>
 
 #include <iostream>
@@ -442,7 +442,7 @@ bool Config::Load(const Path& path, bool keepOpen)
 //   are lost at the next start) and Save still returns true; fixed: a file that is not held
 //   open (no m_file, !keepOpen) is written whole with WriteWholeFile (on the disk "<name>.tmp",
 //   read back, then renamed over the file: all or nothing), a held file has every result
-//   checked; false when anything failed (M2). The callers (Preferences::Save, LDDMain,
+//   checked; false when anything failed. The callers (Preferences::Save, LDDMain,
 //   LDDApplication, PreferencesControl) ignore the result: no localized message fits, no dialog.
 bool Config::Save(const Path& path, bool keepOpen)
 {

@@ -696,7 +696,7 @@ void Win32StorageFactory::Shutdown()
     m_fileDirectory = 0;
 }
 
-// (not in the original; M2) FlushFileBuffers on `from`, then MoveFileEx over `to`
+// (not in the original) FlushFileBuffers on `from`, then MoveFileEx over `to`
 // (MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH): `to` is the complete old file until the
 // move makes it the complete new one. False when the flush or the move fails (`from` is left for
 // the caller to delete).

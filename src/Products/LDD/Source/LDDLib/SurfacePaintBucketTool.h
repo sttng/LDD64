@@ -38,7 +38,7 @@ public:
     virtual void UpdateHighlight();                                         // 36/26
     // MaterialItemControlObserver's (empty). Mac 0x240e20 (entry 37, thunk 0x240e40), Win 0x67e173
     virtual void OnMaterialChanged(UInt32 material);
-    // fixed (M8, not in the original): a save or export follows: the hover preview is undone
+    // fixed (not in the original): a save or export follows: the hover preview is undone
     // (as in OnDetached); the next hover change previews again.
     virtual void OnClearPreview();
 

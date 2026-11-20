@@ -83,7 +83,7 @@ typedef struct CnvCylinderCache {   /* Mac 0x64, Win 0x68 */
     MeVector3 points[4];            /* +0x04 +0x08 */
 } CnvCylinderCache;
 
-/* the per-pair data of the Convex pair tests (VincModelPair::pairData; V3.2's pool) */
+/* the per-pair data of the Convex pair tests (VincModelPair::pairData; pool) */
 typedef struct CnvPairCache {       /* Mac 0x10c, Win 0x118 */
     int count;                      /* +0x00 simplex size; 0: not initialised */
     MeReal* a[4];                   /* +0x04 support points of A (hull vertex / cylA point) */
@@ -180,7 +180,7 @@ int VincConvexConvexIntersect(VincIntersectResult* r, const VincConvexDesc* a, c
 int VincConvexConvexIntersectCached(VincIntersectResult* r, const VincConvexDesc* a, const VincConvexDesc* b,
                                           const MeReal* padding, CnvPairCache* cache, int maxCount);
 /* hello / goodbye of the Convex pair tests (Mac 0x4b3922 / 0x4b38ff, Win 0x7b13e0 / 0x7b1400):
- * acquire / release pair->pairData from V3.2's pool */
+ * acquire / release pair->pairData from pool */
 int MEAPI VincConvexPairHello(VincModelPair* pair);
 int MEAPI VincConvexPairGoodbye(VincModelPair* pair);
 /* Mac 0x4b3945, Win 0x7b1420: Convex-Convex (VincConvexConvexPairIntersect) */

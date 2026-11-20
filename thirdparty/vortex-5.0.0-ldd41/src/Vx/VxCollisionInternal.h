@@ -1,7 +1,7 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - private declarations of the collision objects:
-// the functions of other items they call (names inferred): V3.7
-// (558c) the Vinc regular-grid height field, V3.8 (558d-e) the space and the aggregate geometry,
-// V4.7 (Mac TU 486) the default fluid interaction forces per shape.
+// the functions of other items they call (names inferred): 558c the Vinc regular-grid height
+// field, 558d-e the space and the aggregate geometry, Mac TU 486 the default fluid interaction
+// forces per shape.
 #ifndef VX_VXCOLLISIONINTERNAL_H
 #define VX_VXCOLLISIONINTERNAL_H
 
@@ -14,7 +14,7 @@
 extern "C" {
 #endif
 
-/* ---- V3.7: regular-grid height field (type 8, "RGHeightField"): Vinc/VincHeightField.h
+/* ---- 558c: regular-grid height field (type 8, "RGHeightField"): Vinc/VincHeightField.h
  * (VincRGHeightFieldCreate Mac 0x53b363 / Win 0x75c410, VincRGHeightFieldUpdate Mac 0x53b350 /
  * Win 0x75c4a0) ---- */
 #ifdef __cplusplus
@@ -25,14 +25,14 @@ extern "C" {
 extern "C" {
 #endif
 
-/* ---- V3.8: space wrappers and the aggregate geometry: Vinc/VincSpace.h, Vinc/VincInternal.h ---- */
+/* ---- 558d-e: space wrappers and the aggregate geometry: Vinc/VincSpace.h, Vinc/VincInternal.h ---- */
 
 #ifdef __cplusplus
 }
 #endif
 
 namespace Vx {
-// ---- V4.7 (Mac TU 486): default fluid interaction forces (Mac pointers 0x7025c0-0x7025dc) ----
+// ---- Mac TU 486: default fluid interaction forces (Mac pointers 0x7025c0-0x7025dc) ----
 bool vxCapsuleFluidInteractionForce(VxCollisionGeometry* cg, void* fluidState);     // Mac 0x44faca
 bool vxSphereFluidInteractionForce(VxCollisionGeometry* cg, void* fluidState);      // Mac 0x44fb85
 bool vxConvexMeshFluidInteractionForce(VxCollisionGeometry* cg, void* fluidState);  // Mac 0x451aea

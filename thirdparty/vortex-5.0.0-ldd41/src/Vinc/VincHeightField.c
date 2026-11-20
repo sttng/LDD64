@@ -1,6 +1,6 @@
 /* Vortex 5.0.0 build 800 "vortexldd41" - regular-grid height field geometry and its pair tests
  * (restored). Mac sub-TU 558c 0x532a4f-0x53b3de (the CxSmallSort methods that
- * follow it belong to CxSmallSort.cpp, V3.8), Win 0x770910-0x7738d0, 0x75c400-0x75c6a0,
+ * follow it belong to CxSmallSort.cpp), Win 0x770910-0x7738d0, 0x75c400-0x75c6a0,
  * 0x7b43b0-0x7b5e62. See Vinc/VincHeightField.h. Names (name inferred) except "RGHeightField".
  * The pair tests build the two triangles of each cell under the other geometry, hand them to the
  * triangle contact generators (VincTriangleContacts.h) and reduce with VincContactSimplify. */

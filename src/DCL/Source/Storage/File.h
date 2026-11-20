@@ -66,7 +66,7 @@ public:
     // NOTE: the original File keeps Object::Release (Mac vtable slot 4 = 0x9280, Win slot 3 =
     // 0x412520): the final release (ZipStorageFile flushing into its volume, the share counters
     // of an entry, a LIFF chunk) runs without the storage lock that every other storage access
-    // holds; fixed: Release takes the lock like Directory::Release (M22). Directory.cpp.
+    // holds; fixed: Release takes the lock like Directory::Release. Directory.cpp.
     virtual void Release() const;
 
     virtual Attributes DoGetAttributes() const                       // Mac 0x12060, Win 0x4362c0

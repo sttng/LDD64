@@ -29,7 +29,7 @@ const BIBrick::Connection* FindConnection(const BIBrickPrimitive* primitive, BIB
     return it == connections.End() ? 0 : it->second.Get();
 }
 
-// One level of the iterative Collect (M11): the position in the neighbours of the primitive
+// One level of the iterative Collect: the position in the neighbours of the primitive
 // and, while one is being looked at, in the directions of its connection.
 struct DirectionFrame {
     BIBrickPrimitive*                         m_primitive;
@@ -69,7 +69,7 @@ UInt32 BIAnalyzerDirection::GetDirectionID(const Vector3& direction)
 
 // Mac 0x2232d0, Win 0x59c820
 // NOTE: the original recurses once per primitive of the path, so a long chain of connected
-// bricks overflows the stack; fixed: the same walk with an explicit stack (M11): the same
+// bricks overflows the stack; fixed: the same walk with an explicit stack: the same
 // primitives are entered and the same direction numbers looked up (GetDirectionID registers new
 // directions) in the same order.
 void BIAnalyzerDirection::Collect(BIBrickPrimitive* primitive, BIGraph* graph, BasicSet<BIBrickPrimitive*>& component,

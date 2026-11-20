@@ -345,7 +345,7 @@ void Directory::Release() const
     DirectoryElement::Release();
 }
 
-// (not in the original: File kept Object::Release; M22, see File.h) The final release of a
+// (not in the original: File kept Object::Release, see File.h) The final release of a
 // file (ZipStorageFile::OnFinalRelease flushes into the archive) runs under the storage lock.
 void File::Release() const
 {
@@ -1094,7 +1094,7 @@ void Path::Assign(const Path& other)
     m_directory = other.m_directory;
 }
 
-// (not in the original; M2) see Directory.h
+// (not in the original) see Directory.h
 bool Directory::ReplaceFile(const String& from, const String& to)
 {
     StorageLocker lock;

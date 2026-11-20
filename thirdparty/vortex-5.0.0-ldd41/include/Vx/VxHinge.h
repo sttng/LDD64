@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxHinge (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxHinge (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x120 (Mac 0x45a07c).
 #ifndef VX_VXHINGE_H
 #define VX_VXHINGE_H
@@ -25,7 +24,7 @@ public:
     // Mac 0x45a124, Win 0x717e90: MdtHinge +0xbe0 = the part whose frame gives the axes of the
     // three position rows (-1 = the world; glue: 1 right after construction) (name inferred)
     void setPositionEquationReferencePart(int partIndex);
-    void unk_45a124(int value) { setPositionEquationReferencePart(value); } // (V0.2 spelling)
+    void unk_45a124(int value) { setPositionEquationReferencePart(value); } // (earlier spelling)
     // VxHinge::kAngularCoordinate: Mac global 0x64407c (= 0), read by the glue through the
     // non-lazy pointer 0x702504 (name inferred)
     static const int kAngularCoordinate;

@@ -209,7 +209,7 @@ void Camera::SetViewportSize(Real32 width, Real32 height)
     // NOTE: the original divides by the width (GetFieldOfViewY: 35 h / (2 w f)), so an empty
     // viewport (a 0x0 scene control or render target, e.g. the skybox projection of
     // BrickConnectSceneControl::Draw / the image render) gives an infinite or NaN projection;
-    // fixed: the projection is kept for an empty viewport (M14).
+    // fixed: the projection is kept for an empty viewport.
     if (!(width > 0.0f && height > 0.0f))
         return;
     Real32 fovY = GetFieldOfViewY(width, height);

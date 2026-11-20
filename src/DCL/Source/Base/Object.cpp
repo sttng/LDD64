@@ -59,7 +59,7 @@ Mutex::Mutex()
 
 // NOTE: the original destroys the mutex while it is still locked (Release, ~MutexLocker:
 // undefined for a CRITICAL_SECTION / pthread mutex). fixed: those unlock first, and the
-// destructor asserts that the mutex is not held (assert: debug and test builds only) (M24).
+// destructor asserts that the mutex is not held (assert: debug and test builds only).
 Mutex::~Mutex()
 {
 #if defined(_WIN32)
@@ -103,7 +103,7 @@ void Mutex::Release()
 {
     Lock();
     if (m_refCount-- < 2) {
-        Unlock();               // (M24) no other reference is left to lock it meanwhile
+        Unlock();               // no other reference is left to lock it meanwhile
         delete this;            // destroys the (locked) mutex
         return;
     }
@@ -126,7 +126,7 @@ MutexLocker::MutexLocker(Mutex* m)
 MutexLocker::~MutexLocker()
 {
     bool last = m_mutex->m_refCount-- < 2;
-    m_mutex->Unlock();          // (M24) unlocked before it is destroyed
+    m_mutex->Unlock();          // unlocked before it is destroyed
     if (last)
         delete m_mutex;
 }

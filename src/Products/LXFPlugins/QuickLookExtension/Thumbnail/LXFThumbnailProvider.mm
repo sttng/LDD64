@@ -3,7 +3,7 @@
 // LXFThumbnail.appex: the Quick Look thumbnail extension of .lxf files (macOS 10.15 and later;
 // macOS 15 no longer loads LXFQuickLook.qlgenerator): the .lxf's IMAGE100.PNG, fitted into the
 // requested size; a bare .lxfml gets none (as with the generator, LXFQuickLookData.cpp).
-// 64-bit Objective-C only: the 32-bit builds and checks compile nothing here.
+// 64-bit Objective-C only; other compiles (C++ checks) see nothing here.
 #if defined(__OBJC__) && defined(__LP64__)
 #import <Cocoa/Cocoa.h>
 #import <QuickLookThumbnailing/QuickLookThumbnailing.h>

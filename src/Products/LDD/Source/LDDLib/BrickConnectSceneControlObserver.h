@@ -72,7 +72,7 @@ public:
     virtual void OnEvent21(UInt32 /*cursor*/, bool /*flag*/) {}             // 21/18 2        Mac 0x6f1b0
     // bricks were hidden (1: HideBricks 0x3ee00) or shown (0: ShowBricks 0x3f770, ShowAllBricks)
     virtual void OnEvent22(UInt32) {}                                       // 22/19 1        Mac 0x6f1c0
-    // fixed (M8, not in the original): a save or export is about to read the scene
+    // fixed (not in the original): a save or export is about to read the scene
     // (BrickConnectSceneControl::ClearToolPreviews): a tool undoes the preview it set on the
     // parts (SurfacePaintBucketTool's hover colour).
     virtual void OnClearPreview() {}

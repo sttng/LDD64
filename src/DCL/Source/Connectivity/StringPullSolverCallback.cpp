@@ -53,7 +53,7 @@ StringPullSolverCallback::Anchor::Anchor(Scene* scene, AnchorPhysicsSolverAnchor
 // NOTE: the original leaves its address as the solver anchor's user data. When the solver stops,
 // OnEnd frees the anchors first and the solver's Stop then removes its anchors, so
 // OnAnchorRemoved takes a reference to the freed anchor and drops it again (use after free,
-// double free); fixed: the anchor detaches itself from the solver anchor (M10).
+// double free); fixed: the anchor detaches itself from the solver anchor.
 StringPullSolverCallback::Anchor::~Anchor()
 {
     if (m_anchor->GetUserData() == this)
@@ -229,7 +229,7 @@ void StringPullSolverCallback::OnBegin(PhysicsSolver* solver)
 // Mac 0x32f5d0, Win 0x4d41d0
 // NOTE: the original keeps m_solver after the solver has ended (the scene releases it), so a
 // later CreateAnchor of the tool calls the freed solver; fixed: m_solver is reset, CreateAnchor
-// returns NULL (M10).
+// returns NULL.
 void StringPullSolverCallback::OnEnd(bool& /*result*/)
 {
     m_anchors.Clear();

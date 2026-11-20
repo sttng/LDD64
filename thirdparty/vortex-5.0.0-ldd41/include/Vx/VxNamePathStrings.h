@@ -2,7 +2,7 @@
 // Mac TU 460 0x43249e-0x43271a: a TU whose only code is the static initialiser of three
 // std::string constants (Mac 0x77cdcc "/", 0x77cdd0 "base://", 0x77cdd4 "null") and their
 // destructors. Their users are dead-stripped on Mac; they are exported here for the name-path
-// code (V4.6). Names inferred.
+// code. Names inferred.
 #ifndef VX_VXNAMEPATHSTRINGS_H
 #define VX_VXNAMEPATHSTRINGS_H
 

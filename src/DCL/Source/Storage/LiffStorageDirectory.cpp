@@ -41,7 +41,7 @@ const ChunkId kDirectoryChunk(1, 3);   // Mac 0x77d032
 const ChunkId kFileChunk(1, 4);        // Mac 0x77d036
 const ChunkId kTreeChunk(1, 5);        // Mac 0x77d03a
 
-const UInt32 kMaxTreeDepth = 256;      // (not in the original; H3) folder levels of a tree
+const UInt32 kMaxTreeDepth = 256;      // (not in the original) folder levels of a tree
 
 // Clears the writable/removable bits of `attributes` unless the archive is writable.
 inline Attributes MaskAttributes(Attributes attributes, bool writable)
@@ -191,7 +191,7 @@ bool MonolithTreeDirectory::Read(Stream& stream)
         else if (type == 1) {
             // NOTE: the nesting is not limited (both builds): a deep chain of folders in the
             // tree chunk overflows the stack here (and in the destructor); fixed: at most
-            // kMaxTreeDepth levels (H3).
+            // kMaxTreeDepth levels.
             UInt32 depth = 0;
             for (const MonolithTreeEntry* e = this; e; e = e->m_parent)
                 ++depth;
@@ -529,7 +529,7 @@ File* LiffStorageDirectory::OpenFile(MonolithTreeFile* entry, UInt32 index, cons
         return 0;
     // NOTE: the size in the tree is what the file reports, whatever its chunk holds (both
     // builds): readers size their buffers by it; fixed: a file whose chunk disagrees is not
-    // opened (H3).
+    // opened.
     if (entry->m_size != chunk->GetDataSize())
         return 0;
     LiffStorageFile* file = new LiffStorageFile(this, mode, m_volume, entry, chunk);

@@ -30,7 +30,7 @@ class VxIntersectResultFilter {
 public:
     virtual ~VxIntersectResultFilter() {}
     virtual bool accept(VxIntersectResult* result) = 0;
-    virtual VxIntersectResultFilter* clone() const = 0;  // slot 3 (V4.1)
+    virtual VxIntersectResultFilter* clone() const = 0;  // slot 3
 };
 
 // --------------------------------------------------------------------------------------
@@ -71,7 +71,7 @@ public:
     int mType1;                     // +0x14
     int mType2;                     // +0x18
     int mEvent;                     // +0x1c
-    VxIntersectResultFilter* mFilter; // +0x20 (name inferred; set by VxAssemblyBase::createSubscriberList, V4.1)
+    VxIntersectResultFilter* mFilter; // +0x20 (name inferred; set by VxAssemblyBase::createSubscriberList)
 };
 
 // --------------------------------------------------------------------------------------

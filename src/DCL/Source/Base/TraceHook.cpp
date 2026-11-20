@@ -246,7 +246,7 @@ const String& GetTraceHistory()
     static String s_text;   // Mac 0x77d0f8 (guard 0x77d108), Win 0xb44c40 (guard 0xb44c44)
     // NOTE: the original reads and replaces s_history without the trace lock that Trace()
     // holds while it appends to it, so a Trace() on another thread can corrupt the array.
-    // fixed: the history (and s_text) are handled under the trace lock (M24).
+    // fixed: the history (and s_text) are handled under the trace lock.
     TraceLocker lock(TraceHook::Get());
     s_text.Clear();
     for (BasicArray<String>::Iterator it = s_history.Begin(); it != s_history.End(); ++it)

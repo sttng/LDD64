@@ -28,7 +28,7 @@ namespace {
 CnvHull* s_hull538 = 0;                // Mac 0x779538: freed by the pool teardown, never set here
 
 // ---- per-pair data pool (Mac 0x77953c) ----
-const int kPairDataSize = sizeof(CnvPairCache); // V3.1's pair cache object (Mac 0x10c, Win 0x118 bytes)
+const int kPairDataSize = sizeof(CnvPairCache); // pair cache object (Mac 0x10c, Win 0x118 bytes)
 
 struct PairDataBlockEntry {
     void* objects;
@@ -759,7 +759,7 @@ int MEAPI VincConvexMeshTriangleListRegisterInteraction(void)
     return 1;
 }
 
-// ---- per-pair data (hello / goodbye of the convex pair tests via V3.1's thunks) ----
+// ---- per-pair data (hello / goodbye of the convex pair tests via thunks) ----
 
 // Mac 0x4bd6c2 (name inferred)
 int MEAPI VincConvexPairDataRelease(VincModelID /*m1*/, VincModelID /*m2*/, void* data)
@@ -838,7 +838,7 @@ CnvHull* MEAPI VincConvexBoxHullUpdate(CnvHull* hull, const MeReal* radii)
     return hull;
 }
 
-// Mac 0x4bdb96, Win 0x764150 (name inferred): convex vs convex (registered by V3.1's 0x4b3945 through the
+// Mac 0x4bdb96, Win 0x764150 (name inferred): convex vs convex (registered by 0x4b3945 through the
 // non-lazy pointer Mac 0x70273c)
 int MEAPI VincConvexConvexPairIntersect(VincModelPair* pair, VincIntersectResult* result)
 {
@@ -995,7 +995,7 @@ int MEAPI VincSphereConvexRegisterInteraction(void)
     return RegisterWithConvex(VincSphereGetTypeId(), VincSphereConvexIntersect);
 }
 
-// ---- segment distance helpers (called by the V3.1 hull code: Mac 0x4b3db2, 0x4b45ab) ----
+// ---- segment distance helpers (called by the convex hull code: Mac 0x4b3db2, 0x4b45ab) ----
 
 // Mac 0x4be1be (name inferred): distance of p to segment a-b; closest point in out
 MeReal MEAPI VincPointSegmentDistance(const MeReal* p, const MeReal* a, const MeReal* b, MeReal* out)

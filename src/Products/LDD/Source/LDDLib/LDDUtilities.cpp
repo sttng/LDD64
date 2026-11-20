@@ -66,7 +66,7 @@ bool SaveScreenshot(BrickConnectSceneControl* control, const Path& path, Vector2
         // write leaves a broken one) and ignores the SetSize result. fixed: a failed encoding
         // fails; the PNG is written all or nothing (WriteWholeFile: "<name>.tmp" next to it on
         // the disk storage, read back, then renamed over the file; inside an archive such as
-        // the .lxf thumbnail, written in place and read back) (M2).
+        // the .lxf thumbnail, written in place and read back).
         result = !png.IsNull() && WriteWholeFile(path, png->GetData(), png->GetSize());
     }
     delete[] (UInt8*)bitmap.m_data;

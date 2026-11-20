@@ -4,7 +4,7 @@
 // (box refinement), 0x7ae690 (triangle area); dead-stripped on the Mac (LDD never builds a triangle
 // mesh). The original's C++ members (thiscall, /LTCG register conventions) are C-callable functions
 // here. Every name is inferred. A node box (VincOBBNode +0x10 on Win) is 15 doubles: OBBBox below.
-// x87 at 53 bits (= SSE2 doubles), original sum association (tests/diff/diff_vinc_obbtree.cpp).
+// x87 at 53 bits (= SSE2 doubles), original sum association (the restoration's diff tests).
 #include "Vinc/VincTriangleMesh.h"
 #include "Vinc/VincTriangleMeshContacts.h"
 #include "Me/MeMemory.h"

@@ -68,7 +68,7 @@ public:
     const BasicArray<RefPointer<PrimitiveElement> >& GetElements() const { return m_elements; }
     const ConnectionMap&   GetConnections() const { return m_connections; }
 
-    // ---- data (Mac offsets; Win +4; checked by tests/diff/diff_scenegraph.cpp) ---------------------------------------------------------
+    // ---- data (Mac offsets; Win +4; checked by the restoration's diff tests) ---------------------------------------------------------
     Matrix3D               m_transform;       // +0x04 in the RigidElement
     RigidElement*          m_rigidElement;    // +0x44 (not referenced)
     BoundingBox            m_bounding;        // +0x48 of the elements (element space)

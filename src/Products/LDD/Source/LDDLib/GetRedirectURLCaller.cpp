@@ -24,7 +24,7 @@ void GetRedirectURLCaller::OnResponse(UInt32 size)
 bool GetRedirectURLCaller::ParseRedirect(UInt32 size, String& url)
 {
     // NOTE: size + 1 wraps for a reply size of 0xFFFFFFFF (both builds); fixed: a reply over
-    // 256 MB is refused (H20; HTTPCommunicator refuses such replies too).
+    // 256 MB is refused (as HTTPCommunicator refuses such replies).
     if (size > 0x10000000u)
         return false;
     char* buffer = new char[size + 1];

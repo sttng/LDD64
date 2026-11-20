@@ -63,7 +63,7 @@
 #include "BrickPaletteBagLoaderPAXML.h"
 #include "PaletteNames.h"
 
-// SaveModel's disk replacement (M1: Directory::ReplaceFile) and the archive read-back (M2).
+// SaveModel's disk replacement (Directory::ReplaceFile) and the archive read-back.
 #include "SafeFileWrite.h"
 
 namespace LEGO {
@@ -109,13 +109,13 @@ void EraseFirst(BasicArray<String>& strings, const String& value)
 // a path containing '#' comes back as several broken entries (dropped as missing files).
 // fixed: LDDApplication::EncodeRecentModels: a '#' before every entry, '%' and '#' inside an
 // entry as "%25" / "%23"; a VFS path never starts with '#', so DecodeRecentModels still reads
-// the old "a#b#c" values of existing preference files (M9).
+// the old "a#b#c" values of existing preference files.
 String JoinRecentModels(const BasicArray<String>& models)
 {
     return LDDApplication::EncodeRecentModels(models);
 }
 
-// ---- SaveModel helpers (M1, M2; not in the original): SafeFileWrite.h ----------------------
+// ---- SaveModel helpers (not in the original): SafeFileWrite.h ---------------------------
 // Directory::DoSupportsReplaceFile / ReplaceFile (the disk storage flushes a file and renames it
 // over another in one step) and ArchiveEntrySize / ArchiveEntryReadsBack (the archive read-back).
 
@@ -285,7 +285,7 @@ bool LDDApplication::LoadAssets(Window* window, RenderControlManager* manager,
         String text;
         Preferences::GetInstance()->GetValue(String("RecentModels"), text);
         BasicArray<String> models;
-        // NOTE: a '#' inside a path splits it (see JoinRecentModels); fixed (M9).
+        // NOTE: a '#' inside a path splits it (see JoinRecentModels); fixed.
         DecodeRecentModels(text, models);
         if (&models != &m_recentModels)
             m_recentModels = models;
@@ -1064,16 +1064,16 @@ bool LDDApplication::SaveModel(BrickConnectSceneControl* control, const Path& pa
 
     // NOTE: the original writes straight into `path`. An existing .lxf is opened and its entries
     // are rewritten in place (data behind them moved), a plain file is overwritten and then cut
-    // to size: a crash or a full disk part way leaves a broken model (M1). The archive entries
+    // to size: a crash or a full disk part way leaves a broken model. The archive entries
     // reach the file only when their last file object goes (ZipStorageFile::OnFinalRelease),
     // which drops the result, and the thumbnail and the truncation results are not looked at
-    // either, so a failed write reports success (M2).
+    // either, so a failed write reports success.
     // fixed: on disk the model is written to a new "<name>.tmp" next to `path`; a .lxf is then
     // mounted again and its entries must read back completely with the sizes written; the file
     // is flushed to the disk and renamed over `path` in one step (MoveFileEx / rename). Any
     // failure deletes the temporary file, leaves `path` as it was and shows the save error
     // (the original's alert). Outside the disk storage (Upload's "memory" directory) the file is
-    // still written in place, with the read-back check (M1, M2).
+    // still written in place, with the read-back check.
     const bool archived = name.CompareNoCase(name.GetLength() - 4, 4, String(".lxf")) == 0;
     const String fileName(archived ? String("IMAGE100.LXFML") : name);
     const String pictureName("IMAGE100.PNG");
@@ -1196,7 +1196,7 @@ const BasicArray<String>& LDDApplication::GetRecentModels() const
     return m_recentModels;
 }
 
-// Fix M9 (not in the original): "#a#b#c" with '%' / '#' inside an entry as "%25" / "%23".
+// Fix (not in the original): "#a#b#c" with '%' / '#' inside an entry as "%25" / "%23".
 String LDDApplication::EncodeRecentModels(const BasicArray<String>& models)
 {
     String text;
@@ -1216,7 +1216,7 @@ String LDDApplication::EncodeRecentModels(const BasicArray<String>& models)
     return text;
 }
 
-// Fix M9: reads EncodeRecentModels' format and, without the leading '#', the original "a#b#c"
+// Fix: reads EncodeRecentModels' format and, without the leading '#', the original "a#b#c"
 // (a VFS path never starts with '#').
 void LDDApplication::DecodeRecentModels(const String& text, BasicArray<String>& models)
 {

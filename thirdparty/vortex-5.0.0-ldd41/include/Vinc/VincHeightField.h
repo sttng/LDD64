@@ -9,7 +9,7 @@
  * for the terrain (Vx::VxHeightField, VortexPhysicsGeometrySampledHeightField).
  *
  * Pair tests: Box, Capsule, Cylinder and Sphere against the height field (the triangle-mesh and
- * convex ones belong to V3.3 / V3.1), and the line-segment query. Names follow the strings
+ * convex ones are with those geometries), and the line-segment query. Names follow the strings
  * ("RGHeightField", "Contact buffer full in <X>HeightField") and the Mcd API; all other names are
  * inferred. The Win build exports the full public API (stdcall wrappers 0x75c410-0x75c650
  * around the internal functions); the Mac build dead-stripped most of it. */

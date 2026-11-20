@@ -364,7 +364,7 @@ bool LuaState::PCall(int nargs, int nresults)
 ** NOTE (LDD): a non-string error object (error({}), error(nil)) gives a null message that is
 ** searched; a marker without the quoted file name and ':' line searches from null as well
 ** (both builds); fixed: such a message is reported as "(error object is not a string)", and a
-** marker is only parsed when the quotes and ':' are there (H24).
+** marker is only parsed when the quotes and ':' are there.
 */
 void LuaState::ReportError()
 {

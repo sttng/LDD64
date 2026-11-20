@@ -93,7 +93,7 @@ const char* const kPackageRelationshipsNamespace =
 const char* const kDrawingNamespace = "http://schemas.openxmlformats.org/drawingml/2006/main";
 
 // Saves `dom` as the entry `name` of `archive` (recorded in `entries` for the read-back); false
-// when the save failed. (not in the original; M2)
+// when the save failed. (not in the original)
 bool SavePart(const RefPointer<XMLDOM>& dom, const char* name, Directory* archive,
               BasicArray<String>& entries)
 {
@@ -105,7 +105,7 @@ bool SavePart(const RefPointer<XMLDOM>& dom, const char* name, Directory* archiv
 // back completely with the size written to it (`sizes`); the archive is then copied to `target`
 // all or nothing: on the disk storage to "<name>.tmp" next to it (Directory::Copy, as the
 // original copies), read back against the archive and renamed over `target`
-// (SafeWriteTarget / CommitSafeWrite); elsewhere copied in place. (not in the original; M2)
+// (SafeWriteTarget / CommitSafeWrite); elsewhere copied in place. (not in the original)
 bool CopyCheckedArchive(Directory* memory, const Path& target, const BasicArray<String>& entries,
                         const BasicArray<UInt64>& sizes)
 {
@@ -235,13 +235,13 @@ void ExportBOMCommand::Do()
     // counts (the first failure ends the writing); the closed archive is mounted again and every
     // entry must read back with the size written to it; the copy goes to "<name>.tmp" next to
     // the target on the disk storage, is read back and renamed over the target in one step. Any
-    // failure shows the original's alert and leaves an existing file as it was (M2).
+    // failure shows the original's alert and leaves an existing file as it was.
     bool written = !archive.IsNull();
     BasicArray<String> entries;   // the entries written, for the read-back
 
     // ---- one row per distinct brick (design, palette brick and materials: BrickLess) ----
     // NOTE: the original reads the parts' materials as they are, the paint bucket's hover
-    // preview included; fixed: the previews are undone first (M8).
+    // preview included; fixed: the previews are undone first.
     m_sceneControl->ClearToolPreviews();
     BrickCountMap counts;
     for (const RefPointer<Brick>* it = m_sceneControl->GetScene()->GetBricks().Begin();
@@ -370,7 +370,7 @@ bool ExportBOMCommand::SaveImage(const Path& path, const Vector2& size, ModelCon
 #endif
         // NOTE: the original reports success when the PNG cannot be encoded (nothing written)
         // and ignores the SetSize result; fixed: a failed encoding fails and the picture is
-        // written whole and read back (WriteWholeFile; in place inside the archive) (M2).
+        // written whole and read back (WriteWholeFile; in place inside the archive).
         result = !png.IsNull() && WriteWholeFile(file, png->GetData(), png->GetSize());
     }
     delete[] (UInt8*)bitmap.m_data;
@@ -381,7 +381,7 @@ bool ExportBOMCommand::SaveImage(const Path& path, const Vector2& size, ModelCon
 // NOTE: the original returns -1 for an empty string (Win 0x672415), so a cell with an empty text
 // (a brick without a localized name) refers to shared string 4294967295 and Excel reports the
 // workbook as corrupt; fixed: the empty string gets a real entry (<si><t/></si>) like any
-// other (M6).
+// other.
 UInt32 ExportBOMCommand::AddSharedString(String text)
 {
     const String* it = std::find(m_sharedStrings.Begin(), m_sharedStrings.End(), text);

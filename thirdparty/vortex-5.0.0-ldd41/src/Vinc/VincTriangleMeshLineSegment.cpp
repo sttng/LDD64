@@ -1,7 +1,7 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - line segment query against a triangle mesh (restored,
 // Mac 557d 0x4c8db9-0x4c958f, Win 0x775570-0x775710). The segment is walked
 // down the mesh's OBB tree (segment / box separating axis test in the node frame); the leaf
-// triangles are tested in world space with VincLineSegmentTriangle (V3.6, Mac 0x4c8af1).
+// triangles are tested in world space with VincLineSegmentTriangle (Mac 0x4c8af1).
 #include "VincTriangleMeshPairs.h"
 #include "Vinc/VincTriangleMeshContacts.h"
 #include "Vinc/VincPairTests.h"

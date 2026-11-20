@@ -25,7 +25,7 @@ const BasicSet<BIBrickPrimitive*>& Neighbours(const BIGraph::Adjacency& adjacenc
     return it == adjacency.End() ? s_none : it->second;
 }
 
-// The walkers of the depth-first walks below (WalkDepthFirst, BIGraphWalk.h; M11): the
+// The walkers of the depth-first walks below (WalkDepthFirst, BIGraphWalk.h): the
 // neighbours from the adjacency; Enter / Descend are the entry and the loop test of each
 // recursive original.
 struct GraphWalker {
@@ -305,7 +305,7 @@ bool BIGraph::IsArticulation(BIBrickPrimitive* primitive)
 
 // Mac 0x263f40, Win 0x596db0
 // NOTE: the original recurses once per primitive of the path, so a long chain of connected
-// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst, M11).
+// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst).
 void BIGraph::CollectComponent(BIBrickPrimitive* primitive, BasicSet<BIBrickPrimitive*>& visited)
 {
     ComponentWalker walker(m_adjacency, visited);
@@ -314,7 +314,7 @@ void BIGraph::CollectComponent(BIBrickPrimitive* primitive, BasicSet<BIBrickPrim
 
 // Mac 0x264070, Win 0x596e60
 // NOTE: the original recurses once per primitive of the path, so a long chain of connected
-// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst, M11).
+// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst).
 void BIGraph::CollectComponent(BIBrickPrimitive* primitive, BasicSet<BIBrickPrimitive*>& component,
                                BasicSet<BIBrickPrimitive*>& marked)
 {
@@ -348,7 +348,7 @@ bool BIGraph::IsSeparating(const BasicSet<BIBrickPrimitive*>& primitives)
 
 // Mac 0x2643d0, Win 0x597120
 // NOTE: the original recurses once per primitive of the path, so a long chain of connected
-// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst, M11).
+// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst).
 void BIGraph::CollectComponentExcluding(BIBrickPrimitive* primitive, BasicSet<BIBrickPrimitive*>& visited,
                                         const BasicSet<BIBrickPrimitive*>& excluded)
 {
@@ -358,7 +358,7 @@ void BIGraph::CollectComponentExcluding(BIBrickPrimitive* primitive, BasicSet<BI
 
 // Mac 0x264570, Win 0x596f50
 // NOTE: the original recurses once per primitive of the path, so a long chain of connected
-// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst, M11).
+// bricks overflows the stack; fixed: the same walk with an explicit stack (WalkDepthFirst).
 UInt32 BIGraph::CountConnected(BIBrickPrimitive* primitive, BasicSet<BIBrickPrimitive*>& visited,
                                const BasicSet<BIBrickPrimitive*>& within)
 {

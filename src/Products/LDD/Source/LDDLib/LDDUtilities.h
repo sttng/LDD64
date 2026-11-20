@@ -212,7 +212,7 @@ Texture* LoadApplicationTexture(const String& path, Render* render);
 // (RenderToBitmap); into `target` when given, else the back buffer (`noPostProcessing`: no
 // post effects; `fitCamera`: the camera is fitted to the scene). False when the rendering
 // failed; true when the PNG could not be encoded (nothing written), else the write result
-// (fixed: false then, and the write is all or nothing; M2, see LDDUtilities.cpp).
+// (fixed: false then, and the write is all or nothing, see LDDUtilities.cpp).
 // The bitmap: 32-bit BGRA (0x40000220), pitch width * 4. Mac 0x149470, Win 0x637120 (cdecl,
 // `size` by value)
 bool SaveScreenshot(BrickConnectSceneControl* control, const Path& path, Vector2 size,

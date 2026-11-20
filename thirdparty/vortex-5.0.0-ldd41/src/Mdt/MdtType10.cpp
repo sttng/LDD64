@@ -1,4 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - constraint type 0x10 accessor (restored, V2.1).
+// Vortex 5.0.0 build 800 "vortexldd41" - constraint type 0x10 accessor (restored).
 // Mac 0x48f98b (static initialiser 0x48f9a1 / 0x48f9cc); Win 0x7ac240 next to the Win-only
 // creator 0x7ac3c0. Name unknown.
 #include "Mdt/MdtConstraint.h"

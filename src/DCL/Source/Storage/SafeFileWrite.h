@@ -1,4 +1,4 @@
-// LEGO Digital Designer — not in the original (bug review M2).
+// LEGO Digital Designer — not in the original.
 // SafeFileWrite.h: checked, all-or-nothing file writes for the writers that the original lets
 // fail silently (BOM export, HTML building instructions, screenshots, preferences, palette and
 // library files). On the native disk storage a file is written to "<name>.tmp" next to it and
@@ -21,7 +21,7 @@ namespace LEGO {
 
 // The file to write instead of `path`: "<name>.tmp" next to it when its directory can replace a
 // file in one step, else `path` itself. A stale temporary file of an earlier failed write is
-// removed. (not in the original; M2)
+// removed. (not in the original)
 inline Path SafeWriteTarget(const Path& path)
 {
     Directory* directory = path.GetParentDirectory();
@@ -40,7 +40,7 @@ inline Path SafeWriteTarget(const Path& path)
 // flushed and renamed over `path` (Directory::ReplaceFile: under the storage lock, refused for a
 // read-only `path`); when anything failed it is deleted and `path` is as it was. A
 // write in place that failed leaves the partial file (there is nothing to go back to). True when
-// `path` now holds the complete new file. (not in the original; M2)
+// `path` now holds the complete new file. (not in the original)
 inline bool CommitSafeWrite(const Path& path, const Path& target, bool written)
 {
     if (target == path)
@@ -53,7 +53,7 @@ inline bool CommitSafeWrite(const Path& path, const Path& target, bool written)
 }
 
 // True when `file` holds exactly the `size` bytes of `data` (read back from the start).
-// (not in the original; M2)
+// (not in the original)
 inline bool FileHoldsData(File* file, const void* data, UInt32 size)
 {
     if (file->GetSize() != size)
@@ -73,7 +73,7 @@ inline bool FileHoldsData(File* file, const void* data, UInt32 size)
 
 // Writes `size` bytes of `data` as the whole file `path`, all or nothing on the disk storage:
 // written, cut to size, read back and compared, then put in place (SafeWriteTarget /
-// CommitSafeWrite). (not in the original; M2)
+// CommitSafeWrite). (not in the original)
 inline bool WriteWholeFile(const Path& path, const void* data, UInt32 size)
 {
     const Path target = SafeWriteTarget(path);
@@ -90,7 +90,7 @@ inline bool WriteWholeFile(const Path& path, const void* data, UInt32 size)
 
 // The size of the entry `name` ("a/b/c" for one in a sub-directory) of `archive` (0 when there
 // is none). In a mounted archive this is the size written to the entry, also while it has not
-// reached the file. (moved from LDDApplication.cpp; not in the original; M2)
+// reached the file. (moved from LDDApplication.cpp; not in the original)
 inline UInt64 ArchiveEntrySize(Directory* archive, const String& name)
 {
     RefPointer<Directory> directory(archive);
@@ -112,7 +112,7 @@ inline UInt64 ArchiveEntrySize(Directory* archive, const String& name)
 }
 
 // The entry `name` of a freshly mounted `archive` has `size` (> 0) bytes and reads (and
-// inflates) completely. (moved from LDDApplication.cpp; not in the original; M2)
+// inflates) completely. (moved from LDDApplication.cpp; not in the original)
 inline bool ArchiveEntryReadsBack(Directory* archive, const String& name, UInt64 size)
 {
     if (size == 0)

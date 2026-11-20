@@ -4,8 +4,8 @@
 // Floating point: same evaluation order in both builds. Mac rounds each operation to float
 // (SSE); Win keeps x87 intermediates (53-bit) and rounds at stores (float locals, arguments,
 // returns, MSVC float spills such as the squares in DistanceSquared 0x408da0). Written with
-// EvalReal (MathUtil.h: double on Win, float on Mac) and (Real32) casts at those points;
-// tests/diff/diff_geometry.cpp checks the Win branch bit for bit.
+// EvalReal (MathUtil.h: double on Win, float on Mac) and (Real32) casts at those points.
+// The restoration's diff tests check the Win branch bit for bit.
 //
 // Not restored as code: the static initialiser 0x1e5cf0 (`#include <iostream>`).
 #include "Geometry.h"

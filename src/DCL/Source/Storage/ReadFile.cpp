@@ -28,7 +28,7 @@ bool ReadFile(File* file, AString& out)
     UInt32 size = (UInt32)file->GetSize();
     // NOTE: the size is trusted (both builds): 0xFFFFFFFF skips the reservation and SetLength
     // then writes the terminator far past the buffer, a size near 4 GB wraps; fixed: a file of
-    // 1 GB or more is refused (H2). (The archive storages check their entries' sizes too.)
+    // 1 GB or more is refused. (The archive storages check their entries' sizes too.)
     if (file->GetSize() >= 0x40000000u)
         return false;
     if (size != 0xFFFFFFFFu)

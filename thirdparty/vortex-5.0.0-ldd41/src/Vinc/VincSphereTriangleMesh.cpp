@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - TriangleMesh vs Sphere pair test (restored;
 // Mac 557d 0x4cb774-0x4cbeb3, Win 0x7d4a80-0x7d4ca0). Walks the mesh's OBB tree with the sphere
-// centre in the node frames and collects the triangle-sphere contacts of 558a (V3.6) into a
+// centre in the node frames and collects the triangle-sphere contacts of 558a into a
 // 1000-contact buffer, then simplifies them.
 #include "VincTriangleMeshPairs.h"
 #include "Vinc/VincTriangleMeshContacts.h"
@@ -72,7 +72,7 @@ int MEAPI VincTriangleMeshSphereIntersect(VincModelPair* pair, VincIntersectResu
     SphereContacts(result, mesh, tree->nodes, tmMesh, tmSphere, radius);
     if (result->contactCount == 0) {
         // NOTE: the original returns with result->contacts still pointing at its stack buffer
-        // (and contactMaxCount 1000); restored to the caller's array (as V3.2's mesh pairs do).
+        // (and contactMaxCount 1000); restored to the caller's array (as mesh pairs do).
         saved.Restore(result);
         return 0;
     }

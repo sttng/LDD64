@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - TriangleMesh vs Convex pair test (restored;
 // Mac 557c 0x4c6f3d-0x4c7e2c, Win 0x75b980 / 0x75bec0 paired). The tree walk runs in the
-// mesh frame: each node box is tested as a (shared, rescaled) box hull against the convex with V3.1's
+// mesh frame: each node box is tested as a (shared, rescaled) box hull against the convex with the
 // convex-convex test; leaves go through the one-triangle hull (VincConvexTriangleContacts).
 #include "VincTriangleMeshPairs.h"
 #include "Vinc/VincConvexInteractions.h"

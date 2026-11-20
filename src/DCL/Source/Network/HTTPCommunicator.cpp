@@ -13,7 +13,7 @@ namespace LEGO {
 
 namespace {
 
-// (not in the original; H18, H20) The largest chunk and the largest response body accepted.
+// (not in the original) The largest chunk and the largest response body accepted.
 const UInt32 kMaxChunkSize     = 64 * 1024 * 1024;
 const UInt32 kMaxContentLength = 256 * 1024 * 1024;
 
@@ -268,7 +268,7 @@ void HTTPCommunicator::OnSocketReceived()
                 }
                 else if (!m_chunked) {
                     m_contentLength = StrToUInt32(line.GetBuffer() + length + 15, 0, 10);
-                    if (errno == ERANGE || m_contentLength > kMaxContentLength) {   // (H20)
+                    if (errno == ERANGE || m_contentLength > kMaxContentLength) {
                         GetSubject()->Close();
                         NotifyFailed();
                     }
@@ -297,7 +297,7 @@ void HTTPCommunicator::OnSocketReceived()
                     // NOTE: an out-of-range size fails the request but the loop goes on with
                     // it, and any size is trusted (both builds): FFFFFFFF wraps m_chunkSize + 2
                     // below and the chunk copy overflows the heap; fixed: the request fails and
-                    // stops on a size over kMaxChunkSize or a total over kMaxContentLength (H18).
+                    // stops on a size over kMaxChunkSize or a total over kMaxContentLength.
                     if (errno == ERANGE || m_chunkSize > kMaxChunkSize ||
                         (UInt64)m_contentLength + m_chunkSize > kMaxContentLength) {
                         m_chunkSize = 0;
@@ -320,7 +320,7 @@ void HTTPCommunicator::OnSocketReceived()
             // ever returning (nothing receives meanwhile) — a chunk split over two reads hangs
             // the program (Mac 0x130df9 `jb 0x1309e0`, Win 0x53f6a7); fixed: it returns and
             // goes on when more data has arrived (the size is kept), and a failed read stops
-            // (H18).
+            // .
             if (GetSubject()->GetReceivedSize() < (UInt64)m_chunkSize + 2)
                 return;
             AutoPointer<UInt8> data(new UInt8[m_chunkSize]);

@@ -38,7 +38,7 @@ int MEAPI VincBoxCylinderSafeTime(VincModelPair* pair, MeReal maxTime, VincSafeT
 
 /* Mac 0x4ddd33, Win 0x7e0b90 (cdecl): the 12 box edges clipped against the cylinder (radius *r,
  * half height *hh, z axis), in the cylinder's frame (rel = cylinder in the box frame), transformed
- * back to the box frame and appended at *cursor (V3.8's segment / cylinder clippers) */
+ * back to the box frame and appended at *cursor (segment / cylinder clippers) */
 void VincBoxCylinderEdgePoints(MeReal** cursor, const MeReal* rel, const MeReal* r1, const MeReal* r,
                                const MeReal* hh)
 {
@@ -99,7 +99,7 @@ void VincBoxCylinderEdgePoints(MeReal** cursor, const MeReal* rel, const MeReal*
  * faces, the cylinder's axis, box edge x cylinder axis and the radial direction towards the box
  * centre. Returns 0 at the first axis separating by more than *pad. Otherwise *sep / n / *d as for
  * VincBoxBoxSeparation and the contact point candidates (box frame) at *cursor: the cylinder's
- * rims / generators clipped against the box (V3.8's segment / box clippers) and the box edges
+ * rims / generators clipped against the box (segment / box clippers) and the box edges
  * against the cylinder; returns 1 when there are any. padValue: passed on, unused. */
 int VincBoxCylinderSeparation(MeReal* sep, MeReal* n, MeReal* d, MeReal** cursor, const MeReal* pad,
                               const MeReal* r1, const MeReal* r, const MeReal* hh, const MeReal* rel)

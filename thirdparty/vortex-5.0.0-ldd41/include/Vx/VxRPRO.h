@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxRPRO (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxRPRO (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x12a (Mac 0x474fc8).
 #ifndef VX_VXRPRO_H
 #define VX_VXRPRO_H
@@ -44,8 +43,8 @@ public:
     // Mac 0x47530a, Win 0x715510: the rotation of tm as a quaternion (MeQuaternionFromTM)
     // (name inferred)
     void setPartAttachmentOrientationRel(int index, const VxTransform& tm);
-    void unk_4750aa(const VxVector3& v) { setAngularStrength(v); } // (V0.2 spelling)
-    void unk_4750f8(const VxVector3& v) { setLinearStrength(v); }  // (V0.2 spelling)
+    void unk_4750aa(const VxVector3& v) { setAngularStrength(v); } // (earlier spelling)
+    void unk_4750f8(const VxVector3& v) { setLinearStrength(v); }  // (earlier spelling)
 
     // Not restored (Win only, Mac dead-stripped; they forward to Win-only MdtRPROJoint accessors
     // that are not restored): Win 0x715170 (setPosition), 0x715210, 0x715230,

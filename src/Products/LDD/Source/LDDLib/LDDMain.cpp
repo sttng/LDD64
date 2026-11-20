@@ -433,7 +433,7 @@ bool CreateMainWindow(RefPointer<Window>& window, RefPointer<OpenGLRender>& rend
 
 using namespace LEGO;
 
-#if !defined(LDD_STUB_APPMAIN_SMOKE)   // (build switch of the M5-0 smoke target, not original:
+#if !defined(LDD_STUB_APPMAIN_SMOKE)   // (not original: defined only by the restoration's
                                        // test builds)
 // Mac 0x13ad50, Win 0x5cbc41
 int AppMain(BasicArray<String>& arguments)

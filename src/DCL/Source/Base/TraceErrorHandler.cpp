@@ -1,6 +1,6 @@
 // LEGO Digital Designer — restored source
 // TU "TraceErrorHandler.cpp" (name inferred from the main class): Mac 0x5cf0-0x6bb0, Win
-// 0x42bde0-0x42cb60. Tested by tests/test_error.cpp.
+// 0x42bde0-0x42cb60. Tested by the restoration's tests.
 #include "Error.h"
 #include "LEGO/String.h"
 #include "Trace.h"

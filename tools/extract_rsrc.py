@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-"""Resources of the original LDD.exe -> files the restored build compiles (APP_PLAN item 0.2).
+"""Resources of the original LDD.exe -> the cursors and manifest LDD.rc names (LEGO artwork).
 
 The original .rsrc (no dialogs / menus / string tables) holds 2 group icons (101, 103), 16 group
 cursors (102, 104-110, 112, 115, 116, 127, 128, 131, 133, 134), VERSIONINFO 1 and the asInvoker
 manifest 1; languages 1030 (Danish) and 1033 (English US).
 
   extract_rsrc.py <LDD.exe> <out dir> [--check-rc <committed LDD.rc>]
-      writes <out dir>/{icon_<id>.ico, cursor_<id>.cur, LDD.exe.manifest} (LEGO artwork: build
-      output only, never committed); with --check-rc also warns when the committed .rc differs from
-      --write-rc output and copies it + resource.h next to them (zig's rc resolves file names there).
+      writes <out dir>/{icon_<id>.ico, cursor_<id>.cur, LDD.exe.manifest} (never committed); with
+      --check-rc also warns when the committed .rc differs from --write-rc output and copies it +
+      resource.h next to them.
   extract_rsrc.py <LDD.exe> --write-rc <dir>
-      (re)generates <dir>/LDD.rc and resource.h (committed in src/Products/LDD/Resources/Win/).
+      generates <dir>/LDD.rc and resource.h of the original (LDD64's LDD.rc then has its own icons
+      and version, so this overwrites them).
   extract_rsrc.py --list <exe>
       normalised resource listing (type, name, language, size, SHA-1; image ids replaced by group
-      + position) for comparing two executables:
-      diff <(extract_rsrc.py --list orig/win/LDD.exe) <(extract_rsrc.py --list build/app/win/LDD.exe)
+      + position) for comparing two executables: diff <(... --list a.exe) <(... --list b.exe)
 
 The .rc lists the groups in the order of their original image ids (icons 1-26, cursors 27-42), so
 rc.exe and zig's resinator, which number images in statement order, give the original ids.

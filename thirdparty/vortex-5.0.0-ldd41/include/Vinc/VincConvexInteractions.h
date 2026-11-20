@@ -1,6 +1,6 @@
 /* Vortex 5.0.0 build 800 "vortexldd41" - registration functions and helpers of the Convex (type 9)
- * pair tests restored by V3.2 (src/Vinc/VincConvexMeshInteractions.cpp; Mac 557c 0x4ba87b-0x4bf81e).
- * All names inferred. The hull itself is V3.1's (557b). */
+ * pair tests (src/Vinc/VincConvexMeshInteractions.cpp; Mac 557c 0x4ba87b-0x4bf81e).
+ * All names inferred. The hull itself is (557b). */
 #ifndef VINC_VINCCONVEXINTERACTIONS_H
 #define VINC_VINCCONVEXINTERACTIONS_H
 
@@ -12,7 +12,7 @@ extern "C" {
 
 int MEAPI VincConvexGetTypeId(void);                          /* Mac 0x4bf149, Win 0x75c6d0 */
 void MEAPI VincConvexRegisterType(void);                      /* Mac 0x4bf157, Win 0x75c6c0 */
-/* pool + terminate action + convex-convex (V3.1) + box / sphere / cylinder / plane + line segment
+/* pool + terminate action + convex-convex + box / sphere / cylinder / plane + line segment
  * (Mac 0x4bf077; called by the Vx frame setup) */
 int MEAPI VincConvexMeshRegisterInteractions(void);
 int MEAPI VincConvexMeshHeightFieldRegisterInteraction(void);   /* Mac 0x4bb5a5, Win 0x763d10 */
@@ -36,7 +36,7 @@ int MEAPI VincBoxConvexIntersect(VincModelPair* p, VincIntersectResult* r);     
 int MEAPI VincSphereConvexIntersect(VincModelPair* p, VincIntersectResult* r);            /* Mac 0x4bde34 */
 int MEAPI VincCapsuleConvexIntersect(VincModelPair* p, VincIntersectResult* r);           /* Mac 0x4bdf0f */
 
-/* segment helpers (used by the V3.1 hull code) */
+/* segment helpers (used by the convex hull code) */
 MeReal MEAPI VincPointSegmentDistance(const MeReal* p, const MeReal* a, const MeReal* b, MeReal* out); /* Mac 0x4be1be */
 MeReal MEAPI VincSegmentSegmentParameters(const MeReal* a0, const MeReal* a1, const MeReal* b0,
                                           const MeReal* b1, MeReal* s, MeReal* t, char* parallel); /* Mac 0x4be470 */

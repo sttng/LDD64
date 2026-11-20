@@ -237,7 +237,7 @@ protected:
     }
 
 private:
-    // (not in the original) tests set the database without Initialize (tests/test_templates_groups.cpp)
+    // (not in the original) the restoration's tests set the database without Initialize
     friend struct BrickConnectSceneManagerTestAccess;
 
     // Creates (and caches) the vertex buffer of geometry `face`: "<id>.g" for face 0, else

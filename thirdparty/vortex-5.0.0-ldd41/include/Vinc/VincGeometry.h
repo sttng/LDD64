@@ -6,8 +6,8 @@
  * "VincInit", "VincTerm", "VincSafeTime", the VincErrorTable); the remaining names are inferred
  * from the MathEngine Mcd API that Vinc continues (marked "(name inferred)").
  *
- * API for the other Vinc items (V3.1 convex mesh, V3.3-V3.6 pair tests and primitives, V3.7 height
- * field, V3.8 space):
+ * API for the other Vinc items (convex mesh, pair tests and primitives, height
+ * field, space):
  *
  *  - Geometry types. Every geometry struct starts with VincGeometry (MeI16 type id). A geometry
  *    kind registers once, at VincInit time (VincInit -> registration functions of the kinds):
@@ -98,7 +98,7 @@ typedef int (MEAPI *VincLineSegFn)(struct McdModel* model, const MeVector3 p0, c
 
 /* One pair-table entry (7 slots, 0x1c bytes on both platforms). Slots 5 and 6 (distance queries)
  * are only read by the Win-only VincDistance / VincDistanceBounded (dead-stripped on the Mac); the
- * Mac registrations that set five slots leave them uninitialised (V3.2 zeroes them). */
+ * Mac registrations that set five slots leave them uninitialised (VincConvexMesh zeroes them). */
 typedef struct VincInteractions {
     VincHelloFn helloFn;                   /* +0x00 -> pair  (called by VincHello) */
     VincGoodbyeFn goodbyeFn;               /* +0x04 -> pair->goodbyeFn (+0x20) */

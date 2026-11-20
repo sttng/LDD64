@@ -9,7 +9,7 @@
 //                                                      and type TextLayoutRender, abstract TextLayout
 // In the original these are plain `new XFactory(render)` / constructor calls; the functions keep
 // OpenGLRender.cpp independent of the other files. Each is defined by the file that restores the
-// class (noted per group); tests link tests/render_stubs.cpp for the ones not restored yet.
+// class (noted per group); the restoration's tests link stubs for the ones not restored yet.
 #pragma once
 #include "LEGO/Types.h"
 #include "ObjectFactory.h"

@@ -21,7 +21,7 @@
 
 #if defined(__OBJC__)
 #import <Foundation/Foundation.h>
-#include <fcntl.h>      // (M2) DoReplaceFile
+#include <fcntl.h>      // DoReplaceFile
 #include <stdio.h>
 #include <unistd.h>
 #else
@@ -344,7 +344,7 @@ NSFileHandle* FileHandleAtPath(const HostPath& path, const OpenMode& style)
     // sub-folder as a file (a file of the folder's size, then EISDIR on read). A folder is not a
     // file handle here, as on Windows (CreateFile fails on a folder), so DoCopy takes its folder
     // branch. (Whether the real -fileHandleForReadingAtPath: opens a folder is not checked on a
-    // Mac; no 4.3.11 path copies a folder from disk.) (F5)
+    // Mac; no 4.3.11 path copies a folder from disk.)
     if (fstat(fd, &info) != 0 || S_ISDIR(info.st_mode)) {
         close(fd);
         return 0;
@@ -984,7 +984,7 @@ void MacOSXStorageFactory::Shutdown()
         m_disk = 0;
 }
 
-// (not in the original; M2) fsync of `from`, then rename(2) over `to`: `to` is the complete old
+// (not in the original) fsync of `from`, then rename(2) over `to`: `to` is the complete old
 // file until the rename makes it the complete new one. False when the flush or the rename fails
 // (`from` is left for the caller to delete).
 bool MacOSXDirectory::DoReplaceFile(const String& from, const String& to)

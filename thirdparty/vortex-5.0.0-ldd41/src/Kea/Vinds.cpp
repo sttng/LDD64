@@ -6,7 +6,7 @@
 //                                         invI[0][3] = inverse mass
 //   Iworld (+0x124) / invIworld (+0x184)  body frame inertia (the user's tensor) / its inverse
 //   m2a4 / m2c4                           linear / angular momentum (VindsComputeMomenta)
-// NOTE: Kea/MdtKea.h (V2.1) describes I as body frame and Iworld as world frame: the reverse of
+// NOTE: Kea/MdtKea.h describes I as body frame and Iworld as world frame: the reverse of
 // their use here.
 // Every expression keeps the Mac SSE2 operation order; Win x87 computes the same trees at 53 bits.
 #include "Kea/KeaMath.h"

@@ -12,7 +12,7 @@
  *     x < 0, sign of y (core Win 0x6e2d3c); the result is left on the x87 stack with a 64-bit
  *     mantissa;
  *   - _CIfmod (Win 0x6d13fa) is FPREM: exact, like every C library's fmod.
- * On 10^6 arguments each (tests/diff/diff_vortex_crt_math.cpp) the restored build's C library
+ * On 10^6 arguments each (the restoration's diff tests) the restored build's C library
  * (zig / mingw -> wine msvcrt) differs from VS2008 in the last bit for sin ~3 %, cos ~3 %, asin
  * 0.5 %, acos 1.2 %, atan2 8 % of the arguments; fmod never. MeCrtSin / Cos / Asin / Acos / Atan2
  * reproduce VS2008 bit for bit (sin / cos transcribed, asin / acos generated into

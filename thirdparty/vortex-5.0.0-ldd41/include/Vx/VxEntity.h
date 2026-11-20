@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxEntity, VxCollisionSensor (restored header, V0.2;
-// VxEntity: V4.2, VxCollisionSensor: V4.4).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxEntity, VxCollisionSensor (restored header).
 // Slot numbers are Mac (Itanium) indices; Win = Mac - 1 after the destructor (Mac 2/3, Win 2).
 #ifndef VX_VXENTITY_H
 #define VX_VXENTITY_H
@@ -21,7 +20,7 @@ class VxMaterial;
 
 // --------------------------------------------------------------------------------------
 // VxEntity (Mac vtable 0x75dc48, 25 slots; Win 24; class id 0x100 Mac 0x446780)
-// Mac 0x174 bytes, Win 0x190. src/Vx/VxEntity.cpp (V4.2, Mac TU 484 0x44664e-0x447dd6,
+// Mac 0x174 bytes, Win 0x190. src/Vx/VxEntity.cpp (Mac TU 484 0x44664e-0x447dd6,
 // Win 0x7169b0-0x717cc0).
 //
 // An entity has a transform (mTransformPtr: its own mTransform, or the MdtBody's for a VxPart),
@@ -87,7 +86,7 @@ public:
     // slot 17 Mac 0x447bce (empty); VxCollisionSensor 0x439fe0 updates every collision geometry
     // (cg slot 21) (name inferred)
     virtual void updateCollisionGeometryTransforms();
-    // slots 18-20: response model of the entity (the universe's response table key; V4.4) (names inferred)
+    // slots 18-20: response model of the entity (the universe's response table key) (names inferred)
     virtual void registerResponseModel() = 0;           // slot 18 (CS Mac 0x43b378)
     virtual int getResponseModel() const = 0;           // slot 19 (CS Mac 0x43b2ae)
     virtual bool setResponseModel(int model) = 0;       // slot 20 (CS Mac 0x43a156)

@@ -34,7 +34,7 @@ public:
 
     VxArray() : mBegin(0), mEnd(0), mCapacity(0) {}
     explicit VxArray(int n) : mBegin(0), mEnd(0), mCapacity(0) { resize(n); }
-    VxArray(int n, const T& fill) : mBegin(0), mEnd(0), mCapacity(0) { resize(n, fill); } // (V1.1)
+    VxArray(int n, const T& fill) : mBegin(0), mEnd(0), mCapacity(0) { resize(n, fill); } //
     VxArray(const VxArray& o) : mBegin(0), mEnd(0), mCapacity(0) { *this = o; }
     ~VxArray()
     {

@@ -1,5 +1,5 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - winch (constraint type 0x12) length accessors
-// (restored, V2.1). Mac 0x4930bc-0x4931ac (static initialiser 0x49316a / 0x493195), Win
+// (restored). Mac 0x4930bc-0x4931ac (static initialiser 0x49316a / 0x493195), Win
 // 0x852790-0x852800 (the Win file holds the whole VxWinch Mdt API).
 #include "Mdt/MdtConstraint.h"
 #include "Mdt/MdtBcl.h"

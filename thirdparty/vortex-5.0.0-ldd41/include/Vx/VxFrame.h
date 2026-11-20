@@ -36,7 +36,7 @@ class VxNode;
 // pair request +0xf4 by the ctor Win 0x70e190).
 class VxFrame : public VxBase {
 public:
-    VX_DECLARE_ALLOCATOR();                             // new Mac 0x453cd5, delete Mac 0x453ca7 (V4.1)
+    VX_DECLARE_ALLOCATOR();                             // new Mac 0x453cd5, delete Mac 0x453ca7
     VX_DECLARE_CLASS_TYPES();                           // Mac 0x453934 (0x104), 0x45445c, slot 0 0x4547e4 / Win 0x70efb0, slot 1 0x45393e / Win 0x70e070
     static VxFrame* instance();                         // Mac 0x455430, Win 0x70e7f0 (creates on first use)
     static VxFrame* currentInstance();                  // Mac 0x453954, Win 0x70dc40: the instance or 0 (name inferred)
@@ -62,7 +62,7 @@ public:
     // Mac 0x453d74, Win 0x70dd70: every universe accepts v until one returns 2
     int accept(VxVisitor* v);
 
-    // --- registered objects (VxBase ctor / dtor, while m104 is set) (V1.1 declarations) ---
+    // --- registered objects (VxBase ctor / dtor, while m104 is set) (declarations) ---
     void addObject(VxBase* object);                     // Mac 0x45413e, Win 0x70efe0 (unique)
     bool removeObject(VxBase* object);                  // Mac 0x453db6, Win 0x70e7a0
 
@@ -96,7 +96,7 @@ public:
     // "VxUniverse::setContactBufferSize: newSize must be larger than 0" (the original's) (name inferred)
     void setCollisionTolerance(VxReal tolerance);
 
-    // V2.3 addition (Kea's threaded MdtKeaStep, Win 0x75ed30): the frame's pool, made on first
+    // Addition for Kea's threaded MdtKeaStep, Win 0x75ed30): the frame's pool, made on first
     // use (VxThreadPool::create(mThreadCount, "VxFrame ThreadPool"))
     VxThreadPool* getThreadPool();                      // Mac 0x453d2a, Win 0x70dd40 (name inferred)
     int getThreadCount() const { return mThreadCount; }
@@ -109,7 +109,7 @@ public:
     void updateSceneGraph();                            // Mac 0x453f06, Win 0x70ddb0: slot 9
 
     VxCollisionPairRequest* getDefaultCollisionPairRequest() const { return mDefaultPairRequest; }
-    VxMaterialTable* getMaterialTable() const { return mMaterialTable; } // (V4.2 / V4.5: VxFrame +0xd8)
+    VxMaterialTable* getMaterialTable() const { return mMaterialTable; } // (VxFrame +0xd8)
     void setRegisterNewObjects(bool b) { m104 = b; }    // glue: frame->m104 = false (Mac TU 422 0x39e7c0) (name inferred)
 
     VxArray<VxStepperBase*> m18;      // Mac +0x18, Win +0x30 list 0 (priority 0): beginStep, setTimeStep

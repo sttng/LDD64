@@ -22,7 +22,7 @@ static void ResultClear(VincIntersectResult* result)
 
 /* Mac 0x4e183f, Win 0x7dc050 (model1 = box, model2 = triangle list). The triangles in the box's
  * bounding box come from the list's box generator (its return value decides); each is moved into
- * the box's frame and handed to V3.8's VincBoxTriangleContact; the raw contacts (element1 = -1,
+ * the box's frame and handed to VincBoxTriangleContact; the raw contacts (element1 = -1,
  * element2 = the triangle's user id) are reduced by VincContactSimplify. NOTE (both builds): the
  * triangle's index is never set (-1), the per-edge floats stay for the following triangles. */
 int MEAPI VincBoxTriangleListIntersect(VincModelPair* pair, VincIntersectResult* result)

@@ -1,5 +1,5 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxMotorConstraint (restored header;
-// completed in V4.2). src/Vx/VxMotorConstraint.cpp: Mac TU 504 0x463d8a-0x464682, Win
+// Vortex 5.0.0 build 800 "vortexldd41" - VxMotorConstraint (restored header).
+// src/Vx/VxMotorConstraint.cpp: Mac TU 504 0x463d8a-0x464682, Win
 // 0x723e00-0x724120. Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x197.
 // A one-coordinate motor between two parts (MdtMotor, Mdt type 0x1a).
 #ifndef VX_VXMOTORCONSTRAINT_H

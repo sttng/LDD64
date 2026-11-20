@@ -22,7 +22,7 @@
 #include "File.h"
 #include "Path.h"
 #include "ReadFile.h"
-#include "SafeFileWrite.h"   // (M2) Save
+#include "SafeFileWrite.h"   // Save
 #include "BrickDatabase.h"
 #include "Primitive.h"
 #include "StorageScene2.h"
@@ -660,7 +660,7 @@ String WritePart(const PalettePart& part, bool brick, UInt32 quantity, const Str
     if (brick) {
         out << " " << "quantity" << "=\"" << quantity << "\"";
         // NOTE: the original writes the item number as it is (no String::ToXML, Mac 0x12a880),
-        // so one with & < > " ' breaks the file; fixed: it is escaped (M7).
+        // so one with & < > " ' breaks the file; fixed: it is escaped.
         if (!itemNos.IsEmpty())
             out << " " << "ItemNos" << "=\"" << itemNos.ToXML() << "\"";
     }
@@ -751,7 +751,7 @@ bool BrickPaletteBagLoaderPAXML::Save(const Path& path, const BrickPalette::Bag&
         }
         out << "\t\t<" << "Assembly" << " " << "designID" << "=\"" << brick->GetDesignID() << "\" "
             << "quantity" << "=\"" << count << "\"";
-        // NOTE: the item number is written as it is (Mac 0x12ae20); fixed: escaped (M7).
+        // NOTE: the item number is written as it is (Mac 0x12ae20); fixed: escaped.
         if (!brick->GetName().IsEmpty())
             out << " " << "ItemNos" << "=\"" << brick->GetName().ToXML() << "\"";
         out << ">\r\n";
@@ -770,7 +770,7 @@ bool BrickPaletteBagLoaderPAXML::Save(const Path& path, const BrickPalette::Bag&
     // NOTE: the original rewrites the file in place and ignores the SetSize result: a failed
     //   write leaves a broken .paxml (a cut or partly old file); fixed: written whole with
     //   WriteWholeFile (on the disk "<name>.paxml.tmp", read back, then renamed over the file:
-    //   all or nothing), false when anything failed (M2). The only caller,
+    //   all or nothing), false when anything failed. The only caller,
     //   SavePalettesCommand::Do (a developer command), ignores the result: no localized message
     //   fits, no dialog.
     return WriteWholeFile(path, data.GetBuffer(), data.GetLength());

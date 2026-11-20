@@ -104,7 +104,7 @@ void ModelLoaderStorageScene::Convert(StorageScene& from, StorageScene2& to) // 
                             // surface equal to the size is written one past the end (both builds;
                             // the plain part below uses <=); and a surface near 4G wraps the size
                             // (both, here and below); fixed: grows as below, and surfaces from
-                            // kMaxModelFileIndex on are dropped (H13).
+                            // kMaxModelFileIndex on are dropped.
                             if (d->m_surface >= kMaxModelFileIndex)
                                 continue;
                             if (part2->m_decorations.GetSize() <= d->m_surface)
@@ -157,7 +157,7 @@ void ModelLoaderStorageScene::Convert(StorageScene& from, StorageScene2& to) // 
                             break;
                 }
                 // NOTE: a part missing from its flex writes one past the end of the bones;
-                // fixed: such a part gets no bone (H13)
+                // fixed: such a part gets no bone
                 if (index >= part2->m_bones.GetSize()) {
                     m_parts[part1] = part2;
                     continue;

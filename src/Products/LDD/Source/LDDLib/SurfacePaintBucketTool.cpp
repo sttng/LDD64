@@ -94,7 +94,7 @@ void SurfacePaintBucketTool::OnMaterialChanged(UInt32 material)
 
 // NOTE: the original has no such hook: the previewed material stays on the part while a save
 // or export reads the scene; fixed: BrickConnectSceneControl::ClearToolPreviews (SaveToStorage,
-// ExportBOMCommand, GroupToLibraryCommand) calls this first (M8).
+// ExportBOMCommand, GroupToLibraryCommand) calls this first.
 void SurfacePaintBucketTool::OnClearPreview()
 {
     if (m_previewElement != 0 && m_previewMaterial != 0xffffffff && GetSceneControl() != 0) {

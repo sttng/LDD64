@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxNode reference counting (restored).
 // Mac TU 506 0x4673a4-0x467481 (file name unknown; static initialiser 0x46741c: <iostream>),
-// Win 0x760b10 / 0x760b30. The node interface is V4.5's (vxGetNodeInterface, Mac 0x458f3d).
+// Win 0x760b10 / 0x760b30. The node interface is (vxGetNodeInterface, Mac 0x458f3d).
 #include "Vx/VxSceneGraphInterface.h"
 #include <iostream>
 

@@ -117,7 +117,7 @@ void ScriptFunctionsRegister(LuaState* state)
 	/* NOTE (LDD): putenv gets a Lua string that is popped (and collected) straight away (both
 	   builds). Windows' _putenv copies it; POSIX putenv keeps the pointer, so on the Mac the
 	   environment then points into freed memory, read by the next getenv("LUA_CPATH") in
-	   luaopen_package; fixed: setenv, which copies, outside Windows (H25). */
+	   luaopen_package; fixed: setenv, which copies, outside Windows. */
 #if !defined(_WIN32)
 	state->PushString(modulePath);
 	state->PushString("modules/");

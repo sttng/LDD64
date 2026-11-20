@@ -20,7 +20,7 @@ namespace LEGO {
 
 namespace {
 
-// The depth as a sort key: NaN taken as +infinity (M16).
+// The depth as a sort key: NaN taken as +infinity.
 inline Real32 SortDepth(Real32 depth)
 {
     return depth != depth ? std::numeric_limits<Real32>::infinity() : depth;
@@ -30,7 +30,7 @@ inline Real32 SortDepth(Real32 depth)
 // then material address. Written with the original's comparisons.
 // NOTE: in the original an unordered depth (NaN) compares as "less" in both directions, which is
 // not a strict weak ordering (undefined behaviour in std::sort: entries out of order, or reads
-// past the range in the unguarded insertion sort); fixed: NaN sorts as +infinity (M16).
+// past the range in the unguarded insertion sort); fixed: NaN sorts as +infinity.
 struct LessFrontToBack {
     bool operator()(const RenderEntry& a, const RenderEntry& b) const
     {
@@ -49,7 +49,7 @@ struct LessFrontToBack {
 };
 
 // Mac 0x102600 (TU 041, name inferred): layer descending, then depth descending (back to
-// front), then material address ascending. NOTE: NaN depths as in LessFrontToBack (M16).
+// front), then material address ascending. NOTE: NaN depths as in LessFrontToBack.
 struct LessBackToFront {
     bool operator()(const RenderEntry& a, const RenderEntry& b) const
     {

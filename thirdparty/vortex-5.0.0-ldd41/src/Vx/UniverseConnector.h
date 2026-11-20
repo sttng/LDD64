@@ -87,6 +87,6 @@ public:
     int mMode;                                          // +0x0c 0 = entering, 1 = leaving
 };
 
-// The print-file helper of TU 453 (Mac 0x422e20-0x422f26) is Vx::VxPrintFile (Vx/VxMaterial.h, V4.2).
+// The print-file helper of TU 453 (Mac 0x422e20-0x422f26) is Vx::VxPrintFile (Vx/VxMaterial.h).
 
 #endif

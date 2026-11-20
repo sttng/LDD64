@@ -39,7 +39,7 @@ bool Skybox::Initialize()
 {
     // NOTE: the original enumerates m_directory without a check, so a missing Graphics/Skyboxes
     // folder (ViewMode::Enter passes the null result of GetDirectory) crashes on entering View
-    // mode; fixed: no folder, no skybox (F2).
+    // mode; fixed: no folder, no skybox.
     if (!m_directory)
         return false;
     DescriptorSet entries;
@@ -132,7 +132,7 @@ void Skybox::Next()
 {
     // NOTE: the original divides by the list size, so "Change background" with no valid skybox
     // (an empty or broken Graphics/Skyboxes folder) is an integer division by zero; fixed:
-    // nothing to change to (F2).
+    // nothing to change to.
     if (m_names.GetSize() == 0)
         return;
     UInt32 next = (m_current + 1) % m_names.GetSize();

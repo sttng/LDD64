@@ -249,7 +249,7 @@ public:
     const BasicArray<String>& GetRecentModels() const;                      // Mac 0x178660, Win 0x5fbd25
     // The "RecentModels" preference value of `models` ('#' before every entry, '%' and '#' in
     // an entry as "%25" / "%23") and back; a value without the leading '#' is the original's
-    // "a#b#c". Fix M9, not in the original (see JoinRecentModels in LDDApplication.cpp).
+    // "a#b#c". Fix, not in the original (see JoinRecentModels in LDDApplication.cpp).
     static String EncodeRecentModels(const BasicArray<String>& models);
     static void   DecodeRecentModels(const String& text, BasicArray<String>& models);
     // Preferences "UserModelDirectory" = the directory of `path`. Mac 0x179880, Win 0x5fcabe

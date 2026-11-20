@@ -40,7 +40,7 @@ bool Base64Encode(BasicArray<UInt8> data, AString& out)
 // characters (both builds): "AAAA=" sizes 2 bytes and writes 3, text with '=' or other
 // characters inside does likewise (heap overflow; GetRedirectURLCaller decodes server replies);
 // fixed: the buffer holds the most the decoder can write, length / 4 * 3, and is cut to the
-// size afterwards (H19).
+// size afterwards.
 bool Base64Decode(const AString& text, BasicArray<UInt8>& out)
 {
     UInt32 size = Base64DecodedSize(text.c_str());

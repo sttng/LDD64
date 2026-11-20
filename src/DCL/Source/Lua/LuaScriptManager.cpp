@@ -217,7 +217,7 @@ int LuaScriptManager::LUAParser::Write(lua_State* /*L*/, const void* data, size_
     LUAParser* parser = (LUAParser*)userData;
     // NOTE: the capacity is doubled once (at least 2 KB) whatever the size of the piece (both
     // builds): lua_dump writes a long string constant in one piece, so a script with one longer
-    // than the new capacity overflows the buffer; fixed: it doubles until the piece fits (H22).
+    // than the new capacity overflows the buffer; fixed: it doubles until the piece fits.
     if (parser->m_capacity < parser->m_size + size) {
         UInt32 capacity = parser->m_capacity * 2;
         if (capacity < 0x800)

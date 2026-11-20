@@ -589,7 +589,7 @@ public:
     // The scene, the camera (as StorageScene2::Camera, field of view = distance), the building
     // instructions into `storage` (cleared first). Mac 0x35440
     void SaveToStorage(StorageScene2& storage);
-    // fixed (M8, not in the original): the observers (tools) undo their previews on the parts
+    // fixed (not in the original): the observers (tools) undo their previews on the parts
     // (BrickConnectSceneControlObserver::OnClearPreview) before a save or export reads the scene.
     void ClearToolPreviews();
     // The statistics text of the debug control (+0x22c). Mac 0x38480, Win 0x616132
@@ -778,7 +778,7 @@ private:
     class NavigationProxy;
     friend class NavigationProxy;
     NavigationProxy* m_navigation;
-    friend struct BrickConnectSceneControlTestAccess;   // (tests/test_bcsc.cpp, diff_bcsc.cpp)
+    friend struct BrickConnectSceneControlTestAccess;   // (the restoration's tests)
     // The click-stick and move tools move the grid with the carried bricks (UpdateGrid,
     // Mac 0x39d10) and redraw (the inline Redraw).
     friend class ClickStickTool;

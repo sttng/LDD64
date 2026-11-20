@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - VxQuaternion out-of-line members (restored).
 // Mac TU 512 0x474c9c-0x474fc7 (file name inferred; static initialiser 0x474f62:
-// <iostream>), Win 0x7e4c70-0x7e4d60. Used by the fluid module (V4.7). The Win-only members of
+// <iostream>), Win 0x7e4c70-0x7e4d60. Used by the fluid module. The Win-only members of
 // the TU (0x7e4c90 operator=, 0x7e4cc0 / 0x7e4cf0 copy constructors, 0x7e4d20 (w, x, y, z)
 // constructor, 0x7e4d40) are the header-inline ones of VxQuaternion.h.
 #include "Vx/VxQuaternion.h"

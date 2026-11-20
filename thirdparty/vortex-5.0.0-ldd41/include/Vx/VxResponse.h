@@ -8,7 +8,7 @@
 //   hello   - a broad-phase pair appears (default without one: VincHello)
 //   active  - after every pair test of a pair whose models are both enabled (event 0 / 2 / 3)
 //   goodbye - the pair disappears or one model got disabled
-// VxUniverse's constructor (V4.1, Mac 0x4848fa) fills the table:
+// VxUniverse's constructor (Mac 0x4848fa) fills the table:
 //   (0, 0) body-body: StartBody_Body / Body_Body / EndBody_Body
 //   (1, 0) sensor-body: Start_Sensor_Body; (1, 1) sensor-sensor: Start_Sensor_Sensor;
 //   (2, 1) particle system-sensor: Start_Sensor_PS; contact max count 0 for (0, 1) and (1, 1).
@@ -167,9 +167,9 @@ public:
 // initialised 1 and never written; the Mac build folded it to the constant) (name inferred)
 extern bool gVxResponseKeepAllContacts;
 
-// Random helpers emitted (weak, coalesced) into Mac TU 514; used by the fluid volumes (V4.7,
+// Random helpers emitted (weak, coalesced) into Mac TU 514; used by the fluid volumes (
 // Mac TU 510) (names inferred). The divisor is the C library's RAND_MAX: 2147483647 on the Mac,
-// 32767 on Win (Win 0x7e3b60 / 0x7e3b80 divide by 32767.0) - V4.7.
+// 32767 on Win (Win 0x7e3b60 / 0x7e3b80 divide by 32767.0).
 inline VxReal vxRandom(VxReal max)                     // Mac 0x476a32, Win 0x7e3b60
 {
     return ((VxReal)rand() / (VxReal)RAND_MAX) * max;

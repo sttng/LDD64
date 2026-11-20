@@ -1,7 +1,7 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - the default VxNodeInterface (restored).
 // Mac TU 507 0x467482-0x467efd (static initialiser 0x467e98: <iostream> only), Win
 // 0x752d00-0x7534e0 (+ slot 17 at 0x7ac7a0). The registered interface (vxGetNodeInterface) and
-// its default instance are in VxSceneGraphInterface.cpp (V4.5). LDD registers no other one and
+// its default instance are in VxSceneGraphInterface.cpp. LDD registers no other one and
 // binds no node: only VxNode::addRef / release could reach addRef / release, and they skip a null
 // node.
 #include "Vx/VxSceneGraphInterface.h"

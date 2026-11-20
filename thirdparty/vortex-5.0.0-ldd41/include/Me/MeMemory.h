@@ -31,7 +31,7 @@ typedef struct MeMemoryAPIStruct {
 // The global table (Mac 0x779488; reached through the non-lazy pointer 0x7025c8).
 extern MeMemoryAPIStruct MeMemoryAPI;
 
-// The default implementations (src/Me/MeMemory.c, V1.1; names: "MallocCreateAligned" from its
+// The default implementations (src/Me/MeMemory.c; names: "MallocCreateAligned" from its
 // message, the others inferred).
 void* MEAPI MallocCreate(size_t bytes);                               // Mac 0x489cd2
 void* MEAPI MallocCreateZeroed(size_t bytes);                         // Mac 0x489cb7

@@ -41,7 +41,7 @@ class VxUniverse : public VxStepperBase, public VxEntityConstraintCollection<VxU
 public:
     // VxUniverse::IntersectSubscriber (LEGO LEGOUniverseCollector: Mac 0/1 D1/D0 (0x3ac390 empty,
     // 0x3b2da0), 2 = 0x3b2db0 empty, 3 = callback 0x3b2dc0; Win 3: sdd, 0x424ec0, 0x521b60)
-    // (method names inferred). Events (VxBridge, V4.5): 0 = the pair still touches, 1 = staying
+    // (method names inferred). Events (VxBridge): 0 = the pair still touches, 1 = staying
     // pair not tested this step (result without contacts, response 0), 2 = first touch,
     // 3 = separated (slot 2). The event is the first argument (LEGOUniverseCollector Mac 0x3b2dc0
     // reads the result from [ebp+0x10]).
@@ -60,7 +60,7 @@ public:
         // slot 3 Mac 0x4853aa / Win 0x7076a0 (empty, out of line in VxUniverse.cpp): after
         // updateIntersections (Mac 0x4827ee)
         virtual void intersectionsUpdated();
-        void vf03() { intersectionsUpdated(); }         // (V0.2 name)
+        void vf03() { intersectionsUpdated(); }         // (earlier name)
     };
     // Iterator over the Mdt contacts of the world (MdtConstraint type kMdtTypeContact)
     // (class name inferred; Win strings show VxUniverse::DynamicPartIterator /
@@ -74,7 +74,7 @@ public:
         MdtConstraintID mContact;
     };
     // Iterator over the parts of the enabled (dynamic, awake) Mdt bodies ("VxUniverse::
-    // DynamicPartIterator" warning string, Win 0x708a70) (V4.1)
+    // DynamicPartIterator" warning string, Win 0x708a70)
     class DynamicPartIterator {
     public:
         DynamicPartIterator() : mBody(0), mNext(0) {}   // Mac 0x4808f4 (C2 0x4808ca)
@@ -106,7 +106,7 @@ public:
     virtual void endStep();                             // slot 12 Mac 0x4811da, Win 0x707f40
     virtual VxReal getTime1() const;                    // slot 13 Mac 0x480824, Win 0x708430: collision ms (+0x68)
     virtual VxReal getTime2() const;                    // slot 14 Mac 0x480830, Win 0x708440: dynamics ms (+0x70)
-    void vf07() { print(0); }                           // (V0.2 name of slot 7)
+    void vf07() { print(0); }                           // (earlier name of slot 7)
 
     // --- assemblies (names inferred, cf. "VxAssemblyBase::addAssembly") ---
     bool addAssembly(VxAssemblyBase* a);                // Mac 0x480726, Win 0x707e20: root->addAssembly when a has no parent
@@ -119,7 +119,7 @@ public:
     // --- dynamics (Mdt world) (names inferred) ---
     void setGravity(VxReal x, VxReal y, VxReal z);      // Mac 0x481204, Win 0x707da0 (MdtWorldSetGravity)
     void setAutoDisable(bool b);                        // Mac 0x481252, Win 0x707c90 (MdtWorldSetAutoDisable)
-    void unk_481252(bool b) { setAutoDisable(b); }      // (V0.2 name)
+    void unk_481252(bool b) { setAutoDisable(b); }      // (earlier name)
     // Mac 0x480c7e (through the inline wrapper Mac 0x422f86): MdtWorldInsertBody; warns while
     // stepping ("VxUniverse insert part: cannot be called while stepping ...")
     void insertBody(MdtBodyID body);
@@ -155,9 +155,9 @@ public:
     // bridge updated (dt 0; subscriber notification off unless `notify`) and its pairs
     // refreshed, the parts disabled again, then update subscriber slot 3
     void updateIntersections(bool notify);
-    void unk_4827ee(bool b) { updateIntersections(b); } // (V0.2 name)
+    void unk_4827ee(bool b) { updateIntersections(b); } // (earlier name)
     void setSleepingPairsIntersect(bool b);             // Mac 0x4808b8, Win 0x7086d0 (bridge +0x16)
-    void unk_4808b8(bool b) { setSleepingPairsIntersect(b); } // (V0.2 name)
+    void unk_4808b8(bool b) { setSleepingPairsIntersect(b); } // (earlier name)
     // Mac 0x48079c, Win 0x707f60: bridge slot 2 (type1, type2, event 0..3, subscriber, position in
     // the list) (glue: (0, 0, 2, collector, 0))
     void addIntersectSubscriber(int type1, int type2, int event, IntersectSubscriber* s, unsigned int index);
@@ -209,7 +209,7 @@ public:
     int m58;                        // Mac +0x58, Win +0x74 (maxPartCount rounded up to even) (name unknown)
     MdtWorldID mWorld;              // Mac +0x5c, Win +0x78
     McdSpaceID mSpace;              // Mac +0x60, Win +0x7c
-    VxBridge* mIntersectManager;    // Mac +0x64, Win +0x80 (Vx/VxBridge.h, V4.5; new(0x64)) (name inferred)
+    VxBridge* mIntersectManager;    // Mac +0x64, Win +0x80 (Vx/VxBridge.h; new(0x64)) (name inferred)
     VxReal mTime1;                  // Mac +0x68, Win +0x88 (collision ms)
     VxReal mTime2;                  // Mac +0x70, Win +0x90 (dynamics ms)
     UpdateSubscriber* m78;          // Mac +0x78, Win +0x98 (VxFluidInteractionUniverseUpdate, lazy)

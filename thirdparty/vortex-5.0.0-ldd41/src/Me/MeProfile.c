@@ -112,7 +112,7 @@ void MEAPI MeTimerInitFrequency(void)
     GetOutputInfo();
 }
 
-/* Mac 0x48a5d1 (Win 0x757500 per V2.1): ends a running section, returns the section's
+/* Mac 0x48a5d1 (Win 0x757500): ends a running section, returns the section's
  * accumulated time in ms. NOTE: the accumulated total, not this run's time (original). */
 double MEAPI MeProfileEndSectionFn(const char* name)
 {

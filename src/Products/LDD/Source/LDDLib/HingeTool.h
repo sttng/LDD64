@@ -221,7 +221,7 @@ public:
     virtual void EndManipulation();
 
     // ---- UpdateObserver: the repeat of a held minus / plus button. NOTE: original quirk:
-    // the start time is not advanced, so after the delay every pass repeats (fixed: M17). ----
+    // the start time is not advanced, so after the delay every pass repeats; fixed. ----
     virtual void Update();                                                  // 37 Mac 0x126aa0 (thunk 0x126b50), Win 0x680157
 
     // ---- state (test access; names inferred) ----

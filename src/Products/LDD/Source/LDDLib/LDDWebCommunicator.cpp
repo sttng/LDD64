@@ -138,7 +138,7 @@ void LDDWebObserver::SetFailed()
 bool LDDWebObserver::ParseReply(UInt32 size, XMLDOM* dom)
 {
     // NOTE: size + 1 wraps for a reply size of 0xFFFFFFFF (both builds); fixed: a reply over
-    // 256 MB is refused (H20; HTTPCommunicator refuses such replies too).
+    // 256 MB is refused (as HTTPCommunicator refuses such replies).
     if (size > 0x10000000u)
         return false;
     char* buffer = new char[size + 1];
@@ -288,7 +288,7 @@ void LDDWebCommunicator::SetConfigURLs(const XMLDOMNode* node)
     // NOTE (both builds): the brick-prices map is not cleared.
     // NOTE: the first child is taken without checking that there is one (both builds): an empty
     // <configURLs/> from the server crashes the start-up; fixed: then there are no URLs, as
-    // offline (H21).
+    // offline.
     if (node->GetChildren().IsEmpty())
         return;
     RefPointer<XMLDOMNode> brands = node->GetChildren()[0];

@@ -40,7 +40,7 @@ int MEAPI VincTriangleMeshTriangleListRegisterInteraction(void); /* Mac 0x4cfda4
 int MEAPI VincTriangleMeshRegisterLineSegment(void);             /* Mac 0x4c8db9, Win 0x7757e0 */
 
 /* Mac 0x4d1f97, Win 0x75cc20 (a thunk to VincTriangleMeshGetTypeId 0x7b2e70): the type id as the
- * registrations above (and V3.2's mesh pairs) read it */
+ * registrations above (and mesh pairs) read it */
 MeI16 MEAPI VincTriangleMeshInteractionsGetTypeId(void);
 /* Mac 0x4d1fa5, Win 0x75cae0: register the type and its line segment query (VxFrame) */
 void MEAPI VincTriangleMeshInit(void);
@@ -91,7 +91,7 @@ int VincTriangleMeshTriangleContacts(VincIntersectResult* r, const VincTriangle*
 void VincTriangleMeshTriangleNode(VincIntersectResult* r, const VincTriangle* tri, VincGeometryID mesh,
                                   const struct VincOBBNode* node, MeReal pad, const VincContactMergeParams* params);
 
-/* VincContactSimplifyResult (V3.7, 559a): Vinc/VincContactSimplify.h */
+/* VincContactSimplifyResult (559a): Vinc/VincContactSimplify.h */
 
 /* ---- 3x3 symmetric eigen decomposition (cyclic Jacobi) ---- */
 /* Mac 0x4d1e3e, Win 0x7c0ea0: a (row-major 3x3, overwritten with the rotated matrix: eigenvalues on

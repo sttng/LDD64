@@ -1,5 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxCylindrical (restored header;
-// completed in V4.3).
+// Vortex 5.0.0 build 800 "vortexldd41" - VxCylindrical (restored header).
 // Mac 0x8c bytes, Win 0xa4 (glue operator new sizes). Class id 0x11b (Mac 0x442dc4).
 #ifndef VX_VXCYLINDRICAL_H
 #define VX_VXCYLINDRICAL_H

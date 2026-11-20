@@ -58,7 +58,7 @@ Render* GetRender(ControlManager* manager)
     return static_cast<RenderControlManager*>(manager)->GetRender();
 }
 
-// (not in the original; M3) Puts the complete copy `temporary` of `directory` in place of
+// (not in the original) Puts the complete copy `temporary` of `directory` in place of
 // `name`: the old element is renamed aside first and renamed back when the new one cannot be
 // moved in; it is deleted only once the new one is in place. On failure the temporary copy is
 // removed and `name` is what it was. Directory has no locked public rename, so the DoRename slot
@@ -114,7 +114,7 @@ bool CopyFilesPGThread::Run()
     bool result;
     if (assets->FileExists(m_name)) {
         // NOTE: the copy result is not checked (both builds); fixed: a failed copy fails the
-        // thread (the observer's failure alert) (M3).
+        // thread (the observer's failure alert).
         result = assets->Copy(m_name, *m_destination, String(), true, false);
         Attributes attributes;
         m_destination->GetAttributes(m_name, &attributes);
@@ -171,7 +171,7 @@ bool CopyFilesPGThread::CopyFiles(Directory* source, Directory* destination, UIn
         const String name(it->m_name);
         if (!it->m_attributes.m_isDirectory) {
             // NOTE: the original ignores the copy result and counts the file as copied, so a
-            // failed copy still reports success; fixed: it fails the thread (M3).
+            // failed copy still reports success; fixed: it fails the thread.
             if (!source->Copy(name, *destination, String(), true, false))
                 return false;
             Attributes attributes;
@@ -398,7 +398,7 @@ void BricksDownloaderHandler::OnDownloadFailed()
 // copies the in-memory db.lif over the user's one whatever it holds. With UnpackBricks the
 // user's "DB" is deleted before the archive is copied into it, so a failed copy leaves no
 // database (the alert's YES goes on offline); an in-memory db.lif that cannot be created gives
-// no alert at all. Fixed (M3): the unpacked database is copied into "DB.new" and swapped in only
+// no alert at all. Fixed: the unpacked database is copied into "DB.new" and swapped in only
 // when complete; every failure keeps the user's database, ends the download (m_current at the
 // end, m_userDirectory dropped as the "aborted" mark, the in-memory copy deleted) and shows the
 // failure alert once. OnFilesFinished: see there.
@@ -1016,7 +1016,7 @@ void StartMode::InstallBricks()
         // NOTE: the original copies straight over the user's db.lif and ignores the result: a
         // copy that fails part way leaves a truncated database and the start goes on with it;
         // fixed: copied to "<name>.lif.new", made writable, then swapped in; any failure keeps
-        // the old database and ends in the INSTALLAPPBRICKSFAILED alert (M3).
+        // the old database and ends in the INSTALLAPPBRICKSFAILED alert.
         String temporary(fileName);
         temporary << ".new";
         user->Delete(temporary, true);

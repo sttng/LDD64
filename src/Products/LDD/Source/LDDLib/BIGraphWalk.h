@@ -1,5 +1,5 @@
 // LEGO Digital Designer — NOT original code: the iterative form of the recursive depth-first
-// walks of the building-guide graphs (bug review M11). The original
+// walks of the building-guide graphs. The original
 // walks recurse once per primitive of the path (BIGraph::CollectComponent / ..Excluding /
 // CountConnected, BIBrickPrimitive::CollectConnected, BIAnalyzerDirection::Collect), so a long
 // chain of connected bricks overflows the stack. WalkDepthFirst keeps the call stack of those
@@ -11,7 +11,7 @@
 
 namespace LEGO {
 
-// LDD_BI_WALK_TRACE (test switch, not original): tests/test_bi_graph.cpp defines BIWalkTrace and
+// LDD_BI_WALK_TRACE (test switch, not original): the restoration's tests define BIWalkTrace and
 // records every entered node (each call of the recursive original) to compare the visiting order
 // of the walks with the recursive ones.
 #if defined(LDD_BI_WALK_TRACE)

@@ -1,19 +1,19 @@
 # preferences.ini
 
 Every setting LDD reads from or writes to `preferences.ini`, as found in the restored code (the
-C++ sources and the Lua layouts of the assets). Settings marked **LDD64** are additions of this
-restoration; all others behave as in LDD 4.3.
+C++ sources and the Lua layouts of the assets). The settings under "LDD64 additions" are new in
+LDD64; all others behave as in LDD 4.3.
 
 ## Where the values come from
 
 LDD looks a key up in four places and takes the first value it finds:
 
-1. the command line: `LDD.exe -Key value` (a trailing `-Key` gives an empty value);
+1. the command line: `LDD64.exe -Key value` (a trailing `-Key` gives an empty value);
 2. the user file, `%APPDATA%\LEGO Company\LEGO Digital Designer\preferences.ini` (Mac:
    `~/Library/Application Support/LEGO Company/LEGO Digital Designer/preferences.ini`; Linux:
    `~/.local/share/LEGO Company/LEGO Digital Designer/preferences.ini`);
-3. the shipped file, `preferences.ini` in the program's resource folder (next to `LDD.exe` on
-   Windows);
+3. the shipped file, `preferences.ini` in the program's resource folder (next to `LDD64.exe` on
+   Windows, `ldd64` on Linux, in the bundle's `Contents/Resources` on macOS);
 4. the built-in defaults (`SetDefaultPreferences`, LDDMain.cpp).
 
 LDD writes only to the user file: the Preferences dialog, the window geometry, the recent models
@@ -98,7 +98,7 @@ LEGO's servers no longer answer, so the online features below cannot work any mo
 | `userPalettesDirName` | `Palettes` | folder name | Folder of the downloaded palettes in the user data folder. |
 | `PalettePath` | (empty) | folder | Load the palettes from this folder instead (and without the extended palette). |
 | `UserPalettesPath` | `UserPalettes` | folder | Folder of the user's own palettes (in the user data folder, or a full path). |
-| `LDrawMapFile` | `ldraw.xml` | file name | Part and colour map for LDraw import and export. |
+| `LDrawMapFile` | `ldraw.xml` | file name | Part and colour map for LDraw import and export (LDD64 ships a current one). |
 | `RecentModels` | (none) | list | The recently opened models (LDD keeps this list). |
 | `mainWindowSize` | `1024 768` | `width height` | Size of the main window (LDD updates it). |
 | `mainWindowOrigin` | `0 0` | `x y` | Position of the main window (LDD updates it). |

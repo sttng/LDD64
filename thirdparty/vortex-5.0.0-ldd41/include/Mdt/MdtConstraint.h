@@ -157,8 +157,8 @@ MdtConstraint* MEAPI MdtSpringCreate(VinPool* pool);                  // Mac 0x4
 void MEAPI MdtSpringReset(MdtConstraint* c);                          // Mac 0x4928c4, Win 0x782230
 void MEAPI MdtSpringSetNaturalLength(MdtConstraint* c, MeReal l);     // Mac 0x49288b, Win 0x782280
 MeReal MEAPI MdtSpringGetNaturalLength(const MdtConstraint* c);       // Mac 0x4928a9, Win 0x7822a0
-void MEAPI MdtSpringSetStiffness(MdtConstraint* c, MeReal k);        // Win 0x7822c0 (Win only, V4.3)
-void MEAPI MdtSpringSetDamping(MdtConstraint* c, MeReal d);          // Win 0x782320 (Win only, V4.3)
+void MEAPI MdtSpringSetStiffness(MdtConstraint* c, MeReal k);        // Win 0x7822c0 (Win only)
+void MEAPI MdtSpringSetDamping(MdtConstraint* c, MeReal d);          // Win 0x782320 (Win only)
 MdtConstraint* MEAPI MdtRPROJointCreate(VinPool* pool);               // Mac 0x492368, Win 0x774f70
 void MEAPI MdtRPROJointReset(MdtConstraint* c);                       // Mac 0x4922ac, Win 0x774920
 void MEAPI MdtRPROJointGetQuaternion(const MdtConstraint* c, int which, MeVector4 q); // Mac 0x4920f9

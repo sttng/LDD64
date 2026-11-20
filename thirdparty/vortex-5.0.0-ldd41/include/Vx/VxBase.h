@@ -186,7 +186,7 @@ private:
 
 // --------------------------------------------------------------------------------------
 // VxBase (Mac vtable 0x75d368, 6 slots; Win 0x9f88c0, 5; class id 0x101)
-// Mac 0x18 bytes, Win 0x30. src/Vx/VxBase.cpp (V1.1, Mac TU 458 0x43046c-0x431ec4).
+// Mac 0x18 bytes, Win 0x30. src/Vx/VxBase.cpp (Mac TU 458 0x43046c-0x431ec4).
 // Constructor Mac 0x430d26: id = counter 0x7791ac++, empty name, registers with
 // VxFrame::currentInstance() (VxFrame::addObject, Mac 0x45413e) if a frame exists and then
 // notifies the global creation subscriber (Mac 0x7791b0, slot 2, event kEventCreated).

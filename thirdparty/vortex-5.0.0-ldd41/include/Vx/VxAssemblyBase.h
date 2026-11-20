@@ -1,4 +1,4 @@
-// Vortex 5.0.0 build 800 "vortexldd41" - VxAssemblyBase, VxMechanism (restored header, V0.2;
+// Vortex 5.0.0 build 800 "vortexldd41" - VxAssemblyBase, VxMechanism (restored header;
 // VxAssemblyBase completed by src/Vx/VxAssemblyBase.cpp = Mac TU 455
 // 0x425346-0x42e904, Win 0x725960-0x729b80).
 //
@@ -83,7 +83,7 @@ public:
     };
 
     static int getStaticClassType();                    // Mac 0x425346: 0x109
-    static const VxArray<int>& getStaticClassTypes();   // Mac 0x42769a (name inferred; V1.3)
+    static const VxArray<int>& getStaticClassTypes();   // Mac 0x42769a (name inferred)
     // Mac 0x425dd2, Win 0x725b30: the assembly of that name (sNameMap) or 0 (name inferred)
     static VxAssemblyBase* findFromName(const char* name);
     VxAssemblyBase();                                   // Mac 0x4293fc
@@ -139,8 +139,8 @@ public:
     virtual bool getBoundingSphere(VxVector3& center, VxReal& radius, VxVector3* min, VxVector3* max) const;
     virtual bool getPartsBoundingSphere(VxVector3& center, VxReal& radius, VxVector3* min, VxVector3* max) const;
     virtual void setGrouping(int grouping);             // slot 34 Mac 0x425ebc, Win 0x726cd0 (parts, sub-assemblies)
-    virtual int vf35() const;                           // slot 35 Mac 0x42b3ca, Win 0x719870 (0; VxMechanism: item count) (V1.3)
-    virtual void* vf36(int i) const;                    // slot 36 Mac 0x42b3d4, Win 0x7c61f0 (0; VxMechanism: item i) (V1.3)
+    virtual int vf35() const;                           // slot 35 Mac 0x42b3ca, Win 0x719870 (0; VxMechanism: item count)
+    virtual void* vf36(int i) const;                    // slot 36 Mac 0x42b3d4, Win 0x7c61f0 (0; VxMechanism: item i)
     // slot 37 Mac 0x4262ae, Win 0x726700: 1 = every part (and sub-assembly) frozen, 0 = none,
     // 2 = mixed
     virtual int getFrozenState() const;
@@ -173,7 +173,7 @@ public:
     // first dynamic part found by FirstDynamicPartFinder when part == 0)
     void mergeParts(int mode, VxPart* part);
     // Mac 0x42675e, Win 0x725ef0: e belongs to this assembly or to one of its sub-assemblies
-    // (walks VxEntity +0x3c and the assemblies' mParent) (V1.3)
+    // (walks VxEntity +0x3c and the assemblies' mParent)
     bool contains(VxEntity* e) const;
     // Mac 0x4255de, Win 0x725f80: the ancestor just below the topmost one (the top-level assembly
     // under the universe's root mechanism), this when there is no parent
@@ -195,14 +195,14 @@ public:
     void removeUpdateSubscriber(UpdateSubscriber* s);   // Mac 0x427a68, Win 0x727570
     bool hasUpdateSubscriber(UpdateSubscriber* s) const; // Mac 0x425622
     // Mac 0x4255b4, Win 0x725f50: sets mMergeChanged here and in every parent assembly
-    // (VxPart::setMergeParent) (V4.2)
+    // (VxPart::setMergeParent)
     void setMergeChanged();
     // Mac 0x428bcc, Win 0x728120 ("_exposeField called with a field that is already exposed.")
     void _exposeField(VxData::FieldBase* field, int kind);
     // Mac 0x427b82, Win 0x7273a0 ("_unexposeField called with a field that was not previously exposed.")
     void _unexposeField(VxData::FieldBase* field);
     int getM3d4() const { return m3d4; }                // Mac 0x425426, Win 0x725ee0 (meaning unknown)
-    // V1.3 alias of mergeParts (no callers left)
+    // Alias of mergeParts (no callers left)
     void vf39Helper(int mode, VxPart* part) { mergeParts(mode, part); }
 
     static VxBase::NameMap* sNameMap;                   // Mac 0x7791a4 (name inferred)
@@ -212,7 +212,7 @@ public:
     VxAssemblyBase* mParent;                            // Mac +0x40, Win +0x58 (parent assembly; 0 = top level)
     VxArray<VxAssemblyBase*> m44;                       // Mac +0x44 sub-assemblies
     VxCompositeController mController;                  // Mac +0x54, Win +0x70 (0x354 / 0x444 bytes; Win confirmed by
-                                                        // the ctor Win 0x727da0: next member at +0x4b4) (V1.3) (name inferred)
+                                                        // the ctor Win 0x727da0: next member at +0x4b4) (name inferred)
     VxArray<VxPart*> mParts;                            // Mac +0x3a8 (getPart / getPartCount)
     VxArray<VxConstraint*> mConstraints;                // Mac +0x3b8 (getConstraint / getConstraintCount)
     VxUniverse* mUniverse;                              // Mac +0x3c8
@@ -247,20 +247,20 @@ class VxMechanism : public VxAssemblyBase {
 public:
     VX_DECLARE_ALLOCATOR();                             // new Mac 0x4213bc / Win 0x71eac0, delete Mac 0x4213a5
     static int getStaticClassType();                    // Mac 0x420ef4: 0x182
-    static const VxArray<int>& getStaticClassTypes();   // Mac 0x421798 (name inferred; V1.3)
+    static const VxArray<int>& getStaticClassTypes();   // Mac 0x421798 (name inferred)
     VxMechanism();                                      // C1 Mac 0x4214e0 -> C2 0x421478, Win 0x71efd0
     virtual bool isOfType(int type) const;              // slot 0 Mac 0x421b20, Win 0x71f260
     virtual bool isOfClassType(int type) const;         // slot 1 Mac 0x420efe, Win 0x71ec80
     virtual ~VxMechanism();                             // slot 2/3 Mac 0x421784/0x4215e8, Win 0x71f810
     virtual const char* getClassName() const;           // slot 4 Mac 0x4223bc, Win 0x71f640
-    virtual int vf35() const; // slot 35 Mac 0x420f7a, Win 0x71ecd0: mItems.size() (V1.3)
-    virtual void* vf36(int i) const; // slot 36 Mac 0x4215ac, Win 0x71efa0: mItems[i] or 0 (V1.3)
-    virtual void mergeParts(int mode); // slot 39 Mac 0x420fb2, Win 0x71ec40: mergeParts(mode, reference part) (V1.3)
+    virtual int vf35() const; // slot 35 Mac 0x420f7a, Win 0x71ecd0: mItems.size()
+    virtual void* vf36(int i) const; // slot 36 Mac 0x4215ac, Win 0x71efa0: mItems[i] or 0
+    virtual void mergeParts(int mode); // slot 39 Mac 0x420fb2, Win 0x71ec40: mergeParts(mode, reference part)
     using VxAssemblyBase::mergeParts;
     virtual bool addAssembly(VxAssemblyBase* a); // slot 43 Mac 0x42145e, Win 0x71eb00 (name from string "VxAssemblyBase::addAssembly"; VxUniverse::addAssembly calls it on the root mechanism)
     virtual bool removeAssembly(VxAssemblyBase* a); // slot 44 Mac 0x421444, Win 0x71eb10 (name inferred)
-    virtual void setReferencePart(VxEntity* p); // slot 48 Mac 0x4214f4, Win 0x71eb60 (name from its warning string) (V1.3)
-    virtual VxEntity* getReferencePart(); // slot 49 Mac 0x4222b0, Win 0x71f0c0 (name inferred) (V1.3)
+    virtual void setReferencePart(VxEntity* p); // slot 48 Mac 0x4214f4, Win 0x71eb60 (name from its warning string)
+    virtual VxEntity* getReferencePart(); // slot 49 Mac 0x4222b0, Win 0x71f0c0 (name inferred)
 
     // --- API used by the glue (Mac VxMechanism.cpp, forwarding to VxAssemblyBase) ---
     bool addPart(VxPart* p);                            // Mac 0x421426 -> _addPart (name inferred)
@@ -279,9 +279,9 @@ public:
     int getConstraintCount() const;                     // Mac 0x421594 (mConstraints) (name inferred)
     VxConstraint* getConstraint(int i) const;           // Mac 0x420f5c (name inferred)
 
-    VxEntity* mReferencePart;                           // Mac +0x408, Win +0x514 (V1.3)
+    VxEntity* mReferencePart;                           // Mac +0x408, Win +0x514
     // reference-counted objects (a VxRefCount at Mac +0x18 / Win +0x30 = sizeof(VxBase), released by
-    // the dtor; type unknown, never filled in LDD) (V1.3)
+    // the dtor; type unknown, never filled in LDD)
     VxArray<void*> mItems;                              // Mac +0x40c, Win +0x518
 };
 
@@ -289,7 +289,7 @@ public:
 // The disabled-pair lists of a universe (VxUniverse +0x88) and of an assembly (+0x3cc): Mac
 // TU 452 (ctor 0x422bfe (0x422bb8), apply 0x422c32, dtor 0x422d98 (0x422cb4)), Win 0x72d690 /
 // 0x72d620 / 0x72d6b0. 0x30 bytes. Nothing fills them in either binary (the adders were
-// dead-stripped). (class and member names inferred; restored by V4.1)
+// dead-stripped). (class and member names inferred)
 class VxDisabledPairs {
 public:
     struct GeometryPair { VxCollisionGeometry* cg0; VxCollisionGeometry* cg1; };

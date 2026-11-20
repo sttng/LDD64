@@ -41,7 +41,7 @@ inline VxArray<VxNamePathInterfaceEntry>& vxNamePathInterfaces()
 
 // The registered getter of interface I: a function-local static I (one function per interface
 // class, shared by every type registered with it: VxMechanism and VxAssemblyBase both use the
-// assembly interface's, Mac 0x466319) (V4.6; name inferred)
+// assembly interface's, Mac 0x466319) (name inferred)
 template <class I>
 VxNamePathBaseInterface* vxNamePathInterfaceInstance()
 {
@@ -50,7 +50,7 @@ VxNamePathBaseInterface* vxNamePathInterfaceInstance()
 }
 
 // The registered type test of class T: a dynamic_cast from VxBase (one function per type, e.g.
-// Mac 0x466632 / Win 0x822f00 for VxFrame) (V4.6; name inferred)
+// Mac 0x466632 / Win 0x822f00 for VxFrame) (name inferred)
 template <class T>
 bool vxNamePathIsOfType(VxBase* object)
 {

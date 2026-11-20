@@ -1,6 +1,6 @@
 // Vortex 5.0.0 build 800 "vortexldd41" - TriangleMesh vs Box pair test (restored;
 // Mac 557c 0x4c4ff3-0x4c5e5b). Walks the mesh's OBB tree in the box frame and collects the
-// triangle-box contacts of 558a (V3.6) into a 1000-contact buffer, then simplifies them.
+// triangle-box contacts of 558a into a 1000-contact buffer, then simplifies them.
 #include "VincTriangleMeshPairs.h"
 #include "Vinc/VincPrimitives.h"
 
@@ -105,7 +105,7 @@ int MEAPI VincTriangleMeshBoxRegisterInteraction(void)
     i.distanceFn = 0;
     i.distanceBoundedFn = 0;
     MeI16 box = VincBoxGetTypeId();
-    // the original reads the mesh type through V3.3's wrapper Mac 0x4d1f97 (same value)
+    // the original reads the mesh type through wrapper Mac 0x4d1f97 (same value)
     VincGeometryPairRegisterInteractions(VincTriangleMeshGetTypeId(), box, &i, 0);
     return 1;
 }

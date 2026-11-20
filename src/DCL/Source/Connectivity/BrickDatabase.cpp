@@ -619,7 +619,7 @@ bool BrickDatabase::ReorderParts(const BasicArray<Part>& order,
 // Geometry of one decoration surface: "Lod<lod>/<designID>.g<face>". Mac 0x82a20, Win 0x4b99f0
 // NOTE: when the file does not exist, both builds build the "failed to open" message from
 // DirectoryElement::GetPath of the NULL file (Win 0x4b9b05: xor ecx, ecx; call 0x4255e0) and
-// crash (access violation; tests/diff/diff_brickdatabase.cpp). Restored: the message uses the
+// crash (access violation; the restoration's diff tests). Restored: the message uses the
 // path string, so a missing face file returns NULL.
 BrickGeometry* BrickDatabase::QueryDecorationFaceGeometry(const Primitive* primitive, UInt32 face,
                                                           UInt32 lod) const
@@ -686,7 +686,7 @@ bool BrickDatabase::AlignPart(BasicArray<RefPointer<StorageScene2::Part> >& part
 {
     // NOTE: the part indices of the mapping and the first bone of each part are used without
     // checks (both builds): an assembly in a model file whose part has no <Bone> dereferences
-    // null; fixed: such an assembly does not align (H15).
+    // null; fixed: such an assembly does not align.
     if (relativeToIndex >= parts.GetSize() || parts[relativeToIndex]->m_bones.IsEmpty() ||
         partIndex > parts.GetSize() || count > parts.GetSize() - partIndex)
         return false;

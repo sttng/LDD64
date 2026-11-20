@@ -2378,7 +2378,7 @@ void BrickConnectSceneControl::UpdateRenderData(const BasicArray<RigidElement*>&
 // storage / statistics / scenery / version text
 // =============================================================================================
 
-// fixed (M8, not in the original): see the header.
+// fixed (not in the original): see the header.
 void BrickConnectSceneControl::ClearToolPreviews()
 {
     BCSC_NOTIFY(OnClearPreview());
@@ -2388,7 +2388,7 @@ void BrickConnectSceneControl::ClearToolPreviews()
 // NOTE: the original saves the parts' materials as they are, so the paint bucket's hover
 // preview (SurfacePaintBucketTool::UpdateHighlight sets the colour on the part) is saved when
 // the user saves or exports (Ctrl+S, the menu) while hovering a part; fixed: the previews are
-// undone first (M8). (Saves, Save As, exports and uploads all come here through
+// undone first. (Saves, Save As, exports and uploads all come here through
 // LDDApplication::SaveModel, the .lxf thumbnail is rendered after it.)
 void BrickConnectSceneControl::SaveToStorage(StorageScene2& storage)
 {

@@ -5,7 +5,7 @@
 // sub-containers of its VxInputOutputContainer ("ControllerFields": "Inputs", "Outputs",
 // "Parameters"). Each such field is a VxData::Field<T> plus the VxInputOutputModifier
 // interface (Mac +0x60 for 4-byte T, Win +0x78) and a pointer to the owning controller
-// (Mac +0x64, Win +0x7c). VxConnection functors (Vx/VxConnection.h, V1.2) copy values between
+// (Mac +0x64, Win +0x7c). VxConnection functors (Vx/VxConnection.h) copy values between
 // them and mark the destination's owner with setInputsChanged(true).
 //
 // Only the bool instances are linked in LDD (Mac TU 446, Win 0x7fa960-0x7fb3e0); RTTI of

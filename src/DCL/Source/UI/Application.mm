@@ -264,7 +264,7 @@ void InstallWake()
     // NOTE: the original calls modalWindow without a check. A nested ModalRun: ends with
     // modalWindow = 0 (and timerModal = 0) while the timer of the outer loop keeps firing, so
     // the next tick calls through NULL. fixed: checked here, and a nested ModalRun: hands the
-    // outer loop its state back (below) (M20).
+    // outer loop its state back (below).
     if (modalWindow)
         modalWindow->ModalUpdate();
     if (mur)
@@ -275,7 +275,7 @@ void InstallWake()
 // Mac 0x3100
 - (void)ModalRun:(LEGO::Window*)window andMUR:(LEGO::ModalUpdateReciever*)reciever
 {
-    // (M20) the state of an enclosing modal loop (all 0 outside one)
+    // the state of an enclosing modal loop (all 0 outside one)
     NSTimer* outerTimer = timerModal;
     char outerUseMUR = useMUR;
     LEGO::ModalUpdateReciever* outerMUR = mur;
@@ -292,7 +292,7 @@ void InstallWake()
 #endif
     [NSApp runModalForWindow:(NSWindow*)window->GetNativeWindow()];
     [timerModal invalidate];
-    timerModal = outerTimer;                    // (M20) the outer loop's timer stays its own
+    timerModal = outerTimer;                    // the outer loop's timer stays its own
     useMUR = outerUseMUR;
     mur = outerMUR;
     modalWindow = outerWindow;

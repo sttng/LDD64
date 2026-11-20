@@ -1,7 +1,7 @@
 /* Vortex 5.0.0 build 800 "vortexldd41" - Me math helpers (restored).
  * Mac __text 0x487e9f-0x489c67 (TU 530 Me block); Win pairs in the comments. Names inferred.
  * FP operation order follows the Mac disassembly (not Ghidra's re-associated sums); checked bit for
- * bit against Win by tests/diff/diff_vortex_foundation.cpp. sin / cos / asin / atan2 go through
+ * bit against Win by the restoration's diff tests. sin / cos / asin / atan2 go through
  * Me/MeCrtMath.h (MeSinMul / MeCosMul where Win multiplies the unrounded x87 _CIsin / _CIcos
  * result). */
 #include "Me/MeMath.h"
@@ -123,7 +123,7 @@ void MEAPI MeMatrix4TMMakeRelative(MeMatrix4 rel, const MeMatrix4 a, const MeMat
     rel[3][2] = d0 * b[2][0] + d1 * b[2][1] + d2 * b[2][2];
 }
 
-/* Mac 0x4889e0 (the V0.1 Win pair 0x792320 is a different function) */
+/* Mac 0x4889e0 (Win 0x792320 is a different function) */
 void MEAPI MeQuaternionFromTM(MeVector4 q, const MeMatrix4 tm)
 {
     MeReal trace = tm[0][0] + tm[1][1] + tm[2][2];

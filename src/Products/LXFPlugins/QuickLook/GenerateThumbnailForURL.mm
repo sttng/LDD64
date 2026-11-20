@@ -2,7 +2,7 @@
 // LXFQuickLook.qlgenerator: the thumbnail of an .lxf file = its IMAGE100.PNG (QLThumbnailRequest-
 // SetImageWithData, type hint public.png); other files (.lxfml) get none. QuickLook
 // 0x1cf0-0x239f. File name inferred (Xcode template).
-// Mac only; the Objective-C parts sit behind __OBJC__ (tests/test_lxfplugins.cpp, HOST-ONLY
+// Mac only; the Objective-C parts sit behind __OBJC__ (the restoration's tests, HOST-ONLY
 // stand-ins as in GeneratePreviewForURL.mm).
 #if !defined(_WIN32)
 #include "LXFPluginStorage.h"
@@ -45,7 +45,7 @@ OSStatus GenerateThumbnailForURL(void* /*thisInterface*/, QLThumbnailRequestRef 
         if (!file.IsNull()) {
             // NOTE: new[] buffer handed to NSData without copy (freed with free()), leaked when
             // the read fails, and the declared size is not checked (as the preview); fixed as
-            // there (H26).
+            // there.
             const UInt64 size = file->GetSize();
             char* buffer = size != 0 && size <= kLXFGeneratorMaxSize
                                ? static_cast<char*>(malloc((size_t)size)) : 0;

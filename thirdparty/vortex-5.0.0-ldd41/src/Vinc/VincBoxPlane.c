@@ -19,7 +19,7 @@ static void ResultClear(VincIntersectResult* result)
 
 /* Mac 0x4dffa3, Win 0x81f910 (cdecl): the 12 box edges (rel = box in the plane frame, half
  * extents r) clipped against z <= 0, end points appended at *cursor: the 8 edges along the box's
- * x and y axes add only clipped end points, the 4 along z both (V3.8's clip helpers) */
+ * x and y axes add only clipped end points, the 4 along z both (clip helpers) */
 static void BoxPlanePoints(MeReal** cursor, const MeReal* rel, const MeReal* r)
 {
     MeVector3 a, b, c, p;

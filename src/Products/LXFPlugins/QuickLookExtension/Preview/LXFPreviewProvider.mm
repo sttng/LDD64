@@ -3,7 +3,7 @@
 // LXFPreview.appex: the data-based Quick Look preview extension of .lxf / .lxfml files (macOS 12
 // and later; macOS 15 no longer loads LXFQuickLook.qlgenerator). An .lxf shows its IMAGE100.PNG,
 // an .lxfml its text, as the generator does (LXFQuickLookData.cpp).
-// 64-bit Objective-C only: the 32-bit builds and checks compile nothing here.
+// 64-bit Objective-C only; other compiles (C++ checks) see nothing here.
 #if defined(__OBJC__) && defined(__LP64__)
 #import <Cocoa/Cocoa.h>
 #import <QuickLookUI/QuickLookUI.h>

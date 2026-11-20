@@ -734,7 +734,7 @@ void HingeTool::StopRepeat()
 // Mac 0x121210, Win 0x6829fa
 // NOTE: the original keeps a repeat that has not ended when the tool is detached (no release /
 // leave of the button seen): the main updater keeps calling Update and the joint picked after
-// the next activation turns on its own; fixed: the repeat ends on activation (M17).
+// the next activation turns on its own; fixed: the repeat ends on activation.
 void HingeTool::OnAttached(BrickConnectSceneControl* control)
 {
     StopRepeat();
@@ -1376,7 +1376,7 @@ void HingeTool::EndManipulation()
 
 // Mac 0x126aa0 (thunk 0x126b50), Win 0x680157
 // NOTE: the original never resets the start time of the repeat, so after the 750 ms delay every
-// pass repeats (not every 50 ms); fixed: each repeat starts the interval again (M17).
+// pass repeats (not every 50 ms); fixed: each repeat starts the interval again.
 void HingeTool::Update()
 {
     if (m_repeatControl.IsNull())

@@ -52,7 +52,7 @@ struct McdModel {
     MeVector3 negCOM;                 /* +0x84 +0x88 minus the centre of rotation in model frame */
     int sweep;                        /* +0x9c +0xa0 swept (continuous) collision on */
     int state;                        /* +0xa0 +0xa4 2: special state (space notified) */
-    ptrdiff_t ma4;                    /* +0xa4 +0xa8 (0) the geometry's Vx::VxIntersectFilter (VxBridge, V4.5);
+    ptrdiff_t ma4;                    /* +0xa4 +0xa8 (0) the geometry's Vx::VxIntersectFilter (VxBridge);
                                          pointer-sized for 64-bit hosts */
     const char* ma8;                  /* +0xa8 +0xac (0) the owning sensor's name (VxCollisionSensor::setName);
                                          an int in both binaries, PORT64: the pointer itself */

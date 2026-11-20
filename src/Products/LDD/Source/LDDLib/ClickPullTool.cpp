@@ -139,7 +139,7 @@ void ClickPullTool::Update()
     UInt32 elapsed = (UInt32)now - (UInt32)m_lastTime;
     m_lastTime = now;
     // NOTE: the original steps with 1 / elapsed (ms), which is 1 / 0 = +inf for two updates in
-    // the same millisecond; fixed: at least 1 ms (M15).
+    // the same millisecond; fixed: at least 1 ms.
     if (elapsed == 0)
         elapsed = 1;
     Scene* scene = GetSceneControl()->GetScene();

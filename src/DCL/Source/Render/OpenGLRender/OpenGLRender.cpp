@@ -963,7 +963,7 @@ void OpenGLRender::SetShader(Shader* shader)
 // Mac 0xf5930, Win 0x4ee8c0
 // NOTE: both originals dereference a null buffer that differs from the current one (BindArrays
 // on null). Win catches the access violation (/EHa) and reports a driver crash (ShowGraphicFailure
-// Win 0x5c8a3b; seen in tests/diff/diff_scene_furniture.cpp); Mac dies with SIGSEGV. Deliberate
+// Win 0x5c8a3b; seen in the restoration's diff tests); Mac dies with SIGSEGV. Deliberate
 // deviation: checked for null and reported as on Win (ReportOpenGLCrash), in both builds.
 void OpenGLRender::SetVertexBuffer(VertexBuffer* buffer)
 {

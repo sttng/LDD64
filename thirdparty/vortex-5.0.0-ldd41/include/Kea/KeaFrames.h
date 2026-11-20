@@ -58,7 +58,7 @@ public:
 
 // Mac vtable 0x75ef88 / Win 0xa01084: block Gauss-Seidel over the constraints, each block a
 // small LCP on an smv_matrix (MdtKeaParameters::constraintSolver = 1; not used by LDD:
-// V0.3 found its solve (Win 0x7ba8d0) never runs)
+// Its solve (Win 0x7ba8d0) never runs)
 class itr_constraint_solver : public constraint_solver {
 public:
     itr_constraint_solver();                         // Mac 0x4a5f22 -> 0x4a5e86, Win 0x7ba880

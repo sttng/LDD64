@@ -125,7 +125,7 @@ void PartChildStart(void* data, const char* name, const char** a)
             return;
         // NOTE: the surface id grows the array to surface + 1 unchecked (both builds; an id
         // near 4G wraps the size and writes past it); fixed: ids from kMaxModelFileIndex on are
-        // ignored, as 0 is (H13).
+        // ignored, as 0 is.
         if (surface >= kMaxModelFileIndex)
             return;
         BasicArray<UInt32>& materials = parser.CurrentPart()->m_materials;
@@ -199,7 +199,7 @@ void PartStart(void* data, const char* name, const char** a)
         detail = ModelLoader::PartError::flex;
     // NOTE: the control point grows the flex's part array to controlPoint + 1 unchecked (both
     // builds; 0xFFFFFFFE wraps it); fixed: a control point from kMaxModelFileIndex on is a
-    // flex error (H13).
+    // flex error.
     else if (controlPoint != 0xffffffff && controlPoint >= kMaxModelFileIndex)
         detail = ModelLoader::PartError::flex;
     else
