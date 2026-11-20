@@ -1,11 +1,10 @@
-# LDD64 — LEGO Digital Designer 4.3.11, buildable source
+# LDD64 — LEGO Digital Designer 64bit version, buildable source
 
 The restored C++ source of LEGO Digital Designer 4.3.11 with current third-party libraries,
 building a 64-bit program for **Windows**, **macOS** and **Linux** (Wayland and X11).
 
 LDD64 is version **4.64.0** on every platform. The About box shows "4.64", and saved models carry
-`versionMajor="4" versionMinor="64"`, which LDD 4.3.11 ignores when loading. The restoration's
-analysis databases, decompiler output, tests and tooling are not part of this repository.
+`versionMajor="4" versionMinor="64"`, which LDD 4.3.11 ignores when loading. 
 
 | | Windows | macOS | Linux |
 |---|---|---|---|
@@ -13,10 +12,6 @@ analysis databases, decompiler output, tests and tooling are not part of this re
 | Toolchain | Visual Studio 2022 (v143) or later | Xcode 13 or later | GCC or Clang, CMake 3.16+, GTK 3 |
 | Platforms | x64 | x86_64 + arm64, macOS 10.13+ (arm64: 11+) | x86_64, arm64 |
 | Output | `src/Products/LDD/Bin/x64/<config>/LDD64.exe` | `LEGO Digital Designer.app` | `<build>/ldd64` |
-
-There is no 32-bit build, so a model is limited by memory rather than a 2 GB address space. The
-original ran on the x87 FPU. Its double-precision intermediates are written out as double
-arithmetic (`EvalReal` in `MathUtil.h`), so SSE2 computes the same values.
 
 The Xcode project also builds the Quick Look generator, the Quick Look extensions and the
 Spotlight importer.
@@ -52,8 +47,7 @@ Differences that come from the updates:
 
 ## Building
 
-**Windows.** The cursors and manifest that `LDD.rc` names are LEGO artwork, so they aren't in
-the repository. Extract them once from an installed LDD 4.3.11 (Python 3, `pip install pefile`):
+**Windows.** The cursors and manifest that `LDD.rc` names are LEGO artwork. Extract them once from an installed LDD 4.3.11 (Python 3, `pip install pefile`):
 ```
 python tools\extract_rsrc.py "C:\Program Files (x86)\LEGO Company\LEGO Digital Designer\LDD.exe" src\Products\LDD\Resources\Win\Extracted
 ```
@@ -77,8 +71,7 @@ cmake --build build/linux
   launcher and the `.lxf` / `.lxfml` file types.
 
 **macOS.** Build the `LEGO Digital Designer` scheme of `XCode/LDD64.xcodeproj`; it builds the
-libraries and plug-ins with the app, as Release (the Debug build is unoptimised and has the C++
-library's checks, many times slower with large models). It is signed ad hoc. If the Quick Look extensions don't load,
+libraries and plug-ins with the app, as Release. It is signed ad hoc. If the Quick Look extensions don't load,
 set a team (a free Personal Team is enough) for the app and the `LXFPreview` / `LXFThumbnail`
 targets.
 
@@ -92,10 +85,10 @@ The program needs the data of an original LDD 4.3 installation, which is not in 
 * **Windows:** put `LDD64.exe` in the installation folder, next to `Assets.lif`. The original
   `LDD.exe` can stay. The brick database comes from the original installer (in `%APPDATA%`).
 * **macOS:** copy the original bundle's `Contents/Resources` data into the built bundle:
-  `Assets.lif`, `Sound.lif`, `Help/`, `ldraw.xml`, `preferences.ini`, `Cursor*.png`. On another
+  `Assets.lif`, `Sound.lif`, `Help/`, `preferences.ini`, `Cursor*.png`. On another
   Mac, open the app once with Open from the context menu, or run
   `xattr -dr com.apple.quarantine "LEGO Digital Designer.app"`.
-* **Linux:** copy `Assets.lif`, `Sound.lif`, `Help/`, `ldraw.xml` and `preferences.ini` next to
+* **Linux:** copy `Assets.lif`, `Sound.lif`, `Help/` and `preferences.ini` next to
   `ldd64`. User data goes to `~/.local/share/LEGO Company/LEGO Digital Designer/`. To open a
   model, run `ldd64 model.lxf` or drop the file on the window.
 
