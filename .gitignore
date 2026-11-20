@@ -1,0 +1,18 @@
+# Visual Studio
+src/Products/LDD/Bin/
+src/Products/LDD/Projects/LDD/VS2022/Build/
+*.ncb
+*.suo
+*.user
+*.sdf
+*.opensdf
+*.VC.db
+.vs/
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+# macOS / Python
+.DS_Store
+__pycache__/
