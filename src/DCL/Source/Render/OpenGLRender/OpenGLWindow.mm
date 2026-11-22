@@ -52,7 +52,14 @@
         window = owner;
         [self setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
         [self setWantsLayer:YES];
-        context = [[NSOpenGLContext alloc] initWithFormat:format shareContext:nil];
+        // PORT64: with the 10.15 SDK or later the view's GL surface defaults to the display's
+        // pixel density, but LDD sets its viewport in points, so on a Retina display it drew in
+        // the lower-left quarter only. One pixel per point, as in the original; AppKit scales it.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [self setWantsBestResolutionOpenGLSurface:NO];
+#pragma clang diagnostic pop
+        context =[[NSOpenGLContext alloc] initWithFormat:format shareContext:nil];
         GLint value = 1;
         [context setValues:&value forParameter:NSOpenGLCPSwapInterval];
         value = 0;

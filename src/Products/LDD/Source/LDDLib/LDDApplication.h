@@ -184,8 +184,9 @@ public:
     // m_postProcessing (+0x17c): post-processing is available (BrickConnectSceneControl::
     // SetPostProcessor Mac 0x4f2b0). Mac 0x17d2f0 (name inferred)
     bool IsPostProcessingEnabled() const { return m_postProcessing; }
-    // "DOSTARTUPCHECKS": first run after an install ("Cleanup") or a newer version deletes the
-    // user brick database / palettes. False without a user data directory. Mac 0x173430, Win 0x601ad7
+    // "DOSTARTUPCHECKS": an interrupted start or a broken database ("Cleanup"), or a database that
+    // cannot be opened, deletes the user brick database / palettes. False without a user data
+    // directory. Mac 0x173430, Win 0x601ad7
     bool DoStartupChecks();
     void SetBrickDatabase(BrickDatabase* database);                         // Mac 0x173db0
     Window* GetWindow() const;                                              // Mac 0x173e00, Win 0x5fc29c
@@ -280,10 +281,6 @@ public:
     void SetBuildingGuideCommand(GenerateBuildingGuideCommand* command);    // Mac 0x17a9f0, Win 0x5fcca3
 
     // ---- 082c ----
-    // The running version (Application::GetVersion) is newer than the one the preferences
-    // remember ("ApplicationVersionMajor/Minor/Revision/Build" all present, or
-    // "ApplicationVersion"); true when neither is stored. Mac 0x17e670, Win 0x5fccc4 (name inferred)
-    bool IsNewerVersion();
     // Fills the brick palette at start-up (AppMain, Mac 0x13ad50): "SORTBYIDONLY" (main groups
     // off), the palettes of "PalettePath" (one palette folder, native path) or else of the user
     // data directory's "userPalettesDirName" folder, the LDD Extended palette, the user palettes

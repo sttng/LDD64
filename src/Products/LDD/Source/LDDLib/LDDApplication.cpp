@@ -430,7 +430,10 @@ bool LDDApplication::DoStartupChecks()
     const bool cleanup = Preferences::GetInstance()->GetBool(String("Cleanup"), true);
     WritePreference("Cleanup", true);
     Preferences::GetInstance()->Save();
-    const bool newer = IsNewerVersion();
+    // NOTE: the original also starts over when this program is newer than the "ApplicationVersion"
+    // that ran last, so the first start of LDD64 after LDD 4.3 deleted a modified database and
+    // palettes (issue #2); removed: the start mode still installs the shipped database when its
+    // version is newer than the user's.
 
     RefPointer<Directory> user = GetUserDataDirectory();
     if (!user)
@@ -439,9 +442,9 @@ bool LDDApplication::DoStartupChecks()
     Preferences::GetInstance()->GetValue(String("userBrickDBDirName"), databaseName);
 
     RefPointer<Directory> database;
-    if (!cleanup && !newer)
+    if (!cleanup)
         database = user->GetDirectory(databaseName, false);
-    if (cleanup || newer || !database) {
+    if (cleanup || !database) {
         database = 0;
         // The user database and the user palettes are rebuilt by the start mode.
         String palettesName;
@@ -1859,49 +1862,6 @@ void LDDApplication::OnFinalRelease()
     Notifier<LDDApplicationObserver>::OnFinalRelease();
     UpdateObserver::OnFinalRelease();
     BrickConnectSceneControlObserver::OnFinalRelease();
-}
-
-// Mac 0x17e670, Win 0x5fccc4
-// NOTE: "ApplicationVersionRevision" goes to the third component (Version::m_build) and
-// "ApplicationVersionBuild" to the fourth (both builds).
-bool LDDApplication::IsNewerVersion()
-{
-    Version stored;
-    bool major = false, minor = false, revision = false, build = false;
-    {
-        String text;
-        if (Preferences::GetInstance()->GetValue(String("ApplicationVersionMajor"), text))
-            major = FromString(stored.m_major, text);
-    }
-    {
-        String text;
-        if (Preferences::GetInstance()->GetValue(String("ApplicationVersionMinor"), text))
-            minor = FromString(stored.m_minor, text);
-    }
-    {
-        String text;
-        if (Preferences::GetInstance()->GetValue(String("ApplicationVersionRevision"), text))
-            revision = FromString(stored.m_build, text);
-    }
-    {
-        String text;
-        if (Preferences::GetInstance()->GetValue(String("ApplicationVersionBuild"), text))
-            build = FromString(stored.m_revision, text);
-    }
-    bool version = false;
-    {
-        String text;
-        if (Preferences::GetInstance()->GetValue(String("ApplicationVersion"), text)) {
-            UInt32 position = 0;
-            version = FromString(stored, text, position);
-        }
-    }
-    if (!(major && minor && revision && build) && !version)
-        return true;
-    Version current;
-    if (!GetVersion(current))
-        return false;
-    return current > stored;
 }
 
 } // namespace LEGO

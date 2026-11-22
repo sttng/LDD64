@@ -129,6 +129,8 @@ FastNavigation=yes
 LDD64 fixes the original's defects: checked file writes; checks of untrusted input (archives,
 images, model files, server replies, Lua scripts) against out-of-bounds access, endless loops and
 writes outside a folder; uninitialised members, leaks and missing checks. LuaPlus has two fixes.
+A newer program version no longer deletes the user's brick database and palettes at its first
+start; the shipped database still replaces the user's when its version is newer.
 The restored original code, without these changes, is kept in a separate repository.
 
 For large models, LDD64 gives the same results (model, picks, pair states, building guide) much
