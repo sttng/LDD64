@@ -144,11 +144,16 @@ OpenGLRender::OpenGLRender(UInt32 level, Window* window)
 #if defined(_WIN32)
     m_gpuProcessing = true;
 #else
-    if (Platform::GetInstance()->GetOSVersion().m_minor > 3) {
-        GLint value;
-        if (CGLGetParameter(m_context, kCGLCPGPUVertexProcessing, &value) == kCGLNoError && value == 1 &&
-            CGLGetParameter(m_context, kCGLCPGPUFragmentProcessing, &value) == kCGLNoError && value == 1)
-            m_gpuProcessing = true;
+    // NOTE: the original asks CGL for GPU vertex and fragment processing, and only when the OS
+    // minor version is above 3 (Mac OS X 10.4): never on macOS 11 and later x.0 to x.3, which
+    // then had no shaders (issue #3). Every GPU of macOS 10.13 and later processes both; fixed:
+    // off only on Apple's software renderer.
+    m_gpuProcessing = true;
+    GLint renderer = 0;
+    if (CGLGetParameter(m_context, kCGLCPCurrentRendererID, &renderer) == kCGLNoError) {
+        renderer &= kCGLRendererIDMatchingMask;
+        if (renderer == kCGLRendererGenericFloatID || renderer == kCGLRendererAppleSWID)
+            m_gpuProcessing = false;
     }
 #endif
     WindowObserver::Attach(window);

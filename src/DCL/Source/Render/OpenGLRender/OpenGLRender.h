@@ -227,7 +227,7 @@ private:
     TextureUnit               m_textureUnits[16];    // Mac +0x188, Win +0x1a4
     BasicArray<OpenGLTexture*>      m_textures;      // Mac +0x288, Win +0x2a4
     BasicArray<OpenGLVertexBuffer*> m_vertexBuffers; // Mac +0x298, Win +0x2b4 (never filled here)
-    bool                      m_gpuProcessing;       // Mac +0x2a8 (CGL GPU vertex+fragment), Win +0x2c4 (true)
+    bool                      m_gpuProcessing;       // Mac +0x2a8 (not CGL's software renderer), Win +0x2c4 (true)
     UInt32                    m_maxTextureSize;      // Mac +0x2ac, Win +0x2c8 (power of two)
     UInt32                    m_maxColorAttachments; // Mac +0x2b0, Win +0x2cc
     UInt32                    m_maxVertexTextureImageUnits;   // Mac +0x2b4, Win +0x2d0

@@ -325,6 +325,9 @@ bool TextInputControl::Create()
     [field setHidden:!m_status.m_visible];
     [field setEditable:m_status.m_enabledInTree];
     [field setBordered:NO];
+    // PORT64: LDD draws its own light interface around the field; in Dark Mode the field was
+    // light text on black (issue #4). Always the light appearance.
+    [field setAppearance:[NSAppearance appearanceNamed:NSAppearanceNameAqua]];
     LEGOTextInputControlTarget* target = [[LEGOTextInputControlTarget alloc] initWithTextInputControl:this];
     m_target = target;
     [field setTarget:target];

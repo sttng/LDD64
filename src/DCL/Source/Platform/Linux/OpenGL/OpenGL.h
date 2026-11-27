@@ -60,7 +60,15 @@ CGLError CGLFlushDrawable(CGLContextObj context);
 inline CGLError CGLClearDrawable(CGLContextObj context) { return context ? kCGLNoError : kCGLBadContext; }
 inline CGLContextObj CGLRetainContext(CGLContextObj context) { return context; }
 inline void CGLReleaseContext(CGLContextObj) {}
-// GPU vertex / fragment processing (OpenGLRender ctor, Mac 0xf2900): 1 (hardware or llvmpipe).
+// Renderer IDs of <OpenGL/CGLRenderers.h>: Apple's software renderers and the matching bits.
+enum {
+    kCGLRendererGenericFloatID = 0x00020400,
+    kCGLRendererAppleSWID      = 0x00020600
+};
+#define kCGLRendererIDMatchingMask 0x00FE7F00
+
+// The renderer (OpenGLRender ctor, Mac 0xf2900) is never Apple's software renderer: 0 (hardware
+// or llvmpipe, both with shaders).
 inline CGLError CGLGetParameter(CGLContextObj context, CGLContextParameter parameter, GLint* value)
 {
     if (!context)
@@ -68,6 +76,9 @@ inline CGLError CGLGetParameter(CGLContextObj context, CGLContextParameter param
     if (!value)
         return kCGLBadAddress;
     switch (parameter) {
+    case kCGLCPCurrentRendererID:
+        *value = 0;
+        return kCGLNoError;
     case kCGLCPGPUVertexProcessing:
     case kCGLCPGPUFragmentProcessing:
     case kCGLCPHasDrawable:

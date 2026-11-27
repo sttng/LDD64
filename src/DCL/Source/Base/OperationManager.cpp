@@ -1,7 +1,7 @@
 // LEGO Digital Designer — restored source
 // TU 270 "OperationManager.cpp" (file name inferred), Mac 0x2827e0-0x285631, Win
-// 0x539140-0x53a31f. See OperationManager.h. The NSOperation path (OS minor
-// >= 5) sits behind __OBJC__; HOST-ONLY builds take the pthread pool (the 10.4 code).
+// 0x539140-0x53a31f. See OperationManager.h. The NSOperation path sits behind __OBJC__;
+// HOST-ONLY builds take the pthread pool (the original's Mac OS X 10.4 code).
 #include "OperationManager.h"
 #include "LEGO/String.h"
 #include "Trace.h"
@@ -13,7 +13,6 @@
 #include <unistd.h>
 #if defined(__OBJC__)
 #import <Foundation/Foundation.h>
-#include "Platform.h"
 #endif
 #endif
 
@@ -89,12 +88,14 @@ namespace LEGO {
 
 namespace {
 
-// Platform::GetInstance()->GetOSVersion().m_minor >= 5 at every call (Mac 0xd7f0 + [+4] > 4).
+// NOTE: the original tests the OS minor version at every call (above 4: Mac OS X 10.5, Mac
+// 0xd7f0 + [+4] > 4), false on macOS 11 and later x.0 to x.4, which then took the pool path;
+// fixed: always NSOperation (LDD64 needs macOS 10.13).
 // HOST-ONLY: plain C++ builds of the Mac branch always take the pool path. (name inferred)
 inline bool UseCocoaOperations()
 {
 #if defined(__OBJC__) && !defined(_WIN32)
-    return Platform::GetInstance()->GetOSVersion().m_minor > 4;
+    return true;
 #else
     return false;
 #endif

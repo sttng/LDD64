@@ -1,7 +1,7 @@
 // LEGO Digital Designer — restored source
 // LEGO::Operation, OperationQueue, OperationManager (+ OperationThread) — work items on a small
-// worker pool. TU 270 (file name inferred): Mac 0x2827e0-0x285631 (Obj-C++: on 10.5+ forwards to
-// NSOperation via LEGOMacOperation, else the pthread pool), Win 0x539140-0x53a31f.
+// worker pool. TU 270 (file name inferred): Mac 0x2827e0-0x285631 (Obj-C++: forwards to
+// NSOperation via LEGOMacOperation; plain C++: the pthread pool), Win 0x539140-0x53a31f.
 // Pool model: one static manager (Mac 0x77e758, ctor 0x284b10 from static init 0x285590; Win
 //   0xb44050, ctor 0x539140 / dtor 0x539220 via CRT init 0x930bc0) with a recursive lock, a
 //   wake-up Event, the pending operations and the workers. A worker runs the first operation
@@ -74,7 +74,7 @@ private:
     bool                   m_executing;      // Mac +0x29  Win +0x2d
     bool                   m_finished;       // Mac +0x2a  Win +0x2e
 #if !defined(_WIN32)
-    void*                  m_cocoaOperation; // Mac +0x2c LEGOMacOperation* (Mac OS X >= 10.5, else 0)
+    void*                  m_cocoaOperation; // Mac +0x2c LEGOMacOperation* (Obj-C++ builds, else 0)
 #endif
 };
 
@@ -103,7 +103,7 @@ private:
 
     BasicArray<RefPointer<Operation> > m_operations;   // +0x08 (Mac vtable 0x774c14, Win BasicArray<RefPointer<Operation>>)
 #if !defined(_WIN32)
-    void*                              m_cocoaQueue;   // Mac +0x18 NSOperationQueue* (10.5+, else 0)
+    void*                              m_cocoaQueue;   // Mac +0x18 NSOperationQueue* (Obj-C++, else 0)
 #endif
 };
 
